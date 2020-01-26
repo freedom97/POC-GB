@@ -1,0 +1,66 @@
+<p class="animated fadeIn fast">
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 33px">Detalle de extractos</h3>
+    <hr>
+    <p class="animated fadeIn fast" style=" font-family: 'Nunito', sans-serif;"> Aqui encontrarás la información consolidada de todos los extractos bancarios proporcionados</p>
+    <p class="animated fadeIn fast" style=" font-family: 'Nunito', sans-serif;"> Para ver el detalle del producto, haz click sobre cada uno.</p>
+    <button (click)="verRecomendacion()" type="button" class="btn BotonGrafica">VER GRÁFICAS</button>
+    <div class="main-container"><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body" style=" height: 394px;">
+                        <img style="padding-left:80px" src="/assets/img/cuentas.PNG" class="center-block"><br>
+                        <h5 class="card-title">Cuentas</h5><br>
+                        <h6 class="card-subtitle mb-2 text-muted" style="font-weight:bold">Ver detalle</h6>
+                        <p class="card-text">Ver el detalle de la información de sus Cuentas de Ahorro y Cuentas Corriente.</p><br>
+                        <a href="/#/cuenta-ahorros" class="card-link" style="color: #808285;text-decoration-line: underline">Cuenta de Ahorros</a><br>
+                        <a href="/#/cuenta-corriente" class="card-link" style="color:#808285;text-decoration-line: underline">Cuenta Corriente</a>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/assets/img/tarjeta-credito.PNG" class="center-block"><br><br>
+                        <h5 class="card-title">Tarjetas de Crédito</h5><br>
+                        <h6 class="card-subtitle mb-2 text-muted" style="font-weight:bold">Ver detalle</h6>
+                        <p class="card-text">Ver el detalle de la información de sus Tarjetas de Crédito.</p><br><br>
+                        <a href="/#/tarjeta-credito" class="card-link" style="color:#808285;text-decoration-line: underline">Tarjetas de Crédito</a><br>
+                        <a class="card-link" style="color:#FFFFFF;text-decoration-line: underline">vs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body" style=" height: 390px">
+                        <img src="/assets/img/cuenta-inversion.PNG" class="center-block"><br><br>
+                        <h5 class="card-title">Cuentas de Inversión</h5><br>
+                        <h6 class="card-subtitle mb-2 text-muted" style="font-weight:bold">Ver detalle</h6>
+                        <p class="card-text">Ver el detalle de la información de sus cuentas de inversión.</p><br><br>
+                        <a href="/#/cuenta-inversion" class="card-link" style="color:#808285; text-decoration-line: underline">Cuentas de Inversión</a><br>
+                        <a class="card-link" style="color:#FFFFFF;text-decoration-line: underline">vs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <h5 style="color:#00448D; font-weight:bold; text-align: center; font-family: 'Nunito', sans-serif; font-size:25px;">Resumen de información</h5>
+        <div class="row" style="background-color:#d1d3d4; color:#292929">
+            <div class="col-sm-6" style="
+            padding-top: 15px;
+            padding-bottom: 15px;">
+                <p>Debitos totales por mes: $ 130,000,000.00 </p>
+                <p> Número total de transacciones realizadas por mes: 150</p>
+                <p> Ingresos por mes: $ 50,000,000.00</p>
+            </div>
+            <div class="col-sm-6" style="
+            padding-top: 15px;
+            padding-bottom: 15px;">
+                <p>Egresos por mes: $ 35,000,000.00</p>
+                <p>Retiro total Gravamen Movimientos Financieros: $ 100,000.00</p>
+                <p>Cargo total de IVA: $ 50,000.00</p>
+            </div>
+        </div><br><br><br>
+        <button (click)="VerFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
+            height: 16px;padding-top: 2px"></i>SALIR</button>
+    </div>

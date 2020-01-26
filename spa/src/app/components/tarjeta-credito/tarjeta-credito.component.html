@@ -1,0 +1,132 @@
+<h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 33px">Detalle Tarjeta de Crédito</h3>
+<hr>
+<h6 class="animated fadeIn fast" style="font-weight:bold; font-size:20px">Apreciado Cliente</h6>
+<br>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <img src="/assets/img/estado-cuenta.PNG" class="center-block"><br><br>
+                <h5 class="card-title">Estado de Cuenta</h5>
+                <p class="card-text"> DESDE: 2019/01/31 HASTA: 2019/02/28</p><br>
+                <p class="card-text" style="font-weight: bold;color:#00448d"> TARJETAS DE CRÉDITO:</p>
+                <ul>
+                    <li>MasterCard Gold CitiBank: 89756789</li>
+                    <li>VISA Gold Bancolombia: 89751012</li>
+                </ul>
+            </div>
+        </div>
+    </div><br>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <img src="/assets/img/estado-cuenta.PNG" class="center-block"><br><br>
+                <h5 class="card-title">Resumen</h5><br>
+                <table class="table table-borderless table-responsive table-sm">
+                    <thead>
+                        <tr class="saldos-parciales">
+                            <th scope="col" style="color:#00448d">N° TARJETA</th>
+                            <th scope="col" style="color:#00448d">FECHA CORTE</th>
+                            <th scope="col" style="color:#00448d">CUPO TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>89756789</td>
+                            <td>2019-01-22</td>
+                            <td>$2.000,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>89751012</td>
+                            <td>2019-01-22</td>
+                            <td>$1.000,000.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+<br>
+<!---Tabla detalle de transacciones-->
+<table class=" table table-hover table-bordered table-responsive-sm">
+    <thead>
+        <tr>
+            <th colspan="6" scope="col" style="color: #00448D; font: bold; background-color: #00448d;border-color: #00448d; color:white">Detalle De Transacciones</th>
+        </tr>
+    </thead>
+    <thead>
+        <tr>
+            <th scope="col" style="color: #00448D;  background-color: #e6e7e8">Fecha</th>
+            <th scope="col" style="color: #00448D;  background-color: #e6e7e8">Banco</th>
+            <th scope="col" style="color: #00448D;  background-color: #e6e7e8">N° de Tarjeta</th>
+            <th scope="col" style="color: #00448D;  background-color: #e6e7e8">Descripción</th>
+            <th scope="col" style="color: #00448D;  background-color: #e6e7e8">Cuotas</th>
+            <th scope="col" style="color: #00448D;  background-color: #e6e7e8">Valor Transacción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 08/02</td>
+            <td> CitiBank</td>
+            <td> *6789</td>
+            <td> Compra en Latam Airlines</td>
+            <td> 02/02</td>
+            <td> - </td>
+        </tr>
+        <tr>
+            <td> 08/02</td>
+            <td> Bancolombia</td>
+            <td> *1012</td>
+            <td> Pago Netflix</td>
+            <td> 01/01</td>
+            <td> $40,000.00 </td>
+        </tr>
+        <tr>
+            <td> 09/02</td>
+            <td> CitiBank</td>
+            <td> *6789</td>
+            <td> AliExpress London</td>
+            <td> 02/36</td>
+            <td> $37,686.94</td>
+        </tr>
+        <tr>
+            <td> 10/02</td>
+            <td> Bancolombia</td>
+            <td> *1012</td>
+            <td> Multiplex Viva Envigado</td>
+            <td> 01/01</td>
+            <td> $40,000.00</td>
+        </tr>
+        <tr>
+            <td> 15/02</td>
+            <td> Bancolombia</td>
+            <td> *1012</td>
+            <td> Abono débito automático</td>
+            <td> </td>
+            <td> $-2,018,473.09</td>
+        </tr>
+        <tr>
+            <td> 16/02</td>
+            <td> Bancolombia</td>
+            <td> *1012</td>
+            <td> Traslado saldo a favor</td>
+            <td> -</td>
+            <td> $229,862.00</td>
+        </tr>
+        <tr>
+            <td> 18/02</td>
+            <td> CitiBank</td>
+            <td> *6789</td>
+            <td> Centro experiencia Medellin</td>
+            <td> 01/06</td>
+            <td> $659,934.00</td>
+        </tr>
+    </tbody>
+</table>
+<span>
+    <button type="button" class="Previous"><li class="fas fa-angle-left"></li></button>
+    <button type="button" class="Next" style="margin-left: 30px;"><li class="fas fa-angle-right"></li></button>
+</span><br><br>
+<button (click)="verDetalleExtracto()" class="btn btn-primary"><li class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;height: 16px;padding-top: 2px"></li>REGRESAR</button><br><br>
