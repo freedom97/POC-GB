@@ -1,0 +1,16 @@
+<h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 34px">API Embargos</h3>
+<hr>
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold">Descripción</h4>
+<p class="descripcion">
+    El API de de Embargos provee una mejora en la eficiencia del proceso de recepción de embargos y desembargos, por medio de consultas que reduzcan el número de solicitudes de embargo de personas que no son clientes Bancolombia o que de serlo no poseen productos
+    embargables.
+    <br>Para esto se requiere consultar las personas que son clientes Bancolombia y si tiene productos Bancolombia embargables.
+    <br>Posterior a esto, se procede a radicar la solicitud de Embargo / Desembargo. Y adicional, se puede consultar en qué estado se encuentra la radicación de la solicitud.
+</p><br><br><br>
+<span>
+    <button (click)="verFamiliaRequerimientos()" style="margin-right: 30px" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
+    height: 16px;padding-top: 2px"></i>REGRESAR </button>
+    <button  type="button" (click)="verEmbargosDesembargos()" class="btn btn-primary"> INGRESAR <i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
+    height: 16px;padding-top: 2px"></i></button>
+</span>
+<br><br><br>

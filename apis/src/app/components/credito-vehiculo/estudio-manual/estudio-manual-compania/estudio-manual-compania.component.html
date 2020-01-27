@@ -1,0 +1,66 @@
+<img style="float:left; margin-right: 20px;" src="./assets/img/venturi.png">
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#808080;display: flex; justify-content: center; font-size: 25px ">Estudio Manual</h4>
+<hr>
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#292929;display: flex; justify-content: center; font-size: 25px ">Información básica de la empresa</h4>
+<div class="row" style="display: flex; justify-content: center">
+    <!-----------------INFORMACION DE LA EMPRESA --------------->
+    <div class="col-sm-8">
+        <div class="form-group">
+            <div class="card card-body" style="text-align: left; font-family: 'Nunito', sans-serif ">
+                <div>
+                    <div>
+                        <input for="text" class=" form-control" placeholder="Nombre de la empresa donde labora el solicitante">
+                    </div> <br>
+                    <div>
+                        <input for="text" class=" form-control" placeholder="Cargo asignado">
+                    </div> <br>
+                    <div>
+                        <input for="text" class=" form-control" placeholder="Dirección">
+                    </div> <br>
+                    <div>
+                        <input for="text" class=" form-control" placeholder="Teléfono">
+                    </div> <br>
+                    <div>
+                        <select for="text" class="form-control">
+                            <option>Departamento de residencia del solicitante</option>
+                            <option>Antioquia</option>
+                            <option>Amazonas </option>
+                            <option>Arauca</option>
+                            <option>Bolivar</option>
+                            <option>Boyacá</option>
+                            <option>Caldas</option>
+                            <option>Valle del Cauca</option>
+                            <option>Otro</option>
+                        </select><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br>
+<span class="col-sm-15" style="display:flex; justify-content: center">
+    <button type="button" data-toggle="modal" data-target="#ModalManualCompania" class="btn btn-danger">ENVIAR</button>
+    <button (click)="verEstudioManualReferencias()" style="display: none; margin-left: 20px" id="botonContinuarManualCompania"type="button" data-toggle="modal" data-target="#ModalManualCompania" class="btn btn-danger">CONTINUAR</button>
+</span>
+<!------------ Modal ---------->
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalManualCompania">
+    <div class="modal-dialog modal-dialog-centered" role="document ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información exitosa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¡Los campos se guardaron exitosamente!</p>
+                <p>Se puede continuar con el proceso</p>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <button onclick="document.getElementById('botonContinuarManualCompania').style.display='block';" type="button" class="btn btn-danger"data-dismiss="modal">Aceptar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

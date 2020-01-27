@@ -1,0 +1,114 @@
+<img style="float:left; margin-right: 20px;" src="./assets/img/venturi.png">
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#808080;display: flex; justify-content: center; font-size: 25px ">Estudio Manual</h4>
+<hr>
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#292929;display: flex; justify-content: center; font-size: 25px ">Información de referencia comercial</h4>
+<br>
+<div class="row" style="display: flex; justify-content: center">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <div class="card card-body" style=" font-family: 'Nunito', sans-serif">
+                <div>
+                    <div>
+                        <input id="nombre" for="text" class=" form-control" placeholder="Nombre de la referencia comercial, proveedor y/o clientes del solicitante">
+                    </div><br>
+                    <div>
+                        <input id="telefono" for="text" class=" form-control" placeholder="Telefono de la referencia comercial, proveedor y/o cliente del solicitante">
+                    </div><br>
+                    <div>
+                        <input id="ciudad" for="text" class=" form-control" placeholder="Ciudad de la referencia comercial, proveedor y/o cliente del solicitante">
+                    </div><br>
+                    <div>
+                        <select id="departamento" type="text " class=" form-control ">
+                          <option>Departamento de residencia de la referencia</option>
+                          <option>Antioquia</option>
+                          <option>Amazonas </option>
+                          <option>Arauca</option>
+                          <option>Bolivar</option>
+                          <option>Boyacá</option>
+                          <option>Caldas</option>
+                          <option>Valle del Cauca</option>
+                          <option>Otro</option>
+                      </select> <br>
+                    </div>
+                    <!--Empieza para tables-->
+                    <span style="display: flex; justify-content: center"><br>
+                        <span id="span1">
+                            <i id="iconCargar1" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="agregar();"></i>
+                        </span>
+                    <span id="span2" style="display:none">
+                            <i id="iconCargar2" class="fas fa-plus-circle fa-2x" style="color: #d8372f" (click)="verCarga2();"></i>
+                        </span>
+                    <span id="span3" style="display:none">
+                            <i id="iconCargar3" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="verCarga3();"></i>
+                        </span>
+                    <span id="span4" style="display:none">
+                            <i id="iconCargar4" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="verCarga4();"></i>
+                        </span>
+                    </span><br>
+                    <table class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" id="marca">Nombre</th>
+                                <th scope="col" id="modelo">Telefono</th>
+                                <th scope="col" id="marca">Ciudad</th>
+                                <th scope="col" id="departamento">Departamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row" id="numerov1"></td>
+                                <td id="numerov2"></td>
+                                <td id="numerov3"></td>
+                                <td id="numerov4"></td>
+                            </tr>
+                            <tr>
+                                <td scope="row" id="numerov5"></td>
+                                <td id="numerov6"></td>
+                                <td id="numerov7"></td>
+                                <td id="numerov8"></td>
+                            </tr>
+                            <tr>
+                                <td scope="row" id="numerov9"></td>
+                                <td id="numerov10"></td>
+                                <td id="numerov11"></td>
+                                <td id="numerov12"></td>
+                            </tr>
+                            <tr>
+                                <td scope="row" id="numerov13"></td>
+                                <td id="numerov14"></td>
+                                <td id="numerov15"></td>
+                                <td id="numerov16"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br>
+<span class="col-sm-15" style="display:flex; justify-content: center">
+    <button type="button" data-toggle="modal" data-target="#ModalManualReferencias" class="btn btn-danger">ENVIAR</button>
+    <button (click)="verFamilias()"style="display: none; margin-left: 20px" id="botonContinuarManualReferencias"type="button" class="btn btn-danger">SALIR</button>
+</span>
+<!--------------- Modal -------------->
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalManualReferencias">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información exitosa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¡Los campos se guardaron exitosamente!</p>
+                <p>Su proceso ha finalizado correctamente</p>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <button onclick="document.getElementById('botonContinuarManualReferencias').style.display='block';" type="button" class="btn btn-danger"data-dismiss="modal">Aceptar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

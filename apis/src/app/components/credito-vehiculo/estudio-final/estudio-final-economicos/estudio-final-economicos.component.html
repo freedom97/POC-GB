@@ -1,0 +1,140 @@
+<img style="float:left; margin-right: 20px;" src="./assets/img/venturi.png">
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#808080;display: flex; justify-content: center; font-size: 25px ">Estudio Final</h4>
+<hr>
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#292929;display: flex; justify-content: center; font-size: 25px ">Información económica adicional</h4>
+<div class="row" style="display: flex; justify-content: center">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <div class="card card-body" style="font-family: 'Nunito', sans-serif">
+                <div>
+                    <select for="text" class="form-control">
+                        <option>Tipo de contrato</option>
+                        <option>Indefinido</option>
+                        <option>Fijo</option>
+                        <option>Prestación de servicios</option>
+                        <option>Obra o labor</option>
+                        <option>Provisionalidad</option>
+                        <option>Carrera administrativa</option>
+                        <option>Libre, nombramiento o remoción</option>
+                  </select> <br>
+                </div>
+                <div>
+                    <select for="text" class="form-control">
+                        <option>Tiempo que lleva realizando la actividad</option>
+                        <option>Menor a 1 mes</option>
+                        <option >1 mes </option>
+                        <option>2 mes</option>
+                        <option>3 mes</option>
+                        <option>4 mes</option>
+                        <option>5 mes</option>
+                        <option>6 mes</option>
+                        <option>7 mes</option>
+                        <option>8 mes</option>
+                        <option>9 mes</option>
+                        <option>10 mes</option>
+                        <option>11 mes</option>
+                        <option>12 mes</option>
+                        <option>12 a 24 meses</option>
+                        <option>24 a 48 meses</option>
+                        <option>48 a 84 meses</option>
+                        <option>84 a 144 meses</option>
+                        <option>Mayor a 144</option>
+                    </select><br>
+                </div>
+                <div>
+                    <div>
+                        <label>Número de vehiculos del que es propietario: </label>
+                        <label style="margin-left: 10px;">1 </label><input onclick="numerovehiculo.disabled=false; numerovehiculo2.disabled=false" style="margin-left: 10px;" type="radio" name="numerovehiculo"> <label style="margin-left: 10px; ">2 o más </label>
+                        <input onclick="numerovehiculo.disabled=false; numerovehiculo2.disabled=false" style="margin-left: 10px" type="radio" name="numerovehiculo">
+                    </div><br>
+
+                    <!--------------- Datos para agregar ------------------------------------->
+                    <div>
+                        <p style="display: flex; justify-content: center"><u>Información de vehículos</u></p>
+                        <div>
+                            <input for="text" id="numerovehiculo" disabled="disabled" class=" form-control" placeholder="Marca del vehiculo referenciado como respaldo de la deuda ">
+                        </div><br>
+                        <div>
+                            <input for="text" id="numerovehiculo2" disabled="disabled" class=" form-control" placeholder="Modelo del vehiculo referenciado como respaldo de la deuda ">
+                        </div><br>
+
+                        <span style="display: flex; justify-content: center"><br>
+                            <span id="span1">
+                                <i id="iconCargar1" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="agregar();"></i>
+                            </span>
+                        <span id="span2" style="display:none">
+                                <i id="iconCargar2" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="verCarga2();"></i>
+                            </span>
+                        <span id="span3" style="display:none">
+                                <i id="iconCargar3" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="verCarga3();"></i>
+                            </span>
+                        <span id="span4" style="display:none">
+                                <i id="iconCargar4" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="verCarga4();"></i>
+                            </span>
+                        <span id="span5" style="display:none">
+                                <i id="iconCargar5" class="fas fa-plus-circle fa-2x" style="color:#d8372f" (click)="verCarga5();"></i>
+                            </span>
+                        </span><br>
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col" id="marca">Marca</th>
+                                    <th scope="col" id="modelo">Modelo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row" id="numerov1"></td>
+                                    <td id="numerov2"></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" id="numerov3"></td>
+                                    <td id="numerov4"></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" id="numerov5"></td>
+                                    <td id="numerov6"></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" id="numerov7"></td>
+                                    <td id="numerov8"></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" id="numerov9"></td>
+                                    <td id="numerov10"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<span class="col-sm-15" style="display:flex; justify-content: center">
+    <button type="button" data-toggle="modal" data-target="#ModalFinalEconomicos" class="btn btn-danger">ENVIAR</button>
+    <button (click)="verEstudioFinalFinancieros()" style="display: none; margin-left: 20px;" id="botonContinuarFinalEconomicos" type="button" class="btn btn-danger">CONTINUAR</button>
+</span>
+<!-------- Modal --------->
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalFinalEconomicos">
+    <div class="modal-dialog modal-dialog-centered" role="document ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información exitosa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¡Los campos se guardaron exitosamente!</p>
+                <p>Se puede continuar con el proceso</p>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <button onclick="document.getElementById( 'botonContinuarFinalEconomicos').style.display='block';" type="button" class="btn btn-danger"data-dismiss="modal">Aceptar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

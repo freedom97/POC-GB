@@ -1,0 +1,56 @@
+<nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#">
+        <img class="imgIcon" src="assets/img/despegar.PNG" width="250" height="70" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-ofertas-comerciales" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbar-ofertas-comerciales">
+        <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+            <!--active -->
+
+            <li class="nav-item" routerLinkActive="active">
+                <a style="color:#6307F2;font-weight: bold; font-size:18px; font-family:'Nunito', sans-serif "><i class="fas fa-user 2x"></i> Iniciar sesión </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a style="color:#6307F2;font-weight: bold; font-size:18px; font-family:'Nunito', sans-serif; margin-left: 15px;"><i class="fas fa-question-circle 2x"></i> Ayuda </a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+
+        </form>
+    </div>
+</nav>
+
+<!-----------------------------login--------------------------------->
+<div class="container-login-ofertas" style="display: flex; justify-content: center; border-color: #292929;">
+    <form>
+        <div class="form-group" style="font-family: 'Nunito', sans-serif">
+            <h4 style="display: flex; justify-content: center; color:#808080; font-family: 'Nunito', sans-serif;font-weight: bold">Verificación de ofertas comerciales</h4>
+            <hr>
+            <label for="recipient-name" class="col-form-label">Verifica si tienes ofertas comerciales disponibles</label><br>
+            <label for="recipient-name" class="col-form-label">Selecciona uno de los medios para conocer tus ofertas:</label>
+            <div class="col-sm-15">
+                <br> <i class="fas fa-check" style="color: #6307F2; margin-right: 10px;"></i> Correo electrónico<input style="margin-left: 44px;" type="radio" onclick="document.getElementById('correo-electronico').style.display='block'; document.getElementById('celular').style.display='none'; document.getElementById('tipo-identificacion').style.display='none'; document.getElementById('numero-identificacion').style.display='none'"
+                    name="r1">
+                <br><i class="fas fa-check" style="color: #6307F2; margin-right: 10px;"></i>Identificación personal<input type="radio" onclick="document.getElementById('tipo-identificacion').style.display='block'; document.getElementById('numero-identificacion').style.display='block'; document.getElementById('correo-electronico').style.display='none'; document.getElementById('celular').style.display='none'"
+                    style="margin-left: 15px;" name="r1"><br> <i class="fas fa-check" style="color: #6307F2; margin-right: 10px;"></i>Celular
+                <input type="radio" style="margin-left: 120px;" name="r1" onclick="document.getElementById('celular').style.display='block'; document.getElementById('tipo-identificacion').style.display='none'; document.getElementById('numero-identificacion').style.display='none'">
+            </div><br>
+            <input type="text" style="display: none" placeholder="Correo electrónico" class="form-control" id="correo-electronico">
+            <select type="text" style="display: none" placeholder="Tipo de identificacion" class="form-control" id="tipo-identificacion">
+            <option>Tipo de documento</option>
+            <option>Cedula de ciudadanía</option>
+            <option>NIT</option>
+            </select><br>
+            <input type="text" style="display: none" placeholder="Número de Identificación" class="form-control" id="numero-identificacion">
+            <input type="text" style="display: none" placeholder="Celular" class="form-control" id="celular">
+        </div>
+        <span>
+          <button (click)="verOfertasComerciales()" type="button" class="btn"  style="background-color: #ECE6F5; color:#6307F2; border: 1px#6307F2; font-weight: bold; border-bottom-color: #6307F2;margin-left: 20px;"> Cancelar</button>
+          <button (click)="VerOfertasComercialesBancolombia()"type="button" class="btn"  style="background-color: #6307F2; color:#EBE5F5; border: 1px#6307F2; font-weight: bold; border-bottom-color: #6307F2;margin-left: 20px;">Ver</button>
+        </span>
+    </form>
+</div>

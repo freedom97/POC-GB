@@ -1,0 +1,211 @@
+<ul class="nav nav-tabs nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="#/pagoterceros3">Enviar Lote de Pago</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#/pagoterceros-consultarlote">Consultar estado del lote</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="#/pagoterceros-consultardetalle">Consultar detalle del lote</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#/pagoproveedor-consultarbeneficiario">Consultar beneficiario</a>
+    </li>
+</ul>
+<br>
+<h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">Elige tu cuenta para realizar el pago a terceros</h4><br>
+<div class="main-container"><br>
+    <div class="row" style="display: flex; justify-content: center">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <div class="card-body" style=" height: 300px;">
+                        <img style="padding-left:80px" src="/assets/img/cuentas.PNG" class="center-block"><br>
+                        <h5 class="card-title">Cuentas depósito</h5><br>
+                        <h6 class="card-subtitle mb-2 text-muted" style="font-weight:bold">Ver detalle</h6>
+                        <p class="card-text">Elige tu cuenta para realizar el pago de nómina de tus empleados</p><br>
+                    </div>
+                    <a id="list-first-list" data-toggle="list" href="#list-first" role="tab" aria-controls="first" style="color:#808285;text-decoration-line: underline;cursor:pointer">Cuenta de Ahorros</a>
+                    <a id="list-first-list" data-toggle="list" href="#list-first" role="tab" aria-controls="first" style="color:#808285;text-decoration-line: underline;cursor:pointer">Cuenta Corriente</a>
+                    <br>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="col-12">
+            <div class="tab-content" id="nav-tabContent">
+                <div style=" font-family: 'Nunito', sans-serif;" class="tab-pane fade" id="list-first" role="tabpanel" aria-labelledby="list-first-list">
+                    <br>
+                    <div class="col-12">
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">Información del lote</h4><br>
+                        <ul>
+                            <li>
+                                NIT del pagador: 101010
+                            </li>
+                            <li>
+                                Tipo de cuenta para debitar: Cuenta de Ahorros
+                            </li>
+                            <li>
+                                Número de cuenta para debitar: 24566678956
+                            </li>
+                            <li>
+                                Referencia del cliente: RF001
+                            </li>
+                            <br>
+                        </ul>
+                    </div>
+                    <div style="display: flex; justify-content: left;">
+                        <div class="col-12">
+                            <h6>¿Cuando quieres realizar el pago?</h6>
+                            <select class="custom-select" class="form-control">
+                          <option>Inmediatamente</option>
+                          <option>Medio día (12m)</option>
+                          <option>Media noche (12am)</option>
+                          </select><br>
+                            <h6><u>Tu lote de pago</u></h6>
+                            <table class="table table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">N° cuenta</th>
+                                        <th scope="col">Fecha aplicación</th>
+                                        <th scope="col">Nombre completo</th>
+                                        <th scope="col">Tipo identificación</th>
+                                        <th scope="col">N° identificación</th>
+                                        <th scope="col">Banco</th>
+                                        <th scope="col">Valor pago</th>
+                                        <th scope="col">Correo electrónico</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Jose López</td>
+                                        <td>Cédula</td>
+                                        <td>12871415</td>
+                                        <td>Bancolombia</td>
+                                        <td>$500,000</td>
+                                        <td>jlopez@bancolombia.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Maria Gómez</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Bancolombia</td>
+                                        <td>$500,000</td>
+                                        <td>mgomez@bancolombia.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Julian Arcila</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Davivienda</td>
+                                        <td>$500,000</td>
+                                        <td>jarcila@davivienda.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Carolina Gil</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Banco de Occidente</td>
+                                        <td>$500,000</td>
+                                        <td>cperez@boccidente.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Jose Gomez</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Bancolombia</td>
+                                        <td>$500,000</td>
+                                        <td>jgomez@bancolombia.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Patricia Gutierrez</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Bancolombia</td>
+                                        <td>$500,000</td>
+                                        <td>pgutierrez@bancolombia.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Gustavo Leal</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Banco de Bogotá</td>
+                                        <td>$500,000</td>
+                                        <td>gleal@bbogota.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Daniel Zambrano</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Bancolombia</td>
+                                        <td>$500,000</td>
+                                        <td>dzambra@bancolombia.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Arturo Palacio</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>BBVA</td>
+                                        <td>$500,000</td>
+                                        <td>arturopalacio@bbva.com.co</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2435</th>
+                                        <td>05/04/2019</td>
+                                        <td>Andrea Rojas</td>
+                                        <td>Cédula</td>
+                                        <td>12131415</td>
+                                        <td>Bancolombia</td>
+                                        <td>$100,000</td>
+                                        <td>arojas@bancolombia.com.co</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p style="color: #808080; font-size: 14px;">Si deseas realizar el pago de este lote, presiona <u>Enviar lote</u></p><br>
+                            <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">ENVIAR LOTE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br><br>
+<button (click)="verPagoTerceros()" class="btn btn-primary btn-lg "><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px; height: 16px;padding-top: 2px"></i>REGRESAR </button>
+<!-------MODAL ---------->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Detalle de envío</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Su lote se pago se ha enviado correctamente. En breves momentos podrá consultar el estado de su envío.
+                    <br><br> Fecha de ejecución de la orden de pago: 04/05/2019<br> Código del lote: 0125
+                </p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

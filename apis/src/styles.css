@@ -1,0 +1,505 @@
+/* You can add global styles to this file, and also import other style files */
+/* ANIMACIONES*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+/* CONTENEDORES */
+
+.main-container {
+  margin-bottom: 30px;
+}
+
+.container {
+  text-align: center;
+}
+
+
+/*CONTENEDOR PARA EL LOGIN*/
+
+.container-login {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+
+/*CONTENEDOR PARA LA CONSULTA DEL LOTE DE PAGOS*/
+
+.container-consulta-lote {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.container-body {
+  margin-top: 30px;
+}
+
+.container-login-ofertas {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  margin-right: 50px;
+  border-color: #292929;
+}
+
+
+/* TITULOS */
+
+h3 {
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: #00448D;
+  /*Colores oficiales del Banco*/
+}
+
+h5 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-weight: 700;
+  font-stretch: normal;
+  line-height: 26px;
+  letter-spacing: -0.6px;
+  color: #292929;
+  /*Colores oficiales del Banco*/
+  font-size: 24px;
+}
+
+h4 {
+  text-align: left;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+h6 {
+  text-align: left;
+  font-family: Nunito;
+  /*Fuente oficial del Banco*/
+}
+
+hr {
+  overflow: hidden;
+}
+
+
+/*CUERPO Y HTML*/
+
+body {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+html {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+
+/*ITEMS DEL NAVBAR*/
+
+.nav-item {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
+/*PARA EL CONTENIDO*/
+
+.-label {
+  width: 75px;
+  height: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  color: #00448d;
+  /*Colores oficiales del Banco*/
+}
+
+
+/*PARA LAS CABECERAS*/
+
+.label {
+  width: 50px;
+  height: 20px;
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  color: #292929;
+  /*Colores oficiales del Banco*/
+  background-color: #f7f7f7;
+  border-color: #ffffff;
+}
+
+
+/*DISEÑO DE BOTONES OFICIALES DEL BANCO*/
+
+
+/*BOTONES PRINCIPALES*/
+
+.btn.btn-primary {
+  background-color: #ffcf01;
+  /*Colores oficiales del Banco*/
+  width: 150px;
+  height: 35px;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #292929;
+  border-color: #ffd200;
+}
+
+.btn {
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  max-width: 100%;
+  /* padding: 14px 40px;*/
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/*BOTONES PARA CARGA DE INFORMACION*/
+
+.buttonCargaPrimary {
+  background-color: #ffcf01;
+  width: 130px;
+  height: 30px;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #292929;
+  border-color: #ffcf01;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  max-width: 100%;
+  /* padding: 14px 40px;*/
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.buttonCargaSecondary {
+  background-color: white;
+  width: 130px;
+  height: 30px;
+  border-color: #00448D 1px;
+  color: #00448D;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+
+/*BOTON SECUNDARIO*/
+
+.btn.btn-secondary {
+  background-color: white;
+  width: 150px;
+  height: 35px;
+  border-color: #00448D 1px;
+  color: #00448D;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+
+/*BOTON OPACO O DESHABILITADO*/
+
+.btn-opacity {
+  border-radius: 30000px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+  background-color: #747779;
+  font-family: Nunito;
+  width: 150px;
+  height: 35px;
+  opacity: 0.65;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.07;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #292929;
+  cursor: pointer;
+}
+
+
+/*BOTON GRAFICA DE RECOMENDACION*/
+
+.BotonGrafica {
+  width: 150px;
+  height: 35px;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+  border-radius: 30000px;
+  cursor: pointer;
+  border-color: #00448d 1px;
+  color: #00448d;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+}
+
+.BotonGrafica:hover {
+  background-color: #00448d;
+  color: white;
+}
+
+
+/*BOTONES DE REGRESAR Y SIGUIENTE*/
+
+.Previous {
+  border-radius: 10000px;
+  background-color: #ffcf01;
+  width: 40px;
+  height: 40px;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #292929;
+  border-color: #ffd200;
+  cursor: pointer;
+}
+
+.Next {
+  width: 40px;
+  height: 40px;
+  border-radius: 10000px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffcf01;
+  border-color: #ffcf01;
+  color: #292929;
+  cursor: pointer;
+}
+
+
+/*TODOS LOS CHECK BOX EN EL CENTRO*/
+
+.form-check-input {
+  position: relative;
+}
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #808080;
+  margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+
+.imgIcon {
+  padding-left: 10px;
+}
+
+
+/*LABELS PARA INGRESO DE USUARIO Y CLAVE*/
+
+.labelUser {
+  float: center;
+  padding: 12px 20px 12px 16px;
+  text-align: center;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  margin-top: 5px;
+}
+
+.labelPassword {
+  float: center;
+  padding: 12px 20px 12px 16px;
+  text-align: center;
+  margin-top: 5px;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+
+/*ESTILO DE LA CLASE FORM CONTROL - PARA INPUTS, CHECKBOX*/
+
+.form-control {
+  vertical-align: middle;
+  text-align: justify;
+}
+
+.form-control-password {
+  vertical-align: middle;
+  position: relative;
+}
+
+
+/*LOGOS*/
+
+.sub-logo-component {
+  background: #00448D;
+}
+
+.col-sm-12 {
+  padding-left: 200px;
+  padding-right: 250px;
+}
+
+
+/* CLASE DE LOS ICONOS*/
+
+.fa-li {
+  text-align: left;
+}
+
+
+/*ESTILO PARA ALINEAR LOS INPUT DEL HOME*/
+
+.col-sm-2 {
+  padding-right: 20px;
+}
+
+.detalle-footer {
+  margin: 0px!important;
+  background-color: #e6e7e8!important;
+  padding: 1.5em!important;
+  bottom: 0px;
+  width: 100%;
+  display: inline-flex;
+  display: table!important;
+  box-sizing: border-box;
+}
+
+
+/*CONTENEDOR PARA LA DESCRIPCION DE CADA FAMILIA Y/O INFORMACION ADICIONAL*/
+
+.descripcion {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  color: #292929;
+  text-justify: auto;
+}
+
+
+/*TEXTO DE LAS TARJETAS*/
+
+.card-text {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+
+/*FORMATO PARA EL GRUPO DE LISTA*/
+
+.list-group {
+  size: 60px;
+}
+
+
+/*ESTILO DE LAS LISTAS, ALINEADAS A LA IZQUIERDA, ORDENADAS Y NO ORDENADAS*/
+
+ul {
+  text-align: left;
+}
+
+li {
+  text-align: left;
+}
+
+ol {
+  padding-left: 15px;
+}
+
+dl {
+  list-style: none;
+}
+
+.row-seguros {
+  padding-top: 20px;
+}
+
+.col-sm-10 {
+  padding-left: 5px;
+}
+
+p {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+}
+
+.form-row {
+  padding-left: 450px;
+}
+
+
+/*#bb {
+  padding: 10px;
+  display: table;
+  color: #fff;
+}
+*/

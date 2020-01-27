@@ -1,0 +1,85 @@
+<img style="float:left; margin-right: 20px;" src="./assets/img/venturi.png">
+<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; color:#808080;display: flex; justify-content: center; font-size: 25px ">Estudio Preliminar</h4>
+<hr>
+<h5 class="card-title" style="color: #292929; font-weight: bold;display: flex; justify-content: center; font-size: 25px">Información del Cliente</h5>
+<div class="row">
+    <div class="col-sm-6">
+        <form (ngSubmit)="guardar(formulario)" #formulario="ngForm" validate>
+            <div class="form-group">
+                <div class="card card-body" STYLE="text-align: left; font-family: 'Nunito', sans-serif ">
+                    <div>
+                        <select class="custom-select" class="form-control" required>
+                            <option>Elige tipo de documento</option>
+                            <option>Cedula de Ciudadania</option>
+                            <option>Cédula de ciudadanía</option>
+                            <option>Cédula de extranjería</option>
+                            <option>Tarjeta de identidad</option>
+                            <option>Diplomatico</option>
+                            <option>NIT</option>
+                            <option>Pasaporte</option>
+                        </select> <br>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="primernombre" placeholder="Primer Nombre" ngModel required minlength="8">
+                    </div><br>
+                    <div>
+                        <input type="text" class="form-control" name="primerapellido" placeholder="Primer Apellido" ngModel required>
+                    </div><br>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Celular" name="celular" ngModel required>
+                    </div><br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6">
+        <form (ngSubmit)="guardar(formulario)" #formulario="ngForm">
+            <div class="form-group">
+                <div class="card card-body" STYLE="text-align: left; font-family: 'Nunito', sans-serif ">
+                    <div>
+                        <input type="text" class="form-control" name="primerapellido" placeholder="Número de identificación" ngModel required>
+                    </div><br>
+                    <div>
+                        <input type="text" class="form-control" name="segundoapellido" placeholder="Segundo Nombre" ngModel required>
+                    </div><br>
+                    <div>
+                        <input type="text" class="form-control" name="segundoapellido" placeholder="Segundo Apellido" ngModel required minlength="10">
+                    </div><br>
+                    <div>
+                        <input type="email" class="form-control" #correo="ngModel" name="correo" placeholder="Correo electrónico" ngModel pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    </div><br>
+                </div>
+            </div><br>
+        </form>
+    </div>
+    <span class="col-sm-10" style="display: flex; justify-content: center">
+        <input type="checkbox"><u> 
+        <a style="cursor:pointer; font-size: 15px;" data-toggle="modal" data-target="#exampleModalLong"><u>Acepto términos y condiciones</u></a></u>
+    </span>
+</div><br>
+<span class="col-sm-15" style="display:flex; justify-content: center">
+    <button (click)="guardar(formulario)"type="submit" data-toggle="modal" data-target="#exampleModalcliente" class="btn btn-danger">ENVIAR</button>
+    <button style="display: none;margin-left: 20px"(click)="verEstudioPreliminarVehiculo()" id="botonContinuarCliente"type="button" data-toggle="modal" data-target="#exampleModalLong " class="btn btn-danger">CONTINUAR</button>
+</span>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModalcliente">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información exitosa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¡Los campos se guardaron exitosamente!</p>
+                <p>Se puede continuar con el proceso</p>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <button onclick="document.getElementById('botonContinuarCliente').style.display='block';" type="button" class="btn btn-danger"data-dismiss="modal">Aceptar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

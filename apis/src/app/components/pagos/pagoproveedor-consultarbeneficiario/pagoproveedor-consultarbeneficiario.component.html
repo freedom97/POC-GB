@@ -1,0 +1,59 @@
+<ul class="nav nav-tabs nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link " href="#/pagoproveedor3">Enviar Lote de Pago</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="#/pagoproveedor-consultarlote">Consultar estado del lote</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="#/pagoproveedor-consultardetalle">Consultar detalle del lote</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="#/pagoproveedor-consultarbeneficiario">Consultar beneficiario</a>
+    </li>
+</ul>
+<br><br>
+<h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">Consulta un beneficiario</h4><br>
+<div class="container-consulta-lote" style="display: flex; justify-content: center">
+    <form>
+        <img id="logofilial" src="./assets/img/nom.jpg" alt="Bancolombia">
+        <br>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <input id="documento" name="password" type="text" class="form-control" placeholder="DOCUMENTO" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <input id="password" name="password" type="text" class="form-control" placeholder="CÓDIGO DEL LOTE" required>
+            </div>
+        </div><br>
+        <span class="col-sm-15">
+      <button class="btn btn-secondary btn-sm" type="submit" name="approve"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Consultar</button>
+  </span><br><br><br>
+    </form>
+</div>
+<div class="collapse" id="collapseExample">
+    <div style="display:flex; justify-content: center">
+        <div class="row" style="background-color:#ececec; color:#292929; text-align: center; font-family: 'Nunito', sans-serif">
+            <div class="col-sm-6" style="padding-top: 15px;padding-bottom: 15px;">
+                <p>Tipo de identificacion: Cédula de ciudadanía</p>
+                <p>Número de identificacion: 1234567890</p>
+                <p>Nombre del beneficiario: Andrés Perez</p>
+                <p>Tipo de cuenta donde se realizó el pago: Cuenta de ahorros</p>
+
+            </div>
+            <div class="col-sm-6" style="padding-top: 15px;padding-bottom: 15px;">
+                <p>Número de cuenta del beneficiario: 24500213454</p>
+                <p>Banco al que pertence la cuenta: Bancolombia</p>
+                <p>Valor pagado al beneficiario: $3,000,000.00</p>
+                <p>Estado de pago: <strong>Satisfactorio</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<button (click)="verPagos()" class="btn btn-primary btn-lg "><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
+    height: 16px;padding-top: 2px"></i>SALIR </button>
