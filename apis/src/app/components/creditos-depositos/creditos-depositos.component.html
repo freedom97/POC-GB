@@ -1,11 +1,12 @@
-<!-- componente HTML de la línea de negocio llamada Pagos del portal de las PoC -->
+<!-- componente HTML de la línea de negocio llamada Créditos y depósitos del portal de las PoC -->
 
-<!-- Contenedor de la descripción de los productos que están en la línea de negocio Pagos -->
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Créditos y depósitos -->
+
 <div style="background-color:rgba(150, 140, 140, 0.1);width:1524px;
 height: 147px;margin-top: -23px;margin-left: -210px;background-size: cover;">
     <br>
     <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
-    font-weight: 600;text-align: center;"> Pagos</h3>
+    font-weight: 600;text-align: center;">Créditos y depósitos</h3>
     <hr>
     <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     font-weight: 400;
@@ -15,7 +16,8 @@ height: 147px;margin-top: -23px;margin-left: -210px;background-size: cover;">
     letter-spacing: -0.34px;
     text-align: center;
     color: #808285;">
-        Aquí encontrarás los productos API's de la línea de negocio Pagos, los cuales podrás utilizar como mejor se acomode a tus necesidades o a las necesidades de tu empresa.</section>
+        Aqui encontrarás los productos API's de la línea de negocio Créditos y depósitos, los cuales podrás utilizar como mejor se acomode a tus necesidades o a las necesidades de tu empresa</section>
+
 </div>
 <br>
 <!-- Contenedor del título Catálogo de productos, ubicado casi en el centro del componente HTML -->
@@ -29,48 +31,32 @@ line-height: 1.07;
 letter-spacing: -0.6px;
 color: #808285;">Catálogo de productos</h2>
 <br>
-<!-- Contenedor de las "cards o tarjetas" de los productos de la línea de negocio Pagos -->
+<!-- Contenedor de las "cards o tarjetas" de los productos de la línea de negocio Créditos y depósitos -->
 <div class="card-deck">
-    <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-        <img class="card-img-top" src="./assets/img/imgCardQR.PNG" alt="Card image cap">
+
+    <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"><img class="card-img-top" src="./assets/img/product_13.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Código QR</h5>
-            <p class="card-text" style="color: #808285;">Facilita tus transacciones implementando las increibles funcionalidades que ofrecemos en Código QR.</p>
+            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Crédito Vehículo</h5>
+            <p class="card-text">Realiza desde la comodidad de tu casa, un credito Sufi para el carro de tus sueños.</p>
+            <br>
         </div>
-        <button type="button" (click)="verQR()" class="btn btn-primary" style="color:#00448d;margin-left: 80px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
-                  height: 16px;padding-top: 2px"></i></button>
-        <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
-    </div>
-    <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-        <img src="./assets/img/imgCardQR.PNG" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Pago de nómina</h5>
-            <p class="card-text" style="color: #808285;">Con esta funcionalidad podrás solicitar</p>
-        </div>
-        <button type="button" (click)="verPagoNomina()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;background-color:white ;border: 0px;margin-left: 80px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
-        height: 16px;padding-top: 2px"></i></button>
-        <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
-    </div>
-    <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-        <img class="card-img-top" src="./assets/img/product_12.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Pago a proveedores</h5>
-            <p class="card-text" style="color: #808285;">APIs que brindan la oportunidad de realizar el pago a tus proveedores</p>
-        </div>
-        <button type="button" (click)="verPagoNomina()" class="btn btn-primary" style="color:#00448d;margin-left: 80px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
-                  height: 16px;padding-top: 2px"></i></button>
-        <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+        <button (click)="verPagoTerceros()" type="button" class="btn btn-primary" style="color:#00448d;margin-left: 390px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+            height: 16px;padding-top: 2px;"></i></button>
+        <p class="card-text" style="color: #808285;"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+
 
     </div>
+
+
     <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
         <img class="card-img-top" src="./assets/img/product_11.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Pago a terceros</h5>
-            <p class="card-text" style="color: #808285;">APIs que brindan la oportunidad de realizar el pago a terceros</p>
+            <h5 class="card-title">Crédito Moto</h5>
+            <p class="card-text">APIs que brindan la oportunidad de realizar el pago a terceros</p>
         </div>
-        <button type="button" (click)="verPagoNomina()" class="btn btn-primary" style="color:#00448d;margin-left: 80px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
-                  height: 16px;padding-top: 2px"></i></button>
-        <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+        <button (click)="verPagoTerceros()" type="button" class="btn btn-primary" style="color:#00448d;margin-left: 390px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+          height: 16px;padding-top: 2px;"></i></button>
+        <p class="card-text" style="color: #808285;"><small class="text-muted ">última actualización hace 3 minutos</small></p>
 
     </div>
 </div>

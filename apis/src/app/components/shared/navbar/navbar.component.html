@@ -1,4 +1,7 @@
-<nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+<nav role="navigation" class="navbar navbar-expand-lg navbar-light" style="width: auto;
+height: 90px;
+box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.11), 0 1px 8px 0 rgba(0, 0, 0, 0.14);
+background-color: var(--white-0);background-size: cover;">
     <a class="navbar-brand" href="#">
         <img class="imgIcon" src="assets/img/icon_banco.png" width="220" height="50" alt="">
     </a>
@@ -6,18 +9,50 @@
           <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse" id="navbar" style="margin-top: 18px;margin-left: 5px;">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['home']"> Inicio </a>
+                <a class="nav-link" [routerLink]="['familias']" style="
+               font-family: 'OpenSans', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: -0.3px;
+                text-align: center;
+                color: #808285;"> Inicio </a>
             </li>
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['home']"> <u>Salir</u> <i class="fas fa-sign-out-alt" style="margin-left: 5px;"></i></a>
+
+            <li class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" style="border: 0px solid white;
+                background-color: white;
+                font-family: 'OpenSans', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+                margin-top: 13.5px;
+                margin-left: 45px;
+                color: #808285; " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Líneas de negocio
+            </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="margin-left: 45px;">
+                    <button class="dropdown-item" [routerLink]="['pagos']" type="button">Pagos</button>
+                    <button class="dropdown-item" [routerLink]="['creditos-depositos']" type="button">Créditos y depósitos</button>
+                    <button class="dropdown-item" [routerLink]="['']" type="button">Servicios al consumidor</button>
+                </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-            <button type="button" class="btn btn-secondary">Buscar</button>
+        <form class="form-inline" style="margin-top: 15px;">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar productos" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-warning" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
         </form>
+
+
     </div>
 </nav>

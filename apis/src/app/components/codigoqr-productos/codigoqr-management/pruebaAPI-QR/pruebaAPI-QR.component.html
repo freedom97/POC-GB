@@ -1,22 +1,56 @@
-<div style="background-color: rgba(150, 140, 140, 0.1);">
-    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 34px;text-align: center;">API Saldos y Movimientos</h3>
+<!-- componente HTML de la línea de negocio llamada Créditos y depósitos del portal de las PoC -->
+
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Créditos y depósitos -->
+<br>
+<br>
+
+
+<div style="background-color:white;width:70%;
+height: 107px;margin-top: -23px;margin-left: -150px;background-size: cover;">
+    <br>
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
+    font-weight: 600;text-align: center;">Código QR</h3>
     <hr>
-    <p class="descripcion">
-        La familia de API’s de Saldos y movimientos permite conciliar automáticamente las cuentas de Bancolombia dentro de la plataforma Alegra, al obtener información sobre los saldos y movimientos de forma rápida, automática y en tiempo real.<br><u>Características principales:</u>
-        <br>
-        <li>Consulta de cuentas de depósito de Bancolombia asociados a un cliente de Alegra.</li>
-        <li>Consulta del saldo y movimientos de la cuenta en tiempo real.</li>
-        <li>Conciliación de movimientos para un periodo de tiempo personalizado</li>
-    </p>
+
+
 </div>
-<br><br><br><br><br><br><br><br>
-<!-- <span>
-    <button (click)="verFamilias()"style="margin-right: 30px" class="btn btn-primary btn-lg "><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;height: 16px;padding-top: 2px"></i>REGRESAR </button>
-    <button type="button "(click)="verAuthConciliacionBancaria()" class="btn btn-primary"> Ingresar <i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;height: 16px;padding-top: 2px"></i></button>
-</span> -->
-<br><br><br>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of birth</label>
+                <div class="input-group">
+                    <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{closeResult}}</pre>
+
+<!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
+    height: 16px;padding-top: 2px"></i>REGRESAR </button> -->
 <!-- Contenedor del "footer o pie de página" del portal PoC-->
-<br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<!-- Contenedor del "footer o pie de página" del portal PoC-->
 <footer class="detalle-footer" role="contentinfo">
     <div class="region region-footer">
         <div class="region-inner clearfix">
@@ -67,3 +101,12 @@
         </div>
     </div>
 </footer>
+<style>
+    .circulo {
+        width: 250px;
+        height: 250px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+</style>

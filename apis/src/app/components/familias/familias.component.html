@@ -1,116 +1,173 @@
-<h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 33px">Familias de Primer Orden </h3>
-<hr>
-<h4 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold">Descripción</h4>
-<p class="animated fadeIn fast" style="color: #292929">Aquí encontrarás, teniendo en cuenta su afinidad funcional, una variedad de Familias de API's con las que se han desarrollado ideas innovadoras, para que puedas evidenciar el potencial que tenemos para brindarte por medio de las API's.</p>
-<br>
-<br>
-<br>
-<div class="card-deck">
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_14.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Información de Cliente</h5>
-            <p class="card-text">APIs que brindan analitica para tu negocio.</p>
-            <br>
-            <button (click)="VerFamiliaAnalitica()" type="button" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
-                height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_01.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Seguros</h5>
-            <p class="card-text">Esta API contiene información de los seguros que usted puede obtener</p>
-            <br>
-            <button (click)="verFamiliaSeguros()" class="btn btn-primary" type=" button"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
-                height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_13.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Credito de vehículo</h5>
-            <p class="card-text">Realiza el estudio para el crédito de vehiculo Sufi</p>
-            <br>
-            <button (click)="verEstudioPreliminar()" type="button" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
-                height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
-        </div>
-    </div>
+<!-- componente HTML que se muestra por defecto al ejecutar o comenzar el portal de las PoC -->
+
+<!-- Contenedor de la descripción de Casos de uso de API's públicas -->
+<div class="container-rectangle" style="background-color: rgba(150, 140, 140, 0.1);width:1524px;
+height: 247px;margin-top: -23px;margin-left: -210px;background-size: cover;">
+    <br>
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: 400; font-size: 28px; margin-left: 120px;margin-top: 10px; ">
+        Casos de uso </h3>
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: 800; font-size: 38px; margin-left: 120px;margin-top: 10px; ">
+        API's públicas </h3>
+    <hr>
+    <p class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;color: #808285;margin-left: 120px;font-size: 16px;font-weight: 400;">Si crees que la tecnología es el medio para brindar mejores experiencias al cliente, si has pensado que deberían </p>
+    <p class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;color: #808285;margin-left: 120px;margin-top:-7px ;font-size: 16px;font-weight: 400;">
+        exponer alguna capacidad de negocio para satisfacer una necesidad o si no sabes qué es Open Banking...</p>
+    <p class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;color: #808285;margin-left: 120px;margin-top:-7px ;font-size: 16px;font-weight: 600;">
+        Te invitamos a que explores y conozcas todo el potencial que tenemos para brindarte mediante API's.</p>
 </div>
 <br>
-<div class="card-deck">
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_11.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Saldos y movimientos</h5>
-            <p class="card-text">APIs para la información de las cuentas de nuestros clientes, asi tendrás clara la información más relevante </p>
-            <br>
-            <button type="button" (click)="VerConciliacionBancaria()" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
+<!-- Contenedor del título Líneas de negocio, ubicado casi en el centro del componente HTML -->
+<h2 class="animated fadeIn fast" style="font-family: Nunito;
+font-size: 28px;
+margin-left: -904px;
+font-weight: bold;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.07;
+letter-spacing: -0.6px;
+color: #808285;">Líneas de negocio</h2>
+<br>
+<br>
+
+<!-- Contenedor del "carrusel" de las diferentes líneas de negocio del portal PoC, ubicado
+  casi en el centro del componente HTML -->
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide" id="slide2"> <img class="card-img-top" src="./assets/img/product_11.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Créditos y depósitos</h5>
+                <p class="card-text">APIs para la información de las cuentas de nuestros clientes, asi tendrás clara la información más relevante </p>
+                <br>
+                <button type="button" (click)="verCreditosDepositos()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+                  height: 16px;padding-top: 2px"></i></button>
+                <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+            </div>
+
+        </div>
+        <div class="swiper-slide" id="slide2"> <img class="card-img-top" src="./assets/img/product_11.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Saldos y movimientos</h5>
+                <p class="card-text">APIs para la información de las cuentas de nuestros clientes, asi tendrás clara la información más relevante </p>
+                <br>
+                <button type="button" (click)="VerConciliacionBancaria()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
                 height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+            </div>
+
         </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_12.png " alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Ofertas personalizadas</h5>
-            <p class="card-text">Aqui información sobre el API de ofertas personalizadas, realiza tus pagos desde el exterior de forma segura</p>
-            <br>
-            <button (click)="verOfertasPersonalizadas()" type="button" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
-                height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
+
+        <div class="swiper-slide"><img class="card-img-top" src="./assets/img/product_01.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Pagos</h5>
+                <p class="card-text">APIs que brindan capacidades para realizar el pago de nómina a tus empleado o beneficiarios
+                </p>
+                <br>
+                <button type="button" (click)="verFamiliaPagos()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+                          height: 16px;padding-top: 2px"></i></button>
+                <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_09.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Requerimientos Legales</h5>
-            <p class="card-text">APIs que brindan capacidades para que realices tus procesos de embargos y desembargos.</p>
-            <br>
-            <button type="button" (click)="verFamiliaRequerimientos()" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
-                height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
-        </div>
-    </div>
-</div><br>
-<div class="card-deck">
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_01.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Pagos</h5>
-            <p class="card-text">APIs que brindan capacidades para realizar el pago de nómina a tus empleado o beneficiarios</p>
-            <br>
-            <button type="button" (click)="verFamiliaPagos()" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
+        <div class="swiper-slide"><img class="card-img-top" src="./assets/img/product_01.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Servicios al consumidor</h5>
+                <p class="card-text">APIs que brindan capacidades para realizar el pago de nómina a tus empleado o beneficiarios
+                </p>
+                <br>
+                <button type="button" (click)="verFamiliaPagos()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
                         height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_14.png " alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Vinculación Digital</h5>
-            <p class="card-text">Aqui información sobre el API de ofertas personalizadas, realiza tus pagos desde el exterior de forma segura</p>
-            <br>
-            <button (click)="verVinculacionDigital()" type="button" class="btn btn-primary"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
+        <div class="swiper-slide"><img class="card-img-top" src="./assets/img/product_01.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Pagos</h5>
+                <p class="card-text">APIs que brindan capacidades para realizar el pago de nómina a tus empleado o beneficiarios
+                </p>
+                <br>
+                <button type="button" (click)="verFamiliaPagos()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
                         height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+            </div>
         </div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
     </div>
-    <div class="card">
-        <img class="card-img-top" src="./assets/img/product_09.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title" style="font-family: 'Nunito', sans-serif">Cuentas</h5>
-            <p class="card-text">APIs que brindan capacidades para que realices tus procesos de embargos y desembargos.</p>
-            <br>
-            <button type="button" class="btn btn-opacity"> Ver familia<i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;
-                        height: 16px;padding-top: 2px"></i></button>
-            <p class="card-text"><small class="text-muted ">Last updated 3 mins ago</small></p>
-        </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination">
+
+    </div>
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-next">
+
+    </div>
+    <div class="swiper-button-prev">
+
     </div>
 </div>
+
+<br>
+<!-- Contenedor de las "cards o tarjetas" de los productos en producción del portal PoC, ubicado
+  debajo del carrusel -->
+<div class="container-rectangle" style="background-color:rgba(150, 140, 140, 0.1); width: 1530px;
+height: 800px; margin-left: -217px;background-size: cover;">
+    <br>
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 76px; margin-left: 120px;margin-top: 10px;font-stretch: normal;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0.83;
+  letter-spacing: -0.64px; ">Productos </h3>
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-weight: bold; font-size: 76px; margin-left: 120px;margin-top: 10px;font-stretch: normal;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0.83;
+  letter-spacing: -0.64px; ">en producción </h3>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card-deck" style=" width: 1200px;margin-left: 200px;">
+        <div class="card" style="border: 0px;background-color:rgba(150, 140, 140, 0.1) ;">
+            <img src="./assets/img/produccion.PNG" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Envío de Remesas</h5>
+                <p class="card-text" style="color: #808285;">Con esta funcionalidad podrás enviar tu dinero desde un país extranjero a Colombia.</p>
+            </div>
+            <button type="button" (click)="VerConciliacionBancaria()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;background-color:rgba(255, 255, 255, 0) ;border: 0px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+              height: 16px;padding-top: 2px"></i></button>
+            <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+        </div>
+        <div class="card" style="border: 0px;background-color:rgba(150, 140, 140, 0.1) ;">
+            <img src="./assets/img/produccion.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Crédito de Vehículo</h5>
+                <p class="card-text" style="color: #808285;">Con esta funcionalidad podrás solicitar un crédito de vehículo desde la comodidad de tu casa.</p>
+            </div>
+            <button type="button" (click)="VerConciliacionBancaria()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;background-color:rgba(255, 255, 255, 0) ;border: 0px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+              height: 16px;padding-top: 2px"></i></button>
+            <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+        </div>
+        <div class="card" style="border: 0px;background-color:rgba(150, 140, 140, 0.1) ;">
+            <img src="./assets/img/produccion.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Botón Bancolombia</h5>
+                <p class="card-text" style="color: #808285;">Con esta funcionalidad podrás solicitar</p>
+            </div>
+            <button type="button" (click)="VerConciliacionBancaria()" class="btn btn-primary" style="color:#00448d;margin-left: 108.8px;background-color:rgba(255, 255, 255, 0) ;border: 0px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+              height: 16px;padding-top: 2px"></i></button>
+            <p class="card-text"><small class="text-muted ">última actualización hace 3 minutos</small></p>
+        </div>
+    </div>
+
+
+
+
+</div>
+<!-- Contenedor del "footer o pie de página" del portal PoC-->
 <br><br><br>
 <footer class="detalle-footer" role="contentinfo">
     <div class="region region-footer">
@@ -118,12 +175,108 @@
             <div id="block-block-1" class="block block-block no-title odd first last block-count-5 block-region-footer block-1">
                 <div class="block-inner clearfix">
                     <div class="block-content content no-title">
-                        <div class="footer"><span class="centered_link"><a href="https://www.grupobancolombia.com/wps/portal/personas/condiciones-de-uso">Terms of use</a> </span><span class="centered_link"><a href="https://www.grupobancolombia.com/wps/portal/personas/documentos-legales">Privacy policy</a></span>
+                        <div class="footer">
+                            <p style="font-family: Nunito;
+                            font-size: 16px;
+                            font-weight: bold;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.14;
+                            letter-spacing: -0.39px;
+                            color: #808285;">Dirección de Analítica y Gobierno de Información</p>
+                            <p style="font-family: Nunito;
+                            font-size: 16px;
+                            font-weight: bold;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.14;
+                            letter-spacing: -0.39px;
+                            color: #808285;">Open Banking y API's - OBA</p>
+                            <p style="font-family: OpenSans;
+                            font-size: 14px;
+                            font-weight: 600;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.5;
+                            letter-spacing: -0.3px;
+                            color: #808285;">Contacto: oba@bancolombia.com.co</p>
+                            <h2 style="font-family: Nunito;
+                            font-size: 14px;
+                            font-weight: bold;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.5;
+                            letter-spacing: -0.3px;
+                            color: #ffffff;
+                            position: relative;
+                            left: 550px;
+                            top: -28px;
+                            ">Copyright <i class="far fa-copyright"></i> Grupo Bancolombia</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <img class="img-footer" src="https://development-bancolombiabluemix-dev.developer.us.apiconnect.ibmcloud.com/sites/development-bancolombiabluemix-dev.developer.us.apiconnect.ibmcloud.com/themes/banka_connect_theme/images/logo-bancolombia-footer.svg" alt="">
 </footer>
+<!-- Componente CSS o de estilos para el "carrusel" o "swiper" de este HTML -->
+<style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        background: #fff;
+        /* Center slide text vertically */
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #img1 {
+        width: 80%;
+        position: relative;
+        margin-top: 3%;
+        left: -1%;
+    }
+
+    #titleQR {
+        font-size: 15px;
+    }
+
+    #p1QR {
+        font-size: 14px;
+        margin-top: -3%;
+    }
+
+    #p2QR {
+        font-size: 14px;
+        margin-top: -3%;
+    }
+
+    #p3QR {
+        font-size: 14px;
+        margin-top: -3%;
+    }
+</style>

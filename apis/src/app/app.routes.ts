@@ -1,9 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
 import { FamiliasComponent } from './components/familias/familias.component';
 import { FamiliaAgregacionComponent } from './components/familia-agregacion/familia-agregacion.component';
 import { CargaDocumentosPymeComponent } from './components/carga-documentos-pyme/carga-documentos-pyme.component';
-import { FamiliaAnaliticaComponent } from './components/familia-analitica/familia-analitica.component';
 import { EnvioDocumentosPymeComponent } from './components/envio-documentos-pyme/envio-documentos-pyme.component';
 import { DetalleExtractoComponent } from './components/detalle-extracto/detalle-extracto.component';
 import { RecomendacionComponent } from './components/recomendacion/recomendacion.component';
@@ -12,34 +10,26 @@ import { CuentaCorrienteComponent } from './components/cuenta-corriente/cuenta-c
 import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
 import { CuentaInversionComponent } from './components/cuenta-inversion/cuenta-inversion.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
-import { FamiliaEmbargosComponent } from './components/familia-embargos/familia-embargos.component';
-import { RequerimientosLegalesComponent } from './components/requerimientos-legales/requerimientos-legales.component';
-import { EmbargosDesembargosComponent } from './components/embargos-desembargos/embargos-desembargos.component';
-import { EmbargosDesembargos2Component} from './components/embargos-desembargos2/embargos-desembargos2.component'
-import { EmbargosDesembargos3Component } from './components/embargos-desembargos3/embargos-desembargos3.component';
-import { EmbargosDesembargos4Component } from './components/embargos-desembargos4/embargos-desembargos4.component';
-import { FamiliaSegurosComponent } from './components/familia-seguros/familia-seguros.component';
 import { SoatComponent } from './components/soat/soat.component';
 import { RenovarSoatComponent } from './components/renovar-soat/renovar-soat.component';
 import { RenovarSoat2Component } from './components/renovar-soat/renovar-soat2/renovar-soat2.component';
 import { AdquirirSoatComponent } from './components/adquirir-soat/adquirir-soat.component';
-import { EstudioPreliminarComponent } from './components/credito-vehiculo/estudio-preliminar/estudio-preliminar.component';
-import { EstudioPreliminar2Component } from './components/credito-vehiculo/estudio-preliminar/estudio-preliminar2/estudio-preliminar2.component';
-import { EstudioPreliminarClienteComponent } from './components/credito-vehiculo/estudio-preliminar/estudio-preliminar-cliente/estudio-preliminar-cliente.component';
-import { EstudioPreliminarVehiculoComponent } from './components/credito-vehiculo/estudio-preliminar/estudio-preliminar-vehiculo/estudio-preliminar-vehiculo.component';
-import { EstudioPreliminarComercioComponent } from './components/credito-vehiculo/estudio-preliminar/estudio-preliminar-comercio/estudio-preliminar-comercio.component';
-import { EstudioPreliminarActividadComponent } from './components/credito-vehiculo/estudio-preliminar/estudio-preliminar-actividad/estudio-preliminar-actividad.component';
-import { EstudioFinalClienteComponent } from './components/credito-vehiculo/estudio-final/estudio-final-cliente/estudio-final-cliente.component';
-import { EstudioFinalEconomicosComponent } from './components/credito-vehiculo/estudio-final/estudio-final-economicos/estudio-final-economicos.component';
-import { EstudioFinalFinancierosComponent } from './components/credito-vehiculo/estudio-final/estudio-final-financieros/estudio-final-financieros.component';
-import { EstudioManualSuplementariosComponent } from './components/credito-vehiculo/estudio-manual/estudio-manual-suplementarios/estudio-manual-suplementarios.component';
-import { EstudioManualCompaniaComponent } from './components/credito-vehiculo/estudio-manual/estudio-manual-compania/estudio-manual-compania.component';
-import { EstudioManualReferenciasComponent } from './components/credito-vehiculo/estudio-manual/estudio-manual-referencias/estudio-manual-referencias.component';
+import { EstudioPreliminarComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar.component';
+import { EstudioPreliminar2Component } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar2/estudio-preliminar2.component';
+import { EstudioPreliminarClienteComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar-cliente/estudio-preliminar-cliente.component';
+import { EstudioPreliminarVehiculoComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar-vehiculo/estudio-preliminar-vehiculo.component';
+import { EstudioPreliminarComercioComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar-comercio/estudio-preliminar-comercio.component';
+import { EstudioPreliminarActividadComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar-actividad/estudio-preliminar-actividad.component';
+import { EstudioFinalClienteComponent } from './components/creditos-depositos/credito-vehiculo/estudio-final/estudio-final-cliente/estudio-final-cliente.component';
+import { EstudioFinalEconomicosComponent } from './components/creditos-depositos/credito-vehiculo/estudio-final/estudio-final-economicos/estudio-final-economicos.component';
+import { EstudioFinalFinancierosComponent } from './components/creditos-depositos/credito-vehiculo/estudio-final/estudio-final-financieros/estudio-final-financieros.component';
+import { EstudioManualSuplementariosComponent } from './components/creditos-depositos/credito-vehiculo/estudio-manual/estudio-manual-suplementarios/estudio-manual-suplementarios.component';
+import { EstudioManualCompaniaComponent } from './components/creditos-depositos/credito-vehiculo/estudio-manual/estudio-manual-compania/estudio-manual-compania.component';
+import { EstudioManualReferenciasComponent } from './components/creditos-depositos/credito-vehiculo/estudio-manual/estudio-manual-referencias/estudio-manual-referencias.component';
 import { ConciliacionBancariaComponent } from './components/conciliacion-bancaria/conciliacion-bancaria.component';
 import { AuthConciliacionBancariaComponent } from './components/auth-conciliacion-bancaria/auth-conciliacion-bancaria.component';
 import { CuentasConciliacionBancariaComponent } from './components/cuentas-conciliacion-bancaria/cuentas-conciliacion-bancaria.component';
 import { TransaccionesConciliacionBancariaComponent } from './components/transacciones-conciliacion-bancaria/transacciones-conciliacion-bancaria.component';
-import { OfertasPersonalizadasComponent } from './components/ofertas-personalizadas/ofertas-personalizadas.component';
 import { OfertasComercialesComponent } from './components/ofertas-comerciales/ofertas-comerciales.component';
 import { OfertasComercialesBancolombiaComponent } from './components/ofertas-comerciales-bancolombia/ofertas-comerciales-bancolombia.component';
 import { OfertasComercialesBancolombia2Component } from './components/ofertas-comerciales-bancolombia2/ofertas-comerciales-bancolombia2.component';
@@ -63,17 +53,19 @@ import { Pagoterceros3Component } from './components/pagos/pagoterceros3/pagoter
 import { PagotercerosConsultarloteComponent } from './components/pagos/pagoterceros-consultarlote/pagoterceros-consultarlote.component';
 import { PagotercerosConsultardetalleComponent } from './components/pagos/pagoterceros-consultardetalle/pagoterceros-consultardetalle.component';
 import { PagotercerosConsultarbeneficiarioComponent } from './components/pagos/pagoterceros-consultarbeneficiario/pagoterceros-consultarbeneficiario.component';
-import { VinculacionDigitalComponent } from './components/vinculacion-digital/vinculacion-digital.component';
-import { VinculacionDigital2Component } from './components/vinculacion-digital2/vinculacion-digital2.component';
-import { VinculacionDigital3Component } from './components/vinculacion-digital3/vinculacion-digital3.component';
-import { VinculacionDigital4Component } from './components/vinculacion-digital4/vinculacion-digital4.component';
+import { CodigoQrManagement } from './components/codigoqr-productos/codigoqr-management/codigoqr-management.component';
+import { CreditosDepositos } from './components/creditos-depositos/creditos-depositos.component';
+import { pruebaAPIQR } from './components/codigoqr-productos/codigoqr-management/pruebaAPI-QR/pruebaAPI-QR.component';
+
+
+
+
+
 
 const APP_ROUTES: Routes = [
-    {path: 'home', component: HomeComponent},
     {path: 'familias', component: FamiliasComponent},
     {path: 'familia-agregacion', component: FamiliaAgregacionComponent},
     {path: 'carga-documentos-pyme', component: CargaDocumentosPymeComponent},
-    {path: 'familia-analitica', component: FamiliaAnaliticaComponent},
     {path: 'envio-documentos-pyme', component: EnvioDocumentosPymeComponent},
     {path: 'detalle-extracto', component: DetalleExtractoComponent},
     {path: 'recomendacion', component: RecomendacionComponent},
@@ -82,13 +74,6 @@ const APP_ROUTES: Routes = [
     {path: 'tarjeta-credito', component: TarjetaCreditoComponent},
     {path: 'cuenta-inversion', component: CuentaInversionComponent},
     {path: 'contactanos', component: ContactanosComponent},
-    {path: 'familia-embargos', component: FamiliaEmbargosComponent},
-    {path: 'requerimientos-legales', component: RequerimientosLegalesComponent},
-    {path: 'embargos-desembargos', component: EmbargosDesembargosComponent},
-    {path: 'embargos-desembargos2', component: EmbargosDesembargos2Component},
-    {path: 'embargos-desembargos3', component: EmbargosDesembargos3Component},
-    {path: 'embargos-desembargos4', component: EmbargosDesembargos4Component},
-    {path: 'familia-seguros', component: FamiliaSegurosComponent},
     {path: 'ver-soat', component: SoatComponent},
     {path: 'renovar-soat', component: RenovarSoatComponent},
     {path: 'renovar-soat2', component: RenovarSoat2Component},
@@ -110,7 +95,6 @@ const APP_ROUTES: Routes = [
     {path: 'auth-conciliacion-bancaria', component: AuthConciliacionBancariaComponent},
     {path: 'cuentas-conciliacion-bancaria', component: CuentasConciliacionBancariaComponent},
     {path: 'transacciones-conciliacion-bancaria', component: TransaccionesConciliacionBancariaComponent},
-    {path: 'ofertas-personalizadas', component: OfertasPersonalizadasComponent},
     {path: 'ofertas-comerciales', component: OfertasComercialesComponent},
     {path: 'ofertas-comerciales-bancolombia', component: OfertasComercialesBancolombiaComponent},
     {path: 'ofertas-comerciales-bancolombia2', component: OfertasComercialesBancolombia2Component},
@@ -133,10 +117,11 @@ const APP_ROUTES: Routes = [
     {path: 'pagoterceros-consultarlote',  component: PagotercerosConsultarloteComponent},
     {path: 'pagoterceros-consultardetalle',  component: PagotercerosConsultardetalleComponent},
     {path: 'pagoterceros-consultarbeneficiario',  component: PagotercerosConsultarbeneficiarioComponent},
-    {path: 'vinculacion-digital', component: VinculacionDigitalComponent},
-    {path: 'vinculacion-digital2', component: VinculacionDigital2Component},
-    {path: 'vinculacion-digital3', component: VinculacionDigital3Component},
-    {path: 'vinculacion-digital4', component: VinculacionDigital4Component},
+    {path: 'codigoqr-management', component: CodigoQrManagement},
+    {path: 'creditos-depositos', component: CreditosDepositos},
+    {path: 'pruebaAPI-qr', component: pruebaAPIQR},
+
+
 
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
