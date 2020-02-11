@@ -1,10 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { BootstrapModalModule } from "ng2-bootstrap-modal";
 import { APP_ROUTING } from "./app.routes";
 import { ChartsModule } from "ng2-charts";
-import { FormsModule } from "@angular/forms";
+import { FormsModule} from "@angular/forms";
 import { FileUploadModule } from "ng2-file-upload";
 import { FileUploader } from "ng2-file-upload";
 import { AngularFileUploaderModule } from "angular-file-uploader";
@@ -71,7 +71,10 @@ import { PagotercerosConsultarbeneficiarioComponent } from "./components/pagos/p
 import { CodigoQrManagement } from './components/codigoqr-productos/codigoqr-management/codigoqr-management.component';
 import { CreditosDepositos } from './components/creditos-depositos/creditos-depositos.component';
 import { pruebaAPIQR } from './components/codigoqr-productos/codigoqr-management/pruebaAPI-QR/pruebaAPI-QR.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material';
+import {MatStepperModule} from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -145,11 +148,18 @@ import { pruebaAPIQR } from './components/codigoqr-productos/codigoqr-management
     FormsModule,
     AngularFileUploaderModule,
     FileUploadModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatStepperModule,
+    ReactiveFormsModule,
 
   ],
   providers: [AutenticacionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  ],
 })
 export class AppModule {}
 export class AppRoutingModule {}

@@ -40,11 +40,11 @@ height: 147px;margin-top: -23px;margin-left: -150px;background-size: cover;">
     <img class="circulo" src="./assets/img/imgCardQR.PNG" alt="Card image cap">
 </div>
 <!-- Botón o "Select" para desplegar más información que necesite el cliente de la PoC de QR Code" -->
-<form class="form-inline" style="position: relative; left: 75%;margin-top: 5%;">
+<form class="form-inline" style="position: relative; left: 60%;margin-top: 5%;">
     <select class="form-control" id="exampleFormControlSelect1">
     <option>Más información</option>
-    <option>Encargado: Sara Cardona</option>
-    <option>Correo: oba@bancolombia.com.co</option>
+    <option>Definiciones funcionales y de negocio: Sara Cardona</option>
+    <option>Documentación técnica: https://developer.bancolombia.com/es/node/2289 </option>
   </select>
 </form>
 
@@ -102,8 +102,70 @@ height: 147px;margin-top: -23px;margin-left: -150px;background-size: cover;">
     </i>
     </ul>
 </div>
-<!-- Botón para comenzar la prueba de concepto -->
-<button type="button" class="btn btn-primary btn-lg" style="text-transform: uppercase; box-sizing: border-box;
+<!-- Botón para comenzar la prueba de concepto y tambien apertura al popup o ventana emergente de la PoC-->
+
+<ng-template #content let-modal>
+
+    <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
+        <h4 class="modal-title" id="modal-basic-title">Prueba de concepto API QR Code Management</h4>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+  <br>
+</button>
+    </div>
+
+    <div class="modal-body" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+        <button mat-raised-button (click)="isOptional = !isOptional">
+        {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+      </button>
+
+        <mat-horizontal-stepper linear #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <mat-form-field>
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <mat-form-field>
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                    </mat-form-field>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+    </div>
+
+    <div class="modal-footer" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <br>
+    </div>
+
+
+</ng-template>
+
+<button class="btn btn-primary btn-lg" style="box-sizing: border-box;
 display: inline-block;  text-align: center;
 text-decoration: none; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.16);
 width: 248px;
@@ -112,7 +174,24 @@ border-radius: 10000px;
 background-color: #ffd200;
 position: relative;
 left: -50%;
-margin-top: 6%;" (click)="conocerMas()">Comenzar</button>
+margin-top: 6%;" (click)="open(content)">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
+              height: 16px;padding-top: 2px"></i></button>
+
+
+<hr>
+<!-- Comentario antes del pie de página -->
+<p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">*Esta es una simulación de la experiencia que puede tener el cliente según la funcionalidad de la API, sin embargo no garantiza que los aliados/consumidores lo implementen de la misma forma.</p>
+
+<pre>{{closeResult}}</pre>
+
 <br><br><br><br><br>
 <!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
     height: 16px;padding-top: 2px"></i>REGRESAR </button> -->
@@ -171,11 +250,22 @@ margin-top: 6%;" (click)="conocerMas()">Comenzar</button>
     </div>
 </footer>
 <style>
+    /*Estilo para la imágen circular  */
+
     .circulo {
         width: 250px;
         height: 250px;
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
         border-radius: 50%;
+    }
+    /* Estilo para el popup o ventana emergente de la PoC */
+
+    .mat-stepper-horizontal {
+        margin-top: 8px;
+    }
+
+    .mat-form-field {
+        margin-top: 16px;
     }
 </style>
