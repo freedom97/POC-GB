@@ -24,8 +24,8 @@ background-color: var(--white-0);background-size: cover;">
                 color: #808285;"> Inicio </a>
             </li>
 
-            <li class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" style="border: 0px solid white;
+            <li>
+                <button mat-button [matMenuTriggerFor]="lineasNegocio" style="border: 0px solid white;
                 background-color: white;
                 font-family: 'OpenSans', sans-serif;
                 font-size: 16px;
@@ -33,14 +33,30 @@ background-color: var(--white-0);background-size: cover;">
                 text-align: center;
                 margin-top: 13.5px;
                 margin-left: 45px;
-                color: #808285; " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Líneas de negocio
-            </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="margin-left: 45px;">
-                    <button class="dropdown-item" [routerLink]="['pagos']" type="button">Pagos</button>
-                    <button class="dropdown-item" [routerLink]="['creditos-depositos']" type="button">Créditos y depósitos</button>
-                    <button class="dropdown-item" [routerLink]="['']" type="button">Servicios al consumidor</button>
-                </div>
+                color: #808285; ">Líneas de negocio</button>
+                <mat-menu #lineasNegocio="matMenu">
+                    <button mat-menu-item [matMenuTriggerFor]="pagos" [routerLink]="['pagos']">Pagos</button>
+                    <button mat-menu-item [matMenuTriggerFor]="creditosDepositos" [routerLink]="['creditos-depositos']">Créditos y depósitos</button>
+                    <button mat-menu-item [matMenuTriggerFor]="serviciosConsumidor" [routerLink]="['']">Servicios al consumidor</button>
+
+                </mat-menu>
+                <mat-menu #pagos="matMenu">
+                    <button mat-menu-item [routerLink]="['codigoqr-management']">Código QR</button>
+                    <button mat-menu-item>...</button>
+                    <button mat-menu-item>...</button>
+
+                </mat-menu>
+                <mat-menu #creditosDepositos="matMenu">
+                    <button mat-menu-item [routerLink]="['pagoterceros']">Crédito de Vehículo</button>
+                    <button mat-menu-item [routerLink]="['pagoterceros']">Cuenta Depósito</button>
+                    <button mat-menu-item>...</button>
+
+                </mat-menu>
+                <mat-menu #serviciosConsumidor="matMenu">
+                    <button mat-menu-item>...</button>
+
+                </mat-menu>
+
             </li>
         </ul>
         <form class="form-inline" style="margin-top: 15px;">

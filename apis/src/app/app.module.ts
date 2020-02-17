@@ -4,7 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BootstrapModalModule } from "ng2-bootstrap-modal";
 import { APP_ROUTING } from "./app.routes";
 import { ChartsModule } from "ng2-charts";
-import { FormsModule} from "@angular/forms";
+import { FormsModule} from '@angular/forms';
 import { FileUploadModule } from "ng2-file-upload";
 import { FileUploader } from "ng2-file-upload";
 import { AngularFileUploaderModule } from "angular-file-uploader";
@@ -72,9 +72,16 @@ import { CodigoQrManagement } from './components/codigoqr-productos/codigoqr-man
 import { CreditosDepositos } from './components/creditos-depositos/creditos-depositos.component';
 import { pruebaAPIQR } from './components/codigoqr-productos/codigoqr-management/pruebaAPI-QR/pruebaAPI-QR.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material';
+import { MatButtonModule } from '@angular/material';
 import {MatStepperModule} from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatMenuModule} from '@angular/material/menu';
+
+
+
 
 @NgModule({
   declarations: [
@@ -136,7 +143,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PagotercerosConsultarbeneficiarioComponent,
     CodigoQrManagement,
     CreditosDepositos,
-    pruebaAPIQR
+    pruebaAPIQR,
+
 
   ],
   imports: [
@@ -153,9 +161,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatStepperModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatMenuModule
+
+
 
   ],
   providers: [AutenticacionService],
+
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

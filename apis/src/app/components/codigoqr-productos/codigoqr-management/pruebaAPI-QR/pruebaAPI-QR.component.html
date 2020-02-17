@@ -4,16 +4,161 @@
 <br>
 <br>
 
+<div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 280%;position: relative;left: -90%">
+        <div class="modal-header">
+            <h5 class="modal-title">Prueba de concepto API QR Code Management</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverQR()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+        <div class="modal-body">
 
-<div style="background-color:white;width:70%;
-height: 107px;margin-top: -23px;margin-left: -150px;background-size: cover;">
-    <br>
-    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
-    font-weight: 600;text-align: center;">Código QR</h3>
-    <hr>
+            <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+        {{!isLinear ? 'Campos obligatorios habilitados' : 'Campos obligatorios deshabilitados'}}
+      </button>
+            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <ng-template matStepLabel>Paso 1</ng-template>
+                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;">
+                          <option selected>Tipo de documento del cliente titular de la cuenta destino</option>
+                          <option value="1">NIT</option>
+                          <option value="2">Cédula de Ciudadanía</option>
+                          <option value="3">Otra opción</option>
+                          </select>
+                        <mat-form-field style="top: 60px;left: -450px;width: 230px;">
+                            <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular:</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando" formControlName="firstCtrl2" required>
+
+                        </mat-form-field>
+
+                        <form style="margin-top: 7%;margin-left: 28%;">
+                            <select class="custom-select" style="width: 36%;margin-left: -43%;">
+                            <option selected>Tipo de cuenta destino de la transferencia</option>
+                            <option value="1">NIT</option>
+                            <option value="2">Cédula de Ciudadanía</option>
+                            <option value="3">Otra opción</option>
+                            </select>
+
+                        </form>
+                        <mat-form-field style="top: 15px;left: 8px;width: 380px;">
+                            <mat-label id="label1" style="display: flex;">Número de cuenta destino de la transferencia:</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
 
 
+                    </form>
+                    <div>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                        <ng-template matStepLabel>Paso 2</ng-template>
+                        <mat-form-field style="top:-30px;left: 390px;width: 330px;">
+                            <mat-label>Nombre personalizado del comercio:</mat-label>
+                            <input matInput formControlName="secondCtrl" placeholder="Ejemplo: Almacenes Éxito" required>
+                        </mat-form-field>
+                        <select class="custom-select" style="width: 29%;margin-left: 4.5%;margin-top:6%;">
+                          <option selected>Categoría a la que pertenece el comercio</option>
+                          <option value="1">Retail</option>
+                          <option value="2">Otra opción</option>
+                          </select>
+
+                        <mat-form-field style="top: 110px;left: -375px;width: 330px;">
+                            <mat-label>Referencia o número de factura</mat-label>
+                            <input matInput formControlName="secondCtrl2" placeholder="Ejemplo: 2209" required>
+                        </mat-form-field>
+                        <mat-form-field style="top:16px;left: 420px;width: 330px;">
+                            <mat-label>Descripción personalizada de la factura</mat-label>
+                            <input matInput formControlName="secondCtrl3" placeholder="Ejemplo: Escoba marca x" required>
+                        </mat-form-field>
+                        <select class="custom-select" style="width: 28%;margin-left:7%;margin-top:13%;">
+                        <option selected>Moneda en que se realiza la transferencia</option>
+                        <option value="1">COP</option>
+                        <option value="2">USD</option>
+                        <option value="3">Otra opción</option>
+                        </select>
+                        <mat-form-field style="top: 150px;left: -365px;width: 360px;">
+                            <mat-label>Total a transferir por la factura</mat-label>
+                            <input matInput formControlName="secondCtrl4" placeholder="Ejemplo: 54800" required>
+                        </mat-form-field>
+                        <div style="position: relative; left:2%;">
+
+                            <button mat-button matStepperPrevious style="margin-top: 120px;"> <mat-icon>keyboard_arrow_left</mat-icon>Atrás </button>
+                            <button mat-button matStepperNext color="primary" style="margin-top: 120px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Paso 3</ng-template>
+                    <form>
+                        <button mat-button color="primary" (click)="isCodeQR=!isCodeQR" style="position: relative;top: 150px;left: 9%;">{{!isCodeQR ? 'Código QR generado' : 'Generar código QR'}}</button>
+                        <img id="imgQR" src="./assets/img/codeQR.PNG" alt="..." ng-style="{'visibility': isCodeQR?'visible':'hidden'}" style="position: relative;left: -6%;">
+
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;"><mat-icon>keyboard_arrow_left</mat-icon> Atrás </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Paso 4</ng-template>
+                    <div class="alert alert-success" role="alert">
+                        <h2>¡Transferencia exitosa!</h2>
+                        <p style="text-align: justify;">Se ha realizado la tranferencia exitosamente del producto:</p>
+                        <ul>
+                            <li>Nombre: leche deslactosada</li>
+                            <li>Marca: Parmalat</li>
+                            <li>Id de la tranferencia: 12345</li>
+                            <li>Fecha: 02/02/2020</li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <button mat-button matStepperPrevious> <mat-icon>keyboard_arrow_left</mat-icon> Atrás </button>
+                        <button mat-button (click)="stepper.reset()">Volver a empezar</button>
+                    </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </div>
+
+    </div>
 </div>
+
+
+<ng-template #content let-modal>
+
+    <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
+        <h4 class="modal-title" id="modal-basic-title">Prueba de concepto API QR Code Management</h4>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+      <br>
+    </button>
+    </div>
+
+    <div class="modal-body" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+
+
+    </div>
+
+    <!--   <div class="modal-footer" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <br>
+    </div> -->
+
+
+</ng-template>
 
 <!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
     height: 16px;padding-top: 2px"></i>REGRESAR </button> -->

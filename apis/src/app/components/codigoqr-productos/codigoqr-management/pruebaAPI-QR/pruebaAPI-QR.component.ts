@@ -1,16 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-qr',
+  selector: 'app-pruebaQR',
   templateUrl: './pruebaAPI-QR.component.html'
 })
 export class pruebaAPIQR implements OnInit {
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  isOptional = false;
+  isLinear = false;
+  isCodeQR=false;
 
 
-  constructor(private router:Router) { }
+
+  constructor(private router:Router,private _formBuilder: FormBuilder) { }
+
 
   ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required],
+      firstCtrl2: ['', Validators.required],
+      firstCtrl3: ['', Validators.required]
+    });
+
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required],
+      secondCtrl2: ['', Validators.required],
+      secondCtrl3: ['', Validators.required],
+      secondCtrl4: ['', Validators.required],
+    });
   }
 
   conocerMas(){
@@ -19,5 +39,10 @@ export class pruebaAPIQR implements OnInit {
   verAuthConciliacionBancaria(){
     this.router.navigate(['auth-conciliacion-bancaria']);
   }
+  volverQR(){
+    this.router.navigate(['codigoqr-management']);
+  }
+
+
 
 }
