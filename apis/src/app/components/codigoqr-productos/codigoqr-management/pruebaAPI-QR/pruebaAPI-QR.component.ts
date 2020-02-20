@@ -27,9 +27,7 @@ export class pruebaAPIQR implements OnInit {
 
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required],
-      secondCtrl2: ['', Validators.required],
-      secondCtrl3: ['', Validators.required],
-      secondCtrl4: ['', Validators.required],
+
     });
   }
 

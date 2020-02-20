@@ -22,7 +22,5 @@ verPagoProveedor(){
 verPagoTerceros(){
   this.router.navigate(['pagoterceros']);
 }
-verQR(){
-  this.router.navigate(['codigoqr-management']);
-}
+
 }

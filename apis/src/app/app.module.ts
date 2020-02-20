@@ -79,6 +79,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatMenuModule} from '@angular/material/menu';
+import { TransferenciasComponent } from './components/transferencias/transferencias.component';
+
 
 
 
@@ -144,6 +146,7 @@ import {MatMenuModule} from '@angular/material/menu';
     CodigoQrManagement,
     CreditosDepositos,
     pruebaAPIQR,
+    TransferenciasComponent
 
 
   ],

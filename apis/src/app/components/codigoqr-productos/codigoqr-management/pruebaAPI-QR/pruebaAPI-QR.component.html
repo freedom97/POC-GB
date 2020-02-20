@@ -14,19 +14,89 @@
         </div>
         <div class="modal-body">
 
-            <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-        {{!isLinear ? 'Campos obligatorios habilitados' : 'Campos obligatorios deshabilitados'}}
-      </button>
+            <!-- Comentario al inicio de la PoC -->
+            <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">*Esta es una muestra representativa de las funcionalidades que puede tener está API, sin embargo no garantiza que los aliados/consumidores lo implementen de la misma forma.</p>
+
             <mat-horizontal-stepper [linear]="isLinear" #stepper>
+
                 <mat-step [stepControl]="firstFormGroup">
                     <form [formGroup]="firstFormGroup">
-                        <ng-template matStepLabel>Paso 1</ng-template>
-                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;">
-                          <option selected>Tipo de documento del cliente titular de la cuenta destino</option>
-                          <option value="1">NIT</option>
-                          <option value="2">Cédula de Ciudadanía</option>
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Los campos obtienen los datos del usuario final almacenados en la aplicación del consumidor/cliente de manera automática.</p>
+                        <ng-template matStepLabel>Opción de inicio 1</ng-template>
+                        <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
+                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
+
+                          <option value="1" selected>NIT</option>
+                          <option value="2">CC</option>
                           <option value="3">Otra opción</option>
                           </select>
+                        <mat-form-field style="top: 60px;left: -450px;width: 230px;">
+                            <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" value="800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular:</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando" value="Luis Fernando">
+
+                        </mat-form-field>
+
+                        <form style="margin-top: 7%;margin-left: 28%;">
+                            <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
+                            <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
+                            <option value="1"selected>Corriente</option>
+                            <option value="3">Otra opción</option>
+                            </select>
+
+                        </form>
+                        <mat-form-field style="top: 15px;left: 8px;width: 380px;">
+                            <mat-label id="label1" style="display: flex;">Número de cuenta destino de la transferencia:</mat-label>
+                            <input matInput placeholder="Ejemplo: 5093872099" value="5093872099" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Ver opción 2 <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
+                        <ng-template matStepLabel>Opción de inicio 1</ng-template>
+                        <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
+                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
+
+                        <option value="1">NIT</option>
+                        <option value="2">CC</option>
+                        <option value="3">Otra opción</option>
+                        </select>
                         <mat-form-field style="top: 60px;left: -450px;width: 230px;">
                             <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
                             <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
@@ -35,22 +105,21 @@
 
                         <mat-form-field style="top: 70px;left: -26px;width: 320px;">
                             <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular:</mat-label>
-                            <input matInput placeholder="Ejemplo: Luis Fernando" formControlName="firstCtrl2" required>
+                            <input matInput placeholder="Ejemplo: Luis Fernando">
 
                         </mat-form-field>
 
                         <form style="margin-top: 7%;margin-left: 28%;">
-                            <select class="custom-select" style="width: 36%;margin-left: -43%;">
-                            <option selected>Tipo de cuenta destino de la transferencia</option>
-                            <option value="1">NIT</option>
-                            <option value="2">Cédula de Ciudadanía</option>
-                            <option value="3">Otra opción</option>
-                            </select>
+                            <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
+                            <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
+                          <option value="1">Corriente</option>
+                          <option value="3">Otra opción</option>
+                          </select>
 
                         </form>
                         <mat-form-field style="top: 15px;left: 8px;width: 380px;">
                             <mat-label id="label1" style="display: flex;">Número de cuenta destino de la transferencia:</mat-label>
-                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl3" required>
+                            <input matInput placeholder="Ejemplo: 5093872099" formControlName="firstCtrl3" required>
 
                         </mat-form-field>
 
@@ -60,12 +129,21 @@
                         <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
                     </div>
                 </mat-step>
-                <mat-step [stepControl]="secondFormGroup">
-                    <form [formGroup]="secondFormGroup">
-                        <ng-template matStepLabel>Paso 2</ng-template>
+                <mat-step>
+                    <form>
+                        <p style="font-family: 'OpenSans', sans-serif;
+                      font-size: 12px;
+                      font-weight: normal;
+                      font-stretch: normal;
+                      font-style: normal;
+                      line-height: 1.5;
+                      letter-spacing: -0.3px;
+                      text-align: justify;
+                      color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
+                        <ng-template matStepLabel>Otros datos</ng-template>
                         <mat-form-field style="top:-30px;left: 390px;width: 330px;">
                             <mat-label>Nombre personalizado del comercio:</mat-label>
-                            <input matInput formControlName="secondCtrl" placeholder="Ejemplo: Almacenes Éxito" required>
+                            <input matInput placeholder="Ejemplo: Almacenes Éxito">
                         </mat-form-field>
                         <select class="custom-select" style="width: 29%;margin-left: 4.5%;margin-top:6%;">
                           <option selected>Categoría a la que pertenece el comercio</option>
@@ -75,11 +153,11 @@
 
                         <mat-form-field style="top: 110px;left: -375px;width: 330px;">
                             <mat-label>Referencia o número de factura</mat-label>
-                            <input matInput formControlName="secondCtrl2" placeholder="Ejemplo: 2209" required>
+                            <input matInput placeholder="Ejemplo: 2209">
                         </mat-form-field>
                         <mat-form-field style="top:16px;left: 420px;width: 330px;">
                             <mat-label>Descripción personalizada de la factura</mat-label>
-                            <input matInput formControlName="secondCtrl3" placeholder="Ejemplo: Escoba marca x" required>
+                            <input matInput placeholder="Ejemplo: Escoba marca x">
                         </mat-form-field>
                         <select class="custom-select" style="width: 28%;margin-left:7%;margin-top:13%;">
                         <option selected>Moneda en que se realiza la transferencia</option>
@@ -89,7 +167,7 @@
                         </select>
                         <mat-form-field style="top: 150px;left: -365px;width: 360px;">
                             <mat-label>Total a transferir por la factura</mat-label>
-                            <input matInput formControlName="secondCtrl4" placeholder="Ejemplo: 54800" required>
+                            <input matInput placeholder="Ejemplo: 54800">
                         </mat-form-field>
                         <div style="position: relative; left:2%;">
 
@@ -99,7 +177,7 @@
                     </form>
                 </mat-step>
                 <mat-step>
-                    <ng-template matStepLabel>Paso 3</ng-template>
+                    <ng-template matStepLabel>Generación Código QR</ng-template>
                     <form>
                         <button mat-button color="primary" (click)="isCodeQR=!isCodeQR" style="position: relative;top: 150px;left: 9%;">{{!isCodeQR ? 'Código QR generado' : 'Generar código QR'}}</button>
                         <img id="imgQR" src="./assets/img/codeQR.PNG" alt="..." ng-style="{'visibility': isCodeQR?'visible':'hidden'}" style="position: relative;left: -6%;">
@@ -113,16 +191,20 @@
                     </div>
                 </mat-step>
                 <mat-step>
-                    <ng-template matStepLabel>Paso 4</ng-template>
-                    <div class="alert alert-success" role="alert">
-                        <h2>¡Transferencia exitosa!</h2>
-                        <p style="text-align: justify;">Se ha realizado la tranferencia exitosamente del producto:</p>
-                        <ul>
-                            <li>Nombre: leche deslactosada</li>
-                            <li>Marca: Parmalat</li>
-                            <li>Id de la tranferencia: 12345</li>
-                            <li>Fecha: 02/02/2020</li>
-                        </ul>
+                    <p style="font-family: 'OpenSans', sans-serif;
+                  font-size: 12px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.5;
+                  letter-spacing: -0.3px;
+                  text-align: justify;
+                  color: #808285;">Cuando se generá el código QR, se debe enviar el mensaje de la transferencia por SMS o correo electrónico.</p>
+                    <ng-template matStepLabel>Notificación Transferencia</ng-template>
+                    <div class="alert alert-success" role="alert" style="width: 30%;height: 30%;background-color: white;position: relative;left: 35%;">
+                        <mat-icon color="primary" style="position: relative;left: -170px;margin-top: 15px;">account_circle</mat-icon>
+                        <p style="margin-top: -9%;margin-left: 7%;">¡Transferencia exitosa!</p>
+                        <p style="text-align: justify;">Bancolombia le informa:Transferencia por: $20000,desde la cuenta: 10566410843,fecha: 14/03/2019,inquietudes al: 0345109095/018000931987</p>
 
                     </div>
                     <div>

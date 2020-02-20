@@ -65,6 +65,9 @@ verRecomendacion() {
   verFamiliaPagos(){
     this.router.navigate(['pagos']);
   }
+  verTransferencias(){
+    this.router.navigate(['transferencias']);
+  }
   verVinculacionDigital(){
     this.router.navigate(['vinculacion-digital']);
   }
