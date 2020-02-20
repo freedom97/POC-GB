@@ -27,7 +27,7 @@ import { CuentaInversionComponent } from "./components/cuenta-inversion/cuenta-i
 import { ContactanosComponent } from "./components/contactanos/contactanos.component";
 import { SoatComponent } from "./components/soat/soat.component";
 import { RenovarSoatComponent } from "./components/renovar-soat/renovar-soat.component";
-import { AdquirirSoatComponent } from "./components/adquirir-soat/adquirir-soat.component";
+// import { AdquirirSoatComponent } from "./components/adquirir-soat/adquirir-soat.component";
 import { EstudioPreliminarComponent } from "./components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar.component";
 import { EstudioPreliminar2Component } from "./components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar2/estudio-preliminar2.component";
 import { EstudioPreliminarClienteComponent } from "./components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar-cliente/estudio-preliminar-cliente.component";
@@ -102,7 +102,7 @@ import { TransferenciasComponent } from './components/transferencias/transferenc
     ContactanosComponent,
     SoatComponent,
     RenovarSoatComponent,
-    AdquirirSoatComponent,
+    // AdquirirSoatComponent,
     EstudioPreliminarComponent,
     EstudioPreliminar2Component,
     EstudioPreliminarClienteComponent,

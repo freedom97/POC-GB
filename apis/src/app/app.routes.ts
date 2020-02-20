@@ -13,7 +13,7 @@ import { ContactanosComponent } from './components/contactanos/contactanos.compo
 import { SoatComponent } from './components/soat/soat.component';
 import { RenovarSoatComponent } from './components/renovar-soat/renovar-soat.component';
 import { RenovarSoat2Component } from './components/renovar-soat/renovar-soat2/renovar-soat2.component';
-import { AdquirirSoatComponent } from './components/adquirir-soat/adquirir-soat.component';
+// import { AdquirirSoatComponent } from './components/adquirir-soat/adquirir-soat.component';
 import { EstudioPreliminarComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar.component';
 import { EstudioPreliminar2Component } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar2/estudio-preliminar2.component';
 import { EstudioPreliminarClienteComponent } from './components/creditos-depositos/credito-vehiculo/estudio-preliminar/estudio-preliminar-cliente/estudio-preliminar-cliente.component';
@@ -79,7 +79,7 @@ const APP_ROUTES: Routes = [
     {path: 'ver-soat', component: SoatComponent},
     {path: 'renovar-soat', component: RenovarSoatComponent},
     {path: 'renovar-soat2', component: RenovarSoat2Component},
-    {path: 'adquirir-soat', component: AdquirirSoatComponent},
+    // {path: 'adquirir-soat', component: AdquirirSoatComponent},
     {path: 'estudio-preliminar', component: EstudioPreliminarComponent},
     {path: 'estudio-preliminar2', component: EstudioPreliminar2Component},
     {path: 'estudio-preliminar-cliente', component: EstudioPreliminarClienteComponent},
