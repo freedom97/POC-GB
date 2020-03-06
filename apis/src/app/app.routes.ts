@@ -57,6 +57,8 @@ import { CodigoQrManagement } from './components/codigoqr-productos/codigoqr-man
 import { CreditosDepositos } from './components/creditos-depositos/creditos-depositos.component';
 import { pruebaAPIQR } from './components/codigoqr-productos/codigoqr-management/pruebaAPI-QR/pruebaAPI-QR.component';
 import { TransferenciasComponent } from './components/transferencias/transferencias.component';
+import { ConciliacionPortada } from './components/conciliacion-bancaria/portada-conciliacion/portada-conciliacion.component';
+
 
 
 
@@ -123,6 +125,7 @@ const APP_ROUTES: Routes = [
     {path: 'creditos-depositos', component: CreditosDepositos},
     {path: 'pruebaAPI-qr', component: pruebaAPIQR},
     {path: 'transferencias', component: TransferenciasComponent},
+    {path: 'conciliacion-portada', component: ConciliacionPortada},
 
 
 

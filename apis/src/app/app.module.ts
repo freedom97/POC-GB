@@ -80,6 +80,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatMenuModule} from '@angular/material/menu';
 import { TransferenciasComponent } from './components/transferencias/transferencias.component';
+import { ConciliacionPortada } from './components/conciliacion-bancaria/portada-conciliacion/portada-conciliacion.component';
+
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 
 
@@ -146,7 +150,9 @@ import { TransferenciasComponent } from './components/transferencias/transferenc
     CodigoQrManagement,
     CreditosDepositos,
     pruebaAPIQR,
-    TransferenciasComponent
+    TransferenciasComponent,
+    ConciliacionPortada,
+
 
 
   ],
@@ -167,7 +173,8 @@ import { TransferenciasComponent } from './components/transferencias/transferenc
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
-    MatMenuModule
+    MatMenuModule,
+    MatButtonToggleModule
 
 
 

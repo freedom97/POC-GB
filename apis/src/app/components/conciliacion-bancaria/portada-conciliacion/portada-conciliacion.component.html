@@ -1,6 +1,6 @@
-<!-- componente HTML de la línea de negocio llamada Créditos y depósitos del portal de las PoC -->
+<!-- componente HTML de la línea de negocio llamada Cuentas del portal de las PoC -->
 
-<!-- Contenedor de la descripción de los productos que están en la línea de negocio Créditos y depósitos -->
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Cuentas -->
 <br>
 <br>
 
@@ -9,7 +9,7 @@
 height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
     <br>
     <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
-    font-weight: 600;text-align:left;">Código QR</h3>
+    font-weight: 600;text-align:left;">Conciliación</h3>
     <hr style="width: 72%;position: relative;left: -15%;">
     <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     width: 70%;
@@ -20,7 +20,7 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
     letter-spacing: -0.34px;
     text-align: justify;
     color: #808285;">
-        Para entender cómo generar un código QR con esta API, solo debes realizar unos simples pasos al oprimir en "Comenzar".</section>
+        Para entender cómo funciona la API Conciliación, solo debes realizar unos simples pasos al oprimir en "Comenzar".</section>
     <br>
     <!--  <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     font-weight: 400;
@@ -35,9 +35,9 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
 
 </div>
 
-<!-- Contenedor de la imágen circular representativa de la API QR code -->
+<!-- Contenedor de la imágen circular representativa de la API Conciliacion -->
 <div style=" margin-left: 55%;margin-top: -80px;">
-    <img class="circulo" src="./assets/img/imgCardQR.PNG" alt="Card image cap">
+    <img class="circulo" src="./assets/img/conciliacion.PNG" alt="Card image cap">
 </div>
 
 
@@ -108,7 +108,7 @@ border-radius: 10000px;
 background-color: #ffd200;
 position: relative;
 left: -40%;
-margin-top: 6%;" (click)="comenzar()">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
+margin-top: 6%;" (click)="verAuthConciliacionBancaria()">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
               height: 16px;padding-top: 2px"></i></button>
 
 <!-- Botón o "collapse" para desplegar más información que necesite el cliente de la PoC de QR Code" -->
@@ -121,7 +121,7 @@ margin-top: 6%;" (click)="comenzar()">Comenzar<i class="fas fa-angle-right" styl
     </p>
     <div class="collapse" id="collapseExample" style="position: relative;left: 20%;">
         <div class="card card-body">
-            <p> Funcional y de negocio: saracard@bancolombia.com.co </p>
+            <p> Funcional y de negocio: dcmonroy@bancolombia.com.co </p>
             <p>Documentación técnica: <a href="https://developer.bancolombia.com/es/product" class="stretched-link">https://developer.bancolombia.com/es/product</a> </p>
 
         </div>
@@ -130,7 +130,7 @@ margin-top: 6%;" (click)="comenzar()">Comenzar<i class="fas fa-angle-right" styl
 
 <hr>
 
-<pre>{{closeResult}}</pre>
+<!-- <pre>{{closeResult}}</pre> -->
 
 <br><br><br><br><br>
 <!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;

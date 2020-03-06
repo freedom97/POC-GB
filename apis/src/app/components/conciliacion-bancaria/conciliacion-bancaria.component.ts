@@ -14,7 +14,8 @@ export class ConciliacionBancariaComponent implements OnInit {
   verFamilias(){
     this.router.navigate(['familias']);
   }
-  verAuthConciliacionBancaria(){
-    this.router.navigate(['auth-conciliacion-bancaria']);
+
+  verConciliacion(){
+    this.router.navigate(['conciliacion-portada']);
   }
 }

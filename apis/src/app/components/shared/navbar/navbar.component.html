@@ -36,6 +36,7 @@ background-color: var(--white-0);background-size: cover;">
                 color: #808285; ">Líneas de negocio</button>
                 <mat-menu #lineasNegocio="matMenu">
                     <button mat-menu-item [matMenuTriggerFor]="transferencias" [routerLink]="['transferencias']">Transferencias</button>
+                    <button mat-menu-item [matMenuTriggerFor]="cuentas" [routerLink]="['conciliacion-bancaria']">Cuentas</button>
                     <button mat-menu-item [matMenuTriggerFor]="pagos" [routerLink]="['pagos']">Pagos</button>
                     <button mat-menu-item [matMenuTriggerFor]="creditosDepositos" [routerLink]="['creditos-depositos']">Créditos y depósitos</button>
                     <button mat-menu-item [matMenuTriggerFor]="serviciosConsumidor" [routerLink]="['']">Servicios al consumidor</button>
@@ -43,6 +44,12 @@ background-color: var(--white-0);background-size: cover;">
                 </mat-menu>
                 <mat-menu #transferencias="matMenu">
                     <button mat-menu-item [routerLink]="['codigoqr-management']">Código QR</button>
+                    <button mat-menu-item>...</button>
+                    <button mat-menu-item>...</button>
+
+                </mat-menu>
+                <mat-menu #cuentas="matMenu">
+                    <button mat-menu-item [routerLink]="['conciliacion-portada']">Conciliación</button>
                     <button mat-menu-item>...</button>
                     <button mat-menu-item>...</button>
 
@@ -64,7 +71,7 @@ background-color: var(--white-0);background-size: cover;">
 
             </li>
         </ul>
-        <form class="form-inline" style="margin-top: 15px;">
+        <!-- <form class="form-inline" style="margin-top: 15px;">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Buscar productos" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
@@ -72,7 +79,7 @@ background-color: var(--white-0);background-size: cover;">
                 </div>
             </div>
 
-        </form>
+        </form> -->
 
 
     </div>
