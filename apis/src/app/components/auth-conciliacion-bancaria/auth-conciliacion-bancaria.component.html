@@ -1,8 +1,8 @@
 <br>
 <div class="modal-dialog" role="document">
-    <div class="modal-content" style="width: 280%;position: relative;left: -90%">
+    <div class="modal-content" style="width: 301%;position: relative;left: -100%">
         <div class="modal-header">
-            <h5 class="modal-title">Prueba de concepto API Conciliación</h5>
+            <h5 class="modal-title">Prueba de concepto API Saldos y Movimientos</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverPortalConciliacion()">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -22,6 +22,38 @@ color: #808285;">*Esta es una muestra representativa de las funcionalidades que 
 
             <mat-horizontal-stepper [linear]="isLinear" #stepper>
 
+                <mat-step>
+                    <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">El usuario final debe seleccionar un banco para empezar el proceso de conciliación.</p>
+                    <ng-template matStepLabel>Seleccione su banco</ng-template>
+                    <form>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
+                            Sus bancos:</h4><br>
+                        <div class="container-consulta-lote" style="display: flex; justify-content: center">
+                            <form>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button value="1">Bancolombia</mat-radio-button>
+
+                                </mat-radio-group>
+                            </form>
+                        </div>
+
+
+
+                    </form>
+                    <div>
+
+                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
                 <mat-step [stepControl]="firstFormGroup">
                     <form [formGroup]="firstFormGroup">
                         <p style="font-family: 'OpenSans', sans-serif;
@@ -34,6 +66,13 @@ letter-spacing: -0.3px;
 text-align: justify;
 color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                         <ng-template matStepLabel>Inicio de sesión portal Bancolombia</ng-template>
+                        <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
+                        <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
+                            Surcursal Virtual Personas</p>
+                        <br>
+
+
+
                         <div style="background-color:#788FB9;width: 35%;height: 30px; ;position: relative;left: 32%; border: 1px solid #A6B3D1;">
                             <p style="font-size: 18px;font-family: 'Nunito';font-weight: 600;color: white;position: relative;left: 2%;">
                                 Usuario</p>
@@ -60,39 +99,38 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                     </div>
                                 </div><br>
                                 <span class="col-sm-15 ">
-                  <button  mat-button matStepperNext class="btn btn-primary btn-sm " type="submit "
-                    name="login " value="true"
+                  <button mat-button matStepperNext class="btn btn-primary btn-sm " type="submit " name="login "
+                    value="true"
                     style="background-color:#A6B3D1;width:35%;height:16%;position:relative;top:-10px;">Entrar</button>
-                  <button  class="btn btn-secondary btn-sm " type="submit "
-                    name="approve " value="false"
-                    style="color:black;background-color:white;border:1px solid #A6B3D1;position:relative;top:-10px">Cancelar</button>
+                  <button class="btn btn-secondary btn-sm " type="submit " name="approve " value="false"
+                    style="color:black;background-color:white;border:1px solid #A6B3D1;position:relative;top:-10px;width:35%;height:16%;margin: 5px;">Cancelar</button>
                 </span>
                             </form>
                         </div>
                         <div>
 
-                            <mat-button-toggle-group #group1="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:36%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group1="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:34.3%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber5()" value={{number5}}>5</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group2="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:36.3%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group2="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:34.6%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber9()" value={{number9}}>9</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group3="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:36.6%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group3="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:34.9%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber3()" value={{number3}}>3</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group4="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:36.9%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group4="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-255px;left:35.2%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber0()" value={{number0}}>0</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group5="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:25.3%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group5="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:24.5%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber7()" value={{number7}}>7</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group6="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:25.6%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group6="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:24.8%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber8()" value={{number8}}>8</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group7="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:25.9%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group7="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:25.1%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber4()" value={{number4}}>4</mat-button-toggle>
                             </mat-button-toggle-group>
-                            <mat-button-toggle-group #group8="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:26.2%;border:1px solid #A6B3D1;background-color:#E8EAF6">
+                            <mat-button-toggle-group #group8="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-202px;left:25.4%;border:1px solid #A6B3D1;background-color:#E8EAF6">
                                 <mat-button-toggle (click)="getNumber2()" value={{number2}}>2</mat-button-toggle>
                             </mat-button-toggle-group>
                             <mat-button-toggle-group #group9="matButtonToggleGroup" name="fontStyle" aria-label="Font Style" style="position:relative;top:-148.5px;left:14.7%;border:1px solid #A6B3D1;background-color:#E8EAF6">
@@ -105,53 +143,61 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                 <mat-button-toggle (click)="deletePassword()">Borrar</mat-button-toggle>
                             </mat-button-toggle-group>
                         </div>
-
-
-
-
-
                     </form>
                     <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
                         <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon
                 color="primary">keyboard_arrow_right</mat-icon></button>
                     </div>
                 </mat-step>
+
                 <mat-step [stepControl]="firstFormGroup">
                     <form [formGroup]="firstFormGroup">
 
                         <ng-template matStepLabel>Terminos y condiciones</ng-template>
-                        <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
-                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
+                        <div class="modal-content" style="text-align: justify">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalLongTitle" style="font-family: 'Nunito', sans-serif;font-weight: bold; text-align: center">Términos y Condiciones
+                                </h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                            </div>
+                            <div class="modal-body pt-5 pt-md-3">
+                                <div>
+                                    <!-- <p><strong>Términos y condiciones para realizar una conciliación</strong></p> -->
+                                    <ul>
 
-              <option value="1">NIT</option>
-              <option value="2">CC</option>
-              <option value="3">Otra opción</option>
-            </select>
-                        <mat-form-field style="top: 60px;left: -450px;width: 230px;">
-                            <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
-                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+                                        <li>Recuerde que nunca se solicitara información confidencial personal o financiera por medio de correo electrónico o en la plataforma de Capital Inteligente, como usuarios, claves, números de tarjetas de crédito, fechas
+                                            de vencimiento y códigos de seguridad.&#8203;&#8203;&#8203;</li>
+                                        <li> Al aceptar los términos y condiciones, usted&nbsp;<strong>acuerda y reconoce que todo el
+                        contenido de Capital Inteligente es propiedad de Bancolombia y de terceros que actúan bajo las
+                        instrucciones de Bancolombia.</strong>&nbsp;
+                                        </li>
+                                        <li> Lo anterior abarca todos los elementos que lo integran o lo componen, incluyendo a título meramente enunciativo y no taxativo, los derechos intelectuales derivados de la programación y diseño del sitio y sus plataformas,
+                                            sitios y programas electrónicos, el “look & feel”, su edición, los &nbsp;<strong>logotipos,
+                        imágenes, videos, lenguaje de programación, códigos, textos, gráficos, conceptos, cuadros,
+                        archivos de audio y video, y en general cualquier elemento asociado a todo el
+                        contenido.</strong></li>
+                                        <li> Queda estrictamente prohibido que utilice, copie o reproduzca de forma total o parcial el contenido por cualquier medio.</li>
+                                        <li> Asimismo, queda prohibido distribuir, reproducir, publicar, transmitir, traducir, vender o disponer de manera alguna todo o parte del contenido ya sea a título oneroso o gratuito, cualquiera sea la modalidad o el
+                                            medio.&#8203;
+                                        </li>
+                                        <li><strong>Usted se obliga a no adquirir ni a hacer suyos los elementos anteriormente referidos, ni
+                        a hacer suya cualquier derivación, adaptación o variación de los mismos.</strong>&nbsp;En caso de incumplir las presentes condiciones, usted se obliga a mantener indemne a Bancolombia y los dueños de la propiedad intelectual del
+                                            contenido, frente a toda responsabilidad de cualquier naturaleza. &#8203;</li>
 
-                        </mat-form-field>
-
-                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
-                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular:</mat-label>
-                            <input matInput placeholder="Ejemplo: Luis Fernando">
-
-                        </mat-form-field>
-
-                        <form style="margin-top: 7%;margin-left: 28%;">
-                            <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
-                            <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
-                <option value="1">Corriente</option>
-                <option value="3">Otra opción</option>
-              </select>
-
-                        </form>
-                        <mat-form-field style="top: 15px;left: 8px;width: 380px;">
-                            <mat-label id="label1" style="display: flex;">Número de cuenta destino de la transferencia:</mat-label>
-                            <input matInput placeholder="Ejemplo: 5093872099" formControlName="firstCtrl3" required>
-
-                        </mat-form-field>
+                                    </ul>
+                                </div>
+                                <span class="modal-footer col-sm-8">
+                  <button mat-button matStepperNext type="button" class="btn btn-secondary btn-small"
+                    data-dismiss="modal"
+                    style="background-color:#A6B3D1;color:black;position: relative; left:-15%; width: 20%;height: 30px;">Aceptar</button>
+                </span>
+                            </div>
+                        </div>
 
 
                     </form>
@@ -177,7 +223,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                         <ng-template matStepLabel>Listar Cuentas</ng-template>
 
                         <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                            Lista las cuentas que necesitas</h4><br>
+                            Selecciona la cuenta a conciliar</h4><br>
                         <div class="container-consulta-lote" style="display: flex; justify-content: center">
                             <form>
                                 <br>
@@ -198,30 +244,59 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                 <span class="col-sm-15">
 
                   <button class="btn btn-secondary btn-sm" type="submit" name="approve" data-toggle="collapse"
-                    data-target="#collapseExample" aria-expanded="false"
-                    aria-controls="collapseExample" style="background-color:#A6B3D1 ;color:#292929">Listar Cuentas</button>
+                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    style="background-color:#A6B3D1 ;color:#292929">Consultar</button>
                 </span><br><br><br>
                             </form>
                         </div>
-                        <div class="collapse" id="collapseExample">
-                            <div style="display:flex; justify-content: center">
-                                <div class="row" style="background-color:#ececec; color:#292929; text-align: center; font-family: 'Nunito', sans-serif">
-                                    <div class="col-sm-6" style="padding-top: 15px;padding-bottom: 15px">
-                                        <p>Tipo de identificacion: Cédula de ciudadanía</p>
-                                        <p>Número de identificacion: 1234567890</p>
-                                        <p>Nombre del beneficiario: Andrés Perez</p>
-                                        <p>Tipo de cuenta donde se realizó el pago: Cuenta de ahorros</p>
-                                    </div>
-                                    <div class="col-sm-6" style="padding-top: 15px;padding-bottom: 15px">
-                                        <p>Número de cuenta del beneficiario: 24500213454</p>
-                                        <p>Banco al que pertence la cuenta: Bancolombia</p>
-                                        <p>Valor pagado al beneficiario: $3,000,000.00</p>
-                                        <p>Estado de pago: <strong>Satisfactorio</strong></p>
+                        <div class="col-15">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div style=" font-family: 'Nunito', sans-serif;" class="collapse" id="collapseExample" role="collpase" aria-labelledby="list-first-list">
+                                    <br>
+
+                                    <div style="display: flex; justify-content: left;">
+                                        <div class="col-12">
+                                            <!--table-->
+                                            <table class="table table-striped table-responsive" style="position: relative;left: 24%;">
+                                                <thead>
+                                                    <tr>
+
+                                                        <th scope="col">Tipo identificación</th>
+                                                        <th scope="col">N° identificación</th>
+                                                        <th scope="col">Tipo de cuenta</th>
+                                                        <th scope="col">N° cuenta</th>
+                                                        <th scope="col">Seleccione una cuenta</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+
+
+                                                        <td>Cédula</td>
+                                                        <td>12871415</td>
+                                                        <td>Corriente</td>
+                                                        <th scope="row">***454</th>
+                                                        <td>
+                                                            <input type="radio" id="customRadio1" name="customRadio">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>Cédula</td>
+                                                        <td>12871415</td>
+                                                        <td>Ahorros</td>
+                                                        <th scope="row">***454</th>
+                                                        <td><input type="radio" id="customRadio1" name="customRadio"></td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
 
                         <div style="position: relative; left:2%;">
 
@@ -234,185 +309,130 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                     </form>
                 </mat-step>
                 <mat-step>
+
+                    <ng-template matStepLabel>Autorización</ng-template>
+                    <form>
+                        <br>
+                        <div class="modal-content" style="text-align: justify">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalLongTitle" style="font-family: 'Nunito', sans-serif;font-weight: bold; text-align: center">Autorización</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                            </div>
+                            <div class="modal-body pt-5 pt-md-3">
+                                <div>
+                                    <!-- <p><strong>Términos y condiciones para realizar una conciliación</strong></p> -->
+                                    <ul>
+
+                                        <li>Autoriza que se entregue la información de la cuenta ***454 al tercero Alegra &#8203;&#8203;&#8203;
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <span class="modal-footer col-sm-8">
+                  <button mat-button matStepperNext type="button" class="btn btn-secondary btn-small"
+                    data-dismiss="modal"
+                    style="background-color:#A6B3D1;color:black;position: relative; left:-15%; width: 20%;height: 30px;">Aceptar</button>
+                </span>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 120px;">
+              <mat-icon>keyboard_arrow_left</mat-icon>Atrás
+            </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step>
                     <ng-template matStepLabel>Consultar Saldos</ng-template>
                     <form>
                         <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                            Consulta los saldos de un beneficiario</h4><br>
+                            Consulta el saldo de tu cuenta </h4><br>
                         <div class="container-consulta-lote" style="display: flex; justify-content: center">
                             <form>
                                 <br>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <input id="documento" name="password" type="text" class="form-control" placeholder="NIT DEL PAGADOR" required>
+                                        <mat-label id="label1" style="display: flex;">Cuenta tipo:
+                                        </mat-label>
+                                        <input id="documento" name="password" type="text" class="form-control" placeholder="" required value="Ahorros">
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <mat-label id="label1" style="display: flex;">No. de cuenta:
+                                        </mat-label>
+                                        <input id="password" name="password" type="text" class="form-control" placeholder="" required value="***454">
+                                    </div>
+                                </div>
+                                <!--  <div class="form-group row">
                                     <div class="col-md-12">
                                         <input id="password" name="password" type="text" class="form-control" placeholder="CÓDIGO DEL LOTE" required>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <mat-label id="label1" style="display: flex;">Fecha inicial: no se ha realizado el pago salarial
+                                        <mat-label id="label1" style="display: flex;">Fecha inicial:
                                         </mat-label>
                                         <input id="password" name="password" type="date" class="form-control" placeholder="" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <mat-label id="label1" style="display: flex;">Fecha final: pago realizado en este día específico
+                                        <mat-label id="label1" style="display: flex;">Fecha final:
                                         </mat-label>
                                         <input id="password" name="password" type="date" class="form-control" placeholder="" required>
                                     </div>
                                 </div>
+
+
                                 <br>
                                 <span class="col-sm-15">
                   <button class="btn btn-secondary btn-sm" type="submit" name="approve" data-toggle="collapse"
-                    data-target="#collapseExample" aria-expanded="false"
-                    aria-controls="collapseExample">Consultar</button>
+                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+                    style="background-color:#A6B3D1;color:black;">Consultar</button>
                 </span><br>
                             </form>
                         </div>
-                        <div class="col-15">
-                            <div class="tab-content" id="nav-tabContent">
-                                <div style=" font-family: 'Nunito', sans-serif;" class="collapse" id="collapseExample" role="collpase" aria-labelledby="list-first-list">
-                                    <br>
+                        <div style=" font-family: 'Nunito', sans-serif;" class="collapse" id="collapseExample" role="collpase" aria-labelledby="list-first-list">
+                            <br>
 
-                                    <div style="display: flex; justify-content: left;">
-                                        <div class="col-12">
-                                            <!--table-->
-                                            <table class="table table-striped table-responsive">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">N° cuenta</th>
-                                                        <th scope="col">Fecha aplicación</th>
-                                                        <th scope="col">Nombre completo</th>
-                                                        <th scope="col">Tipo identificación</th>
-                                                        <th scope="col">N° identificación</th>
-                                                        <th scope="col">Banco</th>
-                                                        <th scope="col">Valor pago</th>
-                                                        <th scope="col">Correo electrónico</th>
-                                                        <th scope="col">Estado</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Jose López</td>
-                                                        <td>Cédula</td>
-                                                        <td>12871415</td>
-                                                        <td>Bancolombia</td>
-                                                        <td>$500,000</td>
-                                                        <td>cperez@bancolmbia.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Maria Gómez</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Bancolombia</td>
-                                                        <td>$500,000</td>
-                                                        <td>cperez@bancolmbia.com.co</td>
-                                                        <td>Fallido</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Julian Arcila</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Davivienda</td>
-                                                        <td>$500,000</td>
-                                                        <td>jarcila@davivienda.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Carolina Gil</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Banco de Occidente</td>
-                                                        <td>$500,000</td>
-                                                        <td>cperez@boccidente.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Jose Gomez</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Bancolombia</td>
-                                                        <td>$500,000</td>
-                                                        <td>jgomez@bancolombia.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Patricia Gutierrez</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Bancolombia</td>
-                                                        <td>$500,000</td>
-                                                        <td>pgutierrez@bancolombia.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Gustavo Leal</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Banco de Bogotá</td>
-                                                        <td>$500,000</td>
-                                                        <td>gleal@bbogota.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Daniel Zambrano</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Bancolombia</td>
-                                                        <td>$500,000</td>
-                                                        <td>dzambra@bancolombia.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Arturo Palacio</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>BBVA</td>
-                                                        <td>$500,000</td>
-                                                        <td>arturopalacio@bbva.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2435</th>
-                                                        <td>05/04/2019</td>
-                                                        <td>Andrea Rojas</td>
-                                                        <td>Cédula</td>
-                                                        <td>12131415</td>
-                                                        <td>Bancolombia</td>
-                                                        <td>$100,000</td>
-                                                        <td>arojas@bancolombia.com.co</td>
-                                                        <td>Exitoso</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                            <div style="display: flex; justify-content: left;">
+                                <div class="col-12">
+                                    <!--table-->
+                                    <table class="table table-striped table-responsive" style="position: relative;left: 33%;">
+                                        <thead>
+                                            <tr>
+
+                                                <th scope="col">Fecha inicial</th>
+                                                <th scope="col">Saldo inicial</th>
+                                                <th scope="col">Fecha final</th>
+                                                <th scope="col">Saldo final</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>09/03/20</td>
+                                                <td>$100,000.00</td>
+                                                <td>28/03/20</td>
+                                                <td>$500,000.00</td>
+
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
+
 
 
 
@@ -435,44 +455,36 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                   line-height: 1.5;
                   letter-spacing: -0.3px;
                   text-align: justify;
-                  color: #808285;">El tipo y No. de documento de identidad y de la cuenta del usuario final son obtenidos al realizar la consulta los saldos. Los demás campos deben ser diligenciados por el usuario final.
+                  color: #808285;">El tipo y No. de la cuenta del usuario final son obtenidos al realizar la consulta de saldos. Los demás campos deben ser diligenciados por el usuario final. Además, la "plataforma ABC" es una referencia hacia la plataforma del aliado.
                     </p>
                     <ng-template matStepLabel>Consultar Movimientos</ng-template>
+
                     <!---<a id="list-first-list" data-toggle="list" href="#list-first" role="tab" aria-controls="first" style="color:#808285;text-decoration-line: underline;cursor:pointer">Cuenta de Ahorros</a> -->
                     <div style=" font-family: 'Nunito', sans-serif;" class="tab-pane " id="list-first" role="tabpanel" aria-labelledby="list-first-list">
                         <h4 style="display: flex; justify-content: center; color:#00448d; font-family: 'Nunito', sans-serif;font-weight: bold">
-                            Información de cuenta</h4>
+                            Consulta tus transacciones</h4>
                         <br>
                         <div class="col-sm-7">
                             <ul>
                                 <li>
-                                    Tipo de cuenta: Deposito - Cuenta de ahorros
+                                    Tipo de cuenta: Cuenta de ahorros
                                 </li>
                                 <li>
-                                    Número de la cuenta: 24566678956
+                                    Número de la cuenta: 24500213454
                                 </li>
-                                <li>
-                                    Cuota de sobregiro: $200.00
-                                </li>
-                                <li>
-                                    Saldo disponible: $3,000,000.00
-                                </li>
-                                <li>
-                                    Saldo disponible por cobrar: $1,000,000.00
-                                </li>
-                                <li>
-                                    Saldo bloqueado: $0
-                                </li><br>
+
+                                <br>
                                 <h6><u>Busca tus transacciones</u></h6>
-                                <p style="color: #808080; font-size: 14px;">Elige un rango de fechas para ver tus transacciones con Bancolombia y Alegra</p>
+                                <p style="color: #808080; font-size: 14px;">Elige un rango de fechas para ver tus transacciones con Bancolombia y plataformaABC</p>
                             </ul>
                         </div>
 
                         <div style="display: flex; justify-content: left;">
                             <div class="col-sm-8">
-                                <br><label>Fecha mínima </label> <input class="form-control" type="date"> <label>Fecha máxima</label>
-                                <input class="form-control" type="date"><br>
-                                <button type="submit" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">CONSULTAR</button>
+                                <br><label style="position: relative; left: -38%;">Fecha inicial </label> <input class="form-control" type="date" style="width: 25%;"> <label style="position: relative; left: -38%;top:12px">Fecha
+                  final</label>
+                                <input class="form-control" type="date" style="width: 25%;position: relative;top:15px"><br>
+                                <button type="submit" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="background-color:#A6B3D1;color:black;position: relative; top:-45px">Consultar</button>
                             </div>
                         </div>
                         <div class="collapse" id="collapseExample">
@@ -480,194 +492,127 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                 Información Transaccional</h4>
                             <br>
                             <p class="descripcion">
-                                Funcionalidad que permite consultar las transacciones realizadas en un periodo de tiempo determinado en una de las cuentas depósito o corriente de un cliente del Banco. A continuación encontrará la información transaccional de Alegra y Bancolombia en
-                                el rango de fechas proporcionado.
+                                Funcionalidad que permite consultar las transacciones realizadas en un periodo de tiempo determinado en una de las cuentas depósito o corriente de un cliente del Banco. A continuación encontrará la información transaccional de plataformaABC y Bancolombia
+                                en el rango de fechas proporcionado.
                             </p><br><br>
-                            <div class="row" style="display: flex; justify-content: center">
-                                <div class="col-sm-8">
-                                    <!----------------------TRANSACCIONES ALEGRA ------------------------>
-                                    <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                                        Transacciones Alegra</h4>
-                                    <table class="table table-responsive-sm table-hover table-bordered" style="border-color: #ffffff">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" style=" background-color: #00448d;border-color:#00448d;  color:white"><i class="fas fa-check"></i></th>
-                                                <th scope="col" style=" background-color: #00448d;border-color: #00448d; color:white">Fecha</th>
-                                                <th scope="col" style=" background-color:#00448d;border-color: #00448d; color:white">Descripción
-                                                </th>
-                                                <th scope="col" style=" background-color:#00448d;border-color: #00448d; color:white">Referencia
-                                                </th>
-                                                <th scope="col" style=" background-color: #00448d;border-color:#00448d; color:white">Monto</th>
-                                                <th scope="col" style=" background-color: #00448d;border-color:#00448d;  color:white">Moneda
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/01</td>
-                                                <td>Compra en Multiplex</td>
-                                                <td>123</td>
-                                                <td>$650,000.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/05</td>
-                                                <td>Abono</td>
-                                                <td>124</td>
-                                                <td>$300.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/10</td>
-                                                <td>Retiro</td>
-                                                <td>125</td>
-                                                <td>$200,000.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/15</td>
-                                                <td>Pago telefonia</td>
-                                                <td>126</td>
-                                                <td>$35,000.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/20</td>
-                                                <td>GMF</td>
-                                                <td>127</td>
-                                                <td>$-85.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/20</td>
-                                                <td>GMF</td>
-                                                <td>127</td>
-                                                <td>$-85.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/20</td>
-                                                <td>GMF</td>
-                                                <td>127</td>
-                                                <td>$-85.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination justify-content-center">
-                                            <li class="page-item disabled">
-                                                <a class="page-link" href="#/transacciones-conciliacion-bancaria" tabindex="-1">Previous</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#/transacciones-conciliacion-bancaria">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#/transacciones-conciliacion-bancaria">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#/transacciones-conciliacion-bancaria">3</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#/transacciones-conciliacion-bancaria">Next</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!------------------------------------- TRANSACCIONES BANCOLOMBIA -->
-                                <div class="col-sm-8">
-                                    <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                                        Transacciones Bancolombia</h4>
-                                    <table class="table table-responsive-sm table-hover table-bordered" style="border-color: #ffffff">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" style=" background-color: #00448d;border-color:#00448d;  color:white"><i class="fas fa-check"></i></th>
-                                                <th scope="col " style=" background-color: #00448d;border-color: #00448d; color:white">Fecha
-                                                </th>
-                                                <th scope="col " style=" background-color:#00448d;border-color: #00448d; color:white">
-                                                    Descripción </th>
-                                                <th scope="col " style=" background-color:#00448d;border-color: #00448d; color:white">Referencia
-                                                </th>
-                                                <th scope="col " style=" background-color: #00448d;border-color:#00448d; color:white">Monto</th>
-                                                <th scope="col " style=" background-color: #00448d;border-color:#00448d; color:white">Moneda
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/01</td>
-                                                <td>Compra</td>
-                                                <td>123</td>
-                                                <td>$200,000.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/05</td>
-                                                <td>Abono </td>
-                                                <td>124</td>
-                                                <td>$500.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/10</td>
-                                                <td>Retiro sucursal</td>
-                                                <td>125</td>
-                                                <td>$100,000.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/15</td>
-                                                <td>Compra Falabella</td>
-                                                <td>126</td>
-                                                <td>$150,000.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/20</td>
-                                                <td>GMF</td>
-                                                <td>127</td>
-                                                <td>$-252.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/20</td>
-                                                <td>GMF</td>
-                                                <td>127</td>
-                                                <td>$-252.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox"></td>
-                                                <td>2019/04/20</td>
-                                                <td>GMF</td>
-                                                <td>127</td>
-                                                <td>$-252.00</td>
-                                                <td>COP</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination justify-content-center">
-                                            <li class="page-item disabled">
-                                                <a class="page-link" href="#/transacciones-conciliacion-bancaria" tabindex="-1">Previous</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#/transacciones-conciliacion-bancaria">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#/transacciones-conciliacion-bancaria">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#/transacciones-conciliacion-bancaria">3</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#/transacciones-conciliacion-bancaria">Next</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div><br>
+
+
+                            <br>
+                            <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold;position: relative;left:-24%">
+                                Transacciones plataformaABC</h4>
+                            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 45%;position: relative;left:3%">
+
+                                <!-- Checkbox Column -->
+                                <ng-container matColumnDef="select">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                                        </mat-checkbox>
+                                    </th>
+                                    <td mat-cell *matCellDef="let row">
+                                        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                                        </mat-checkbox>
+                                    </td>
+                                </ng-container>
+
+                                <!-- Fecha transacción Column -->
+                                <ng-container matColumnDef="fechatransaccion">
+                                    <th mat-header-cell *matHeaderCellDef> Fecha transacción </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.fechatransaccion}} </td>
+                                </ng-container>
+
+                                <!-- Fecha contable Column -->
+                                <ng-container matColumnDef="fechacontable">
+                                    <th mat-header-cell *matHeaderCellDef> Fecha contable </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.fechacontable}} </td>
+                                </ng-container>
+
+                                <!-- Nombre Column -->
+                                <ng-container matColumnDef="nombre">
+                                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+                                </ng-container>
+
+                                <!-- Referencia Column -->
+                                <ng-container matColumnDef="referencia">
+                                    <th mat-header-cell *matHeaderCellDef> Referencia </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.referencia}} </td>
+                                </ng-container>
+
+                                <!-- Tipo de cuenta Column -->
+                                <ng-container matColumnDef="tipodecuenta">
+                                    <th mat-header-cell *matHeaderCellDef> Tipo de cuenta </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.tipodecuenta}} </td>
+                                </ng-container>
+
+                                <!-- Valor Column -->
+                                <ng-container matColumnDef="Valor">
+                                    <th mat-header-cell *matHeaderCellDef> Valor </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.Valor}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+                                </tr>
+                            </table>
+
+                            <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold;position: relative;left:22%;top:-429px">
+                                Transacciones Bancolombia</h4>
+                            <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8" style="width: 45%;position: relative;left:50%;top:-429px">
+
+                                <!-- Checkbox Column -->
+                                <ng-container matColumnDef="select">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                        <mat-checkbox (change)="$event ? masterToggle2() : null" [checked]="selection2.hasValue() && isAllSelected2()" [indeterminate]="selection2.hasValue() && !isAllSelected2()" [aria-label]="checkboxLabel2()">
+                                        </mat-checkbox>
+                                    </th>
+                                    <td mat-cell *matCellDef="let row">
+                                        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection2.toggle(row) : null" [checked]="selection2.isSelected(row)" [aria-label]="checkboxLabel2(row)">
+                                        </mat-checkbox>
+                                    </td>
+                                </ng-container>
+
+                                <!-- Fecha transacción Column -->
+                                <ng-container matColumnDef="fechatransaccion">
+                                    <th mat-header-cell *matHeaderCellDef> Fecha transacción </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.fechatransaccion}} </td>
+                                </ng-container>
+
+                                <!-- Fecha contable Column -->
+                                <ng-container matColumnDef="fechacontable">
+                                    <th mat-header-cell *matHeaderCellDef> Fecha contable </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.fechacontable}} </td>
+                                </ng-container>
+
+                                <!-- Nombre Column -->
+                                <ng-container matColumnDef="nombre">
+                                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+                                </ng-container>
+
+                                <!-- Referencia Column -->
+                                <ng-container matColumnDef="referencia">
+                                    <th mat-header-cell *matHeaderCellDef> Referencia </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.referencia}} </td>
+                                </ng-container>
+
+                                <!-- Tipo de cuenta Column -->
+                                <ng-container matColumnDef="tipodecuenta">
+                                    <th mat-header-cell *matHeaderCellDef> Tipo de cuenta </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.tipodecuenta}} </td>
+                                </ng-container>
+
+                                <!-- Valor Column -->
+                                <ng-container matColumnDef="Valor">
+                                    <th mat-header-cell *matHeaderCellDef> Valor </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.Valor}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+                                </tr>
+                            </table>
+                            <button matStepperNext type="submit" class="btn btn-secondary" aria-expanded="false" style="background-color:#A6B3D1;color:black;position: relative; top:-350px">Realizar Conciliación</button>
+
                         </div>
                     </div>
 
@@ -675,7 +620,32 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                         <button mat-button matStepperPrevious>
               <mat-icon>keyboard_arrow_left</mat-icon> Atrás
             </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon
+              color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step>
+
+                    <ng-template matStepLabel>Mensaje Exitoso</ng-template>
+                    <form>
+
+                        <div class="alert alert-success" role="alert" style="width: 50%;position: relative;left: 23%;">
+                            <p>
+                                <mat-icon style="font-size: 40px;position: relative;left: 46%;">check_circle_outline</mat-icon>
+                            </p>
+                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Felicitaciones</h4>
+                            <p style="text-align: center;">¡La conciliación de la 2019/04/01 a la 2019/04/20 fue exitosa!</p>
+                            <hr>
+                        </div>
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious>
+                      <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+                    </button>
                         <button mat-button (click)="stepper.reset()">Volver a empezar</button>
+
                     </div>
                 </mat-step>
             </mat-horizontal-stepper>
@@ -687,7 +657,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
 <ng-template #content let-modal>
 
     <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
-        <h4 class="modal-title" id="modal-basic-title">Prueba de concepto API Conciliación</h4>
+        <h4 class="modal-title" id="modal-basic-title">Prueba de concepto API Saldos y Movimientos</h4>
         <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
       <br>

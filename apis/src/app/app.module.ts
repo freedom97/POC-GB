@@ -81,8 +81,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatMenuModule} from '@angular/material/menu';
 import { TransferenciasComponent } from './components/transferencias/transferencias.component';
 import { ConciliacionPortada } from './components/conciliacion-bancaria/portada-conciliacion/portada-conciliacion.component';
-
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatTableModule} from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -174,7 +176,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatInputModule,
     MatFormFieldModule,
     MatMenuModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatRadioModule,
+    MatTableModule,
+    MatCheckboxModule
 
 
 
