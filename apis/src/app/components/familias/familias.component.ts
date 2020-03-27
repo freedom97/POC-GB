@@ -16,6 +16,7 @@ export class FamiliasComponent implements OnInit {
 verFamiliaRequerimientos(){
   this.router.navigate(['requerimientos-legales']);
 }
+
 verFamilias() {
   this.router.navigate(['familias']);
 }
@@ -73,6 +74,9 @@ verRecomendacion() {
   }
   verCreditosDepositos(){
     this.router.navigate(['creditos-depositos']);
+  }
+  verVerificacionDocIdentidad(){
+    this.router.navigate(['verificar-doc-identidad']);
   }
   ngOnInit() {
     var mySwiper = new Swiper(".swiper-container", {

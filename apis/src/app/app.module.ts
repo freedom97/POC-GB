@@ -85,6 +85,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {VerificarDocIdentidad} from './components/verificacion-documento-identidad/verificacion-documento-identidad.component'
+import { PortadaConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/portada-consulta-infodocumento.component';
+import { ConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/consulta-info-documento/consulta-info-documento.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -154,6 +158,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     pruebaAPIQR,
     TransferenciasComponent,
     ConciliacionPortada,
+    VerificarDocIdentidad,
+    PortadaConsultaInfoDocumento,
+    ConsultaInfoDocumento
 
 
 
@@ -179,7 +186,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatButtonToggleModule,
     MatRadioModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
 
 
 

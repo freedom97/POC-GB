@@ -58,6 +58,10 @@ import { CreditosDepositos } from './components/creditos-depositos/creditos-depo
 import { pruebaAPIQR } from './components/codigoqr-productos/codigoqr-management/pruebaAPI-QR/pruebaAPI-QR.component';
 import { TransferenciasComponent } from './components/transferencias/transferencias.component';
 import { ConciliacionPortada } from './components/conciliacion-bancaria/portada-conciliacion/portada-conciliacion.component';
+import { VerificarDocIdentidad } from './components/verificacion-documento-identidad/verificacion-documento-identidad.component';
+import { PortadaConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/portada-consulta-infodocumento.component';
+import { ConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/consulta-info-documento/consulta-info-documento.component';
+
 
 
 
@@ -126,6 +130,9 @@ const APP_ROUTES: Routes = [
     {path: 'pruebaAPI-qr', component: pruebaAPIQR},
     {path: 'transferencias', component: TransferenciasComponent},
     {path: 'conciliacion-portada', component: ConciliacionPortada},
+    {path: 'verificar-doc-identidad', component: VerificarDocIdentidad},
+    {path: 'consultar-infoDocumento-portada', component: PortadaConsultaInfoDocumento},
+    {path: 'consultar-info-documento', component: ConsultaInfoDocumento},
 
 
 
