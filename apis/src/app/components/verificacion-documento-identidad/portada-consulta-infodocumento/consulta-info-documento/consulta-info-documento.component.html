@@ -22,7 +22,7 @@ color: #808285;">*Esta es una muestra representativa de las funcionalidades que 
 
             <mat-horizontal-stepper [linear]="isLinear" #stepper>
 
-                <mat-step>
+                <mat-step [stepControl]="firstFormGroup">
                     <p style="font-family: 'OpenSans', sans-serif;
 font-size: 12px;
 font-weight: normal;
@@ -31,9 +31,9 @@ font-style: normal;
 line-height: 1.5;
 letter-spacing: -0.3px;
 text-align: justify;
-color: #808285;">El asesor vinculado al proceso es quien debe completar los campos.</p>
+color: #808285;">El asesor vinculado al proceso es quien debe completar los campos. El símbolo (*) significa campo obligatorio.</p>
                     <ng-template matStepLabel>Inicio opción 1</ng-template>
-                    <form>
+                    <form [formGroup]="firstFormGroup">
                         <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
                         <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
                             Surcursal Virtual Personas</p>
@@ -49,7 +49,7 @@ color: #808285;">El asesor vinculado al proceso es quien debe completar los camp
                                     <mat-form-field style="width: 130%;">
                                         <mat-label>Tipo de documento</mat-label>
                                         <mat-select>
-                                            <mat-option *ngFor="let documentoId of docId" [value]="documentoId.value">
+                                            <mat-option *ngFor="let documentoId of docId" [value]="documentoId.value" required>
                                                 {{documentoId.viewValue}}
                                             </mat-option>
                                         </mat-select>
@@ -58,7 +58,7 @@ color: #808285;">El asesor vinculado al proceso es quien debe completar los camp
                                 <td style="position: relative;left: 30%;">
                                     <mat-form-field class="example-full-width" style="width: 135%;">
                                         <mat-label>Número de documento</mat-label>
-                                        <input matInput placeholder="Ingrese el número del documento">
+                                        <input matInput placeholder="Ingrese el número del documento" formControlName="firstCtrl2" required>
                                     </mat-form-field>
                                 </td>
 
@@ -67,13 +67,13 @@ color: #808285;">El asesor vinculado al proceso es quien debe completar los camp
                                 <td>
                                     <mat-form-field class="example-full-width" style="width: 135%;">
                                         <mat-label>Número de celular</mat-label>
-                                        <input matInput placeholder="Ingrese el número de contacto">
+                                        <input matInput placeholder="Ingrese el número de contacto" formControlName="firstCtrl3" required>
                                     </mat-form-field>
                                 </td>
                                 <td style="position: relative;left: 30%;">
                                     <mat-form-field class="example-full-width" style="width: 130%;">
                                         <mat-label>Correo electronico</mat-label>
-                                        <input matInput placeholder="Ingresa el e-mail">
+                                        <input matInput placeholder="Ingresa el e-mail" formControlName="firstCtrl4" required>
                                     </mat-form-field>
                                 </td>
                             </tr>
@@ -88,6 +88,30 @@ color: #808285;">El asesor vinculado al proceso es quien debe completar los camp
 
                             </tr>
 
+
+                        </table>
+                        <br>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
+                            Datos del dispositivo:</h4>
+
+                        <table class="example-full-width" cellspacing="0" style="position: relative;left:32%;top:15px">
+                            <tr>
+
+
+                                <td>
+                                    <mat-form-field class="example-full-width" style="width: 135%;">
+                                        <mat-label>IP dispositivo</mat-label>
+                                        <input matInput placeholder="Ejemplo: 190.216.159.17">
+                                    </mat-form-field>
+                                </td>
+                                <td style="position: relative;left: 30%;">
+                                    <mat-form-field class="example-full-width" style="width: 130%;">
+                                        <mat-label>ID dispositivo</mat-label>
+                                        <input matInput placeholder="Ejemplo: OpTxv%2B0J3V%2FmX3CdwwE91btqWXE%3D">
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+
                         </table>
 
 
@@ -100,8 +124,8 @@ color: #808285;">El asesor vinculado al proceso es quien debe completar los camp
                 color="primary">keyboard_arrow_right</mat-icon></button>
                     </div>
                 </mat-step>
-                <mat-step [stepControl]="firstFormGroup">
-                    <form [formGroup]="firstFormGroup">
+                <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
                         <p style="font-family: 'OpenSans', sans-serif;
 font-size: 12px;
 font-weight: normal;
@@ -205,7 +229,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                         <mat-form-field style="width: 130%;">
                                             <mat-label>Tipo de documento</mat-label>
                                             <mat-select>
-                                                <mat-option *ngFor="let documentoId of docId" [value]="documentoId.value">
+                                                <mat-option *ngFor="let documentoId of docId" [value]="documentoId.value" required>
                                                     {{documentoId.viewValue}}
                                                 </mat-option>
                                             </mat-select>
@@ -214,7 +238,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                     <td style="position: relative;left: 30%;">
                                         <mat-form-field class="example-full-width" style="width: 135%;">
                                             <mat-label>Número de documento</mat-label>
-                                            <input matInput placeholder="Ingrese el número del documento">
+                                            <input matInput placeholder="Ingrese el número del documento" formControlName="secondCtrl2" required>
                                         </mat-form-field>
                                     </td>
 
@@ -223,13 +247,13 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                     <td>
                                         <mat-form-field class="example-full-width" style="width: 135%;">
                                             <mat-label>Número de celular</mat-label>
-                                            <input matInput placeholder="Ingrese el número de contacto">
+                                            <input matInput placeholder="Ingrese el número de contacto" formControlName="secondCtrl3" required>
                                         </mat-form-field>
                                     </td>
                                     <td style="position: relative;left: 30%;">
                                         <mat-form-field class="example-full-width" style="width: 130%;">
                                             <mat-label>Correo electronico</mat-label>
-                                            <input matInput placeholder="Ingresa el e-mail">
+                                            <input matInput placeholder="Ingresa el e-mail" formControlName="secondCtrl4" required>
                                         </mat-form-field>
                                     </td>
                                 </tr>
@@ -260,24 +284,24 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                       line-height: 1.5;
                       letter-spacing: -0.3px;
                       text-align: justify;
-                      color: #808285;">Los datos cargados son obtenidos al completar los datos personales del usuario final.</p>
+                      color: #808285;">Los datos cargados son obtenidos al completar los datos personales del usuario final. Además, las validaciones sólo serán visibles para un asesor vinculado al proceso.</p>
                         <ng-template matStepLabel>Validaciones</ng-template>
                         <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
                         <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
                             Surcursal Virtual Personas</p>
-                        <br>
+
                         <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                            Revisa por favor que todo este correcto</h4><br>
+                            Por favor, revisa que todo este correcto</h4><br>
                         <div class="container-consulta-lote" style="display: flex; justify-content: center">
                             <form>
                                 <br>
                                 <div>
                                     <br>
 
-                                    <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                                        Datos Personales:</h4>
+                                    <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold;position: relative;left: -5%;">
+                                        Datos Obtenidos:</h4>
 
-                                    <table class="example-full-width" cellspacing="0" style="position: relative;left:-5%;top:15px">
+                                    <table class="example-full-width" cellspacing="0" style="position: relative;left:-22%;top:15px">
 
                                         <tr>
                                             <td>
@@ -313,24 +337,65 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                                 </mat-form-field>
                                             </td>
                                         </tr>
+                                        <tr>
 
+
+                                            <td>
+                                                <mat-form-field class="example-full-width" style="width: 135%;">
+                                                    <mat-label>IP dispositivo</mat-label>
+                                                    <input matInput placeholder="Ejemplo: 190.216.159.17">
+                                                </mat-form-field>
+                                            </td>
+                                            <td style="position: relative;left: 30%;">
+                                                <mat-form-field class="example-full-width" style="width: 130%;">
+                                                    <mat-label>ID dispositivo</mat-label>
+                                                    <input matInput placeholder="Ejemplo: OpTxv%2B0J3V%2FmX3CdwwE91btqWXE%3D">
+                                                </mat-form-field>
+                                            </td>
+                                        </tr>
 
                                     </table>
-
-
-
 
                                 </div><br>
                                 <span class="col-sm-15">
 
-                  <button class="btn btn-secondary btn-sm" type="submit" name="approve" data-toggle="collapse"
-                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
-                    style="background-color:#A6B3D1 ;color:#292929">Consultar</button>
+
+                    <button data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary btn-lg" style="box-sizing: border-box;
+                            display: inline-block;  text-align: center;
+                            text-decoration: none; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+                            width: 248px;
+                            height: 38px;
+                            border-radius: 10000px;
+                            background-color: #ffd200;
+                            position: relative;
+                            left: -1%;
+                            margin-top: 6%;">Consultar<i class="fas fa-chevron-down" style="float:right;color: #454648; width: 10px;
+                            height: 16px;padding-top: 2px"></i></button>
                 </span><br><br><br>
                             </form>
                         </div>
-                        <div class="col-15">
+                        <div class="collapse" id="collapseExample" role="collpase">
                             <div class="tab-content" id="nav-tabContent">
+                                <div class="alert alert-danger" role="alert" style="width: 50%;position: relative;left: 26%;">
+                                    <p>
+                                        <mat-icon style="font-size: 40px;position: relative;left: 46%;">cancel</mat-icon>
+                                    </p>
+                                    <h4 class="alert-heading" style="text-align: center;font-weight:600">Acción no legal</h4>
+                                    <br>
+                                    <p style="text-align: left;">Estado: Alerta vigente
+                                    </p>
+                                    <p style="text-align: left;">Nombre completo de la persona verificada: José Dario Gómez
+                                    </p>
+                                    <p style="text-align: left;">Categoría de alerta: Riesgo de suplantación
+                                    </p>
+                                    <p style="text-align: left;">Subcategoría de alerta: Por titular fallecido
+                                    </p>
+                                    <p style="text-align: left;">Fecha registro de alerta: 2020-03-30
+                                    </p>
+                                    <p style="text-align: left;">Usuario reportado: NO APLICA
+                                    </p>
+                                    <hr>
+                                </div>
 
                             </div>
                         </div>
@@ -345,64 +410,31 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                         </div>
                     </form>
                 </mat-step>
+
                 <mat-step>
-
-                    <ng-template matStepLabel>Alertas</ng-template>
-                    <form>
-                        <br>
-                        <div class="modal-content" style="text-align: justify">
-
-                            <div class="modal-body pt-5 pt-md-3">
-
-                                <span class="modal-footer col-sm-8">
-                  <button mat-button matStepperNext type="button" class="btn btn-secondary btn-small"
-                    data-dismiss="modal"
-                    style="background-color:#A6B3D1;color:black;position: relative; left:-15%; width: 20%;height: 30px;">Aceptar</button>
-                </span>
-                            </div>
-                        </div>
-
-
-
-                    </form>
-                    <div>
-                        <button mat-button matStepperPrevious style="margin-top: 120px;">
-              <mat-icon>keyboard_arrow_left</mat-icon>Atrás
-            </button>
-                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon
-                color="primary">keyboard_arrow_right</mat-icon></button>
-                    </div>
-                </mat-step>
-                <mat-step>
+                    <p style="font-family: 'OpenSans', sans-serif;
+                      font-size: 12px;
+                      font-weight: normal;
+                      font-stretch: normal;
+                      font-style: normal;
+                      line-height: 1.5;
+                      letter-spacing: -0.3px;
+                      text-align: justify;
+                      color: #808285;">La conclusión del proceso puede ser visible tanto para el usuario final como para el asesor de Bancolombia.</p>
                     <ng-template matStepLabel>Conclusión del proceso</ng-template>
                     <form>
 
 
 
-
-
-
-                    </form>
-                    <div>
-                        <button mat-button matStepperPrevious style="margin-top: 100px;">
-              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
-            </button>
-                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon
-                color="primary">keyboard_arrow_right</mat-icon></button>
-                    </div>
-                </mat-step>
-
-                <mat-step>
-
-                    <ng-template matStepLabel>Mensaje Exitoso</ng-template>
-                    <form>
-
-                        <div class="alert alert-success" role="alert" style="width: 50%;position: relative;left: 23%;">
+                        <div class="alert alert-danger" role="alert" style="width: 50%;position: relative;left: 23%;">
                             <p>
-                                <mat-icon style="font-size: 40px;position: relative;left: 46%;">check_circle_outline</mat-icon>
+                                <mat-icon style="font-size: 40px;position: relative;left: 46%;">cancel</mat-icon>
                             </p>
-                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Felicitaciones</h4>
-                            <p style="text-align: center;">¡La conciliación de la 2019/04/01 a la 2019/04/20 fue exitosa!</p>
+                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Acción denegada</h4>
+                            <br>
+                            <p style="text-align: left;">Los datos suministrados no son los correctos, intentelo nuevamente. Gracias por su comprensión.
+                            </p>
+
                             <hr>
                         </div>
 
@@ -410,12 +442,14 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                     </form>
                     <div>
                         <button mat-button matStepperPrevious>
-                      <mat-icon>keyboard_arrow_left</mat-icon> Atrás
-                    </button>
+                    <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+                  </button>
                         <button mat-button (click)="stepper.reset()">Volver a empezar</button>
 
                     </div>
                 </mat-step>
+
+
             </mat-horizontal-stepper>
         </div>
 

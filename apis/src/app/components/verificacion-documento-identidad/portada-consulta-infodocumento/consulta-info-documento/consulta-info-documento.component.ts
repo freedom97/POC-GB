@@ -38,13 +38,17 @@ export class ConsultaInfoDocumento implements OnInit {
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
+
       firstCtrl2: ['', Validators.required],
-      firstCtrl3: ['', Validators.required]
+      firstCtrl3: ['', Validators.required],
+      firstCtrl4: ['', Validators.required]
     });
 
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
+
+      secondCtrl2: ['', Validators.required],
+      secondCtrl3: ['', Validators.required],
+      secondCtrl4: ['', Validators.required],
 
     });
   }
