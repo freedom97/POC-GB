@@ -1,6 +1,6 @@
-<!-- componente HTML de la línea de negocio llamada Verificación de documento de identidad del portal de las PoC -->
+<!-- componente HTML de la línea de negocio llamada Cuentas del portal de las PoC -->
 
-<!-- Contenedor de la descripción de los productos que están en la línea de negocio Verificación de documento de identidad -->
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Cuentas -->
 <br>
 <br>
 
@@ -9,7 +9,7 @@
 height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
     <br>
     <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
-    font-weight: 600;text-align:left;">Verificación de documento de identidad</h3>
+    font-weight: 600;text-align:left;">Validar pertenencia de la cuenta</h3>
     <hr style="width: 72%;position: relative;left: -15%;">
     <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     width: 70%;
@@ -20,20 +20,8 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
     letter-spacing: -0.34px;
     text-align: justify;
     color: #808285;">
-        El producto Verificación de documento de Identidad permite identificar en otras fuente bancarias si una persona ha estado relacionada con un evento de fraude o suplantación, durante el proceso de vinculación a Bancolombia sea por un canal digital o físico.</section>
+        El producto API Validar pertenencia de la cuenta, permite confirmar si una cuenta Bancolombia pertenece a una persona consultada con su número de documento. Si deseas conocer el paso a paso solo debes oprimir en "Comenzar".</section>
     <br>
-    <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
-    width: 70%;
-    font-weight: 400;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.34px;
-    text-align: justify;
-    color: #808285;">
-        Si deseas conocer el paso a paso solo debes oprimir en "Comenzar".</section>
-    <br>
-
     <!--  <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     font-weight: 400;
     font-stretch: normal;
@@ -47,15 +35,15 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
 
 </div>
 
-<!-- Contenedor de la imágen circular representativa de la API Verificación de documento de identidad -->
+<!-- Contenedor de la imágen circular representativa de la API Conciliacion -->
 <div style=" margin-left: 55%;margin-top: -80px;">
-    <img class="circulo" src="./assets/img/consultaInfoDocumento.PNG" alt="Card image cap">
+    <img class="circulo" src="./assets/img/validarPertenenciaCuenta.PNG" alt="Card image cap">
 </div>
 
 
 <!-- Lista de las características del producto -->
 
-<div style="width: 58%;margin-top: 5%;position: relative;left: 8%;">
+<div style="width: 58%;margin-top: 1%;position: relative;left: 8%;">
     <h2 style="color:#00448d;font-family: Nunito;
   font-size: 28px;
   font-weight: bold;
@@ -77,7 +65,7 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
           letter-spacing: -0.3px;
           margin-top: -20px;
           margin-left: 3%;
-          color: #808285;">Verificación rápida y transparente</p>
+          color: #808285;">Confirmación de cuentas y titulares</p>
     </i>
         <i class="fas fa-check-circle" style="color:
         #ffcf01 ;">
@@ -90,7 +78,7 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
             letter-spacing: -0.3px;
             margin-top: -20px;
             margin-left: 3%;
-            color: #808285;">Disminución del fraude</p>
+            color: #808285;">Conocimiento de clientes</p>
     </i>
         <i class="fas fa-check-circle" style="color:
         #ffcf01 ;">
@@ -103,7 +91,7 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
                 letter-spacing: -0.3px;
                 margin-top: -20px;
                 margin-left: 3%;
-                color: #808285;">Accesibilidad a información para consulta</p>
+                color: #808285;">Datos inmediatos</p>
     </i>
     </ul>
 </div>
@@ -120,13 +108,13 @@ border-radius: 10000px;
 background-color: #ffd200;
 position: relative;
 left: -40%;
-margin-top: 6%;" (click)="consultarInfoDocumento()">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
+margin-top: 6%;" (click)="verValidarPertenenciaCuenta()">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
               height: 16px;padding-top: 2px"></i></button>
 
-<!-- Botón o "collapse" para desplegar más información que necesite el cliente de la PoC" -->
+<!-- Botón o "collapse" para desplegar más información que necesite el cliente de la PoC " -->
 <div class="container-collapse" style="width: 40%;position: relative;left: 46%;top: -120px;">
     <p>
-        <i class="fas fa-plus-circle" style="color: #ffcf01;position: relative;left:60%;top: 10px;"></i><a class="btn btn-primary" style="position: relative; left: 60%;margin-top: 5%;" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        <i class="fas fa-plus-circle" style="color: #ffcf01;position: relative;left:60%;top: 12px;"></i><a class="btn btn-primary" style="position: relative; left: 60%;margin-top: 5%;" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
             aria-controls="collapseExample">
     Más información
 </a>
@@ -205,8 +193,8 @@ margin-top: 6%;" (click)="consultarInfoDocumento()">Comenzar<i class="fas fa-ang
     /*Estilo para la imágen circular  */
 
     .circulo {
-        width: 250px;
-        height: 250px;
+        width: 230px;
+        height: 230px;
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
         border-radius: 50%;

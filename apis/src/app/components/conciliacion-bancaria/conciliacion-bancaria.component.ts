@@ -18,4 +18,7 @@ export class ConciliacionBancariaComponent implements OnInit {
   verConciliacion(){
     this.router.navigate(['conciliacion-portada']);
   }
+  verPortadaValidarPertenenciaCuenta(){
+    this.router.navigate(['validar-pertenencia-cuenta-portada']);
+  }
 }

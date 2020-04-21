@@ -2,7 +2,7 @@
 <div class="modal-dialog" role="document">
     <div class="modal-content" style="width: 301%;position: relative;left: -100%">
         <div class="modal-header">
-            <h5 class="modal-title">Prueba de concepto API Consulta de información de documento</h5>
+            <h5 class="modal-title">Prototipo de API Verificación de documento de identidad</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverPortalConsultaInfoDocumento()">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -90,29 +90,8 @@ color: #808285;">El asesor vinculado al proceso es quien debe completar los camp
 
 
                         </table>
-                        <br>
-                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
-                            Datos del dispositivo:</h4>
-
-                        <table class="example-full-width" cellspacing="0" style="position: relative;left:32%;top:15px">
-                            <tr>
 
 
-                                <td>
-                                    <mat-form-field class="example-full-width" style="width: 135%;">
-                                        <mat-label>IP dispositivo</mat-label>
-                                        <input matInput placeholder="Ejemplo: 190.216.159.17">
-                                    </mat-form-field>
-                                </td>
-                                <td style="position: relative;left: 30%;">
-                                    <mat-form-field class="example-full-width" style="width: 130%;">
-                                        <mat-label>ID dispositivo</mat-label>
-                                        <input matInput placeholder="Ejemplo: OpTxv%2B0J3V%2FmX3CdwwE91btqWXE%3D">
-                                    </mat-form-field>
-                                </td>
-                            </tr>
-
-                        </table>
 
 
 
@@ -134,7 +113,7 @@ font-style: normal;
 line-height: 1.5;
 letter-spacing: -0.3px;
 text-align: justify;
-color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
+color: #808285;">Los campos deben ser diligenciados por el usuario final. Tener en cuenta que el IP y ID del dispositivo del usuario final son capturados por el back-end de la API.</p>
                         <ng-template matStepLabel>Inicio opción 2</ng-template>
                         <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
                         <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
@@ -337,22 +316,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                                 </mat-form-field>
                                             </td>
                                         </tr>
-                                        <tr>
 
-
-                                            <td>
-                                                <mat-form-field class="example-full-width" style="width: 135%;">
-                                                    <mat-label>IP dispositivo</mat-label>
-                                                    <input matInput placeholder="Ejemplo: 190.216.159.17">
-                                                </mat-form-field>
-                                            </td>
-                                            <td style="position: relative;left: 30%;">
-                                                <mat-form-field class="example-full-width" style="width: 130%;">
-                                                    <mat-label>ID dispositivo</mat-label>
-                                                    <input matInput placeholder="Ejemplo: OpTxv%2B0J3V%2FmX3CdwwE91btqWXE%3D">
-                                                </mat-form-field>
-                                            </td>
-                                        </tr>
 
                                     </table>
 
@@ -380,10 +344,8 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                     <p>
                                         <mat-icon style="font-size: 40px;position: relative;left: 46%;">cancel</mat-icon>
                                     </p>
-                                    <h4 class="alert-heading" style="text-align: center;font-weight:600">Acción no legal</h4>
+                                    <h4 class="alert-heading" style="text-align: center;font-weight:600">Alerta vigente</h4>
                                     <br>
-                                    <p style="text-align: left;">Estado: Alerta vigente
-                                    </p>
                                     <p style="text-align: left;">Nombre completo de la persona verificada: José Dario Gómez
                                     </p>
                                     <p style="text-align: left;">Categoría de alerta: Riesgo de suplantación
@@ -392,7 +354,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                                     </p>
                                     <p style="text-align: left;">Fecha registro de alerta: 2020-03-30
                                     </p>
-                                    <p style="text-align: left;">Usuario reportado: NO APLICA
+                                    <p style="text-align: left;">Reporte legal: NO APLICA
                                     </p>
                                     <hr>
                                 </div>
@@ -420,7 +382,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                       line-height: 1.5;
                       letter-spacing: -0.3px;
                       text-align: justify;
-                      color: #808285;">La conclusión del proceso puede ser visible tanto para el usuario final como para el asesor de Bancolombia.</p>
+                      color: #808285;">Esta conclusión del proceso sólo será visible para el usuario final.</p>
                     <ng-template matStepLabel>Conclusión del proceso</ng-template>
                     <form>
 
@@ -430,9 +392,9 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
                             <p>
                                 <mat-icon style="font-size: 40px;position: relative;left: 46%;">cancel</mat-icon>
                             </p>
-                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Acción denegada</h4>
+                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Finalización incorrecta</h4>
                             <br>
-                            <p style="text-align: left;">Los datos suministrados no son los correctos, intentelo nuevamente. Gracias por su comprensión.
+                            <p style="text-align: left;">Lo sentimos, el proceso no ha podido finalizar correctamente. Te invitamos a que te acerques a una de nuestras sucursales Bancolombia.
                             </p>
 
                             <hr>
@@ -459,7 +421,7 @@ color: #808285;">Los campos deben ser diligenciados por el usuario final.</p>
 <ng-template #content let-modal>
 
     <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
-        <h4 class="modal-title" id="modal-basic-title">Prueba de concepto API Consulta de información de documento</h4>
+        <h4 class="modal-title" id="modal-basic-title">Prototipo de API Verificación de documento de identidad</h4>
         <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
       <br>

@@ -42,9 +42,12 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
                         <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
 
-                          <option value="1" selected>NIT</option>
-                          <option value="2">CC</option>
-                          <option value="3">Otra opción</option>
+                            <option value="1" selected>CC</option>
+                            <option value="2">CE</option>
+                            <option value="3">NIT</option>
+                            <option value="4">TI</option>
+                            <option value="5">PASS</option>
+                            <option value="3" >Elija una opción</option>
                           </select>
                         <mat-form-field style="top: 60px;left: -450px;width: 230px;">
                             <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
@@ -61,8 +64,9 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <form style="margin-top: 7%;margin-left: 28%;">
                             <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
                             <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
-                            <option value="1"selected>Corriente</option>
-                            <option value="3">Otra opción</option>
+                            <option value="1"selected>CUENTA_DE_AHORRO</option>
+                            <option value="2">CUENTA_CORRIENTE</option>
+                            <option value="3">Elija una opción</option>
                             </select>
 
                         </form>
@@ -89,14 +93,17 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                                   letter-spacing: -0.3px;
                                   text-align: justify;
                                   color: #808285;">
-                        Los campos deben ser diligenciados por el usuario final.</p>
+                            Los campos deben ser diligenciados por el usuario final.</p>
                         <ng-template matStepLabel>Opción de inicio 2</ng-template>
                         <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
                         <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
 
-                        <option value="1">NIT</option>
-                        <option value="2">CC</option>
-                        <option value="3">Otra opción</option>
+                        <option value="1">CC</option>
+                        <option value="2">CE</option>
+                        <option value="3">NIT</option>
+                        <option value="4">TI</option>
+                        <option value="5">PASS</option>
+                        <option value="3" selected>Elija una opción</option>
                         </select>
                         <mat-form-field style="top: 60px;left: -450px;width: 230px;">
                             <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
@@ -113,8 +120,9 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <form style="margin-top: 7%;margin-left: 28%;">
                             <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
                             <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
-                          <option value="1">Corriente</option>
-                          <option value="3">Otra opción</option>
+                                <option value="1">CUENTA_DE_AHORRO</option>
+                                <option value="2">CUENTA_CORRIENTE</option>
+                                <option value="3"selected>Elija una opción</option>
                           </select>
 
                         </form>
@@ -123,7 +131,6 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                             <input matInput placeholder="Ejemplo: 5093872099" formControlName="firstCtrl3" required>
 
                         </mat-form-field>
-
 
                     </form>
                     <div>
@@ -148,25 +155,28 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         </mat-form-field>
                         <select class="custom-select" style="width: 29%;margin-left: 4.5%;margin-top:6%;">
                           <option selected>Categoría a la que pertenece el comercio</option>
-                          <option value="1">Retail</option>
-                          <option value="2">Otra opción</option>
+                          <option value="1">IMPUESTOS</option>
+                          <option value="2">EDUCACION</option>
+                          <option value="3">VIAJES</option>
+                          <option value="4">COMIDAS_RESTAURANTES</option>
+                          <option value="5">MODA</option>
+                          <option value="6">MASCOTAS</option>
+                          <option value="7">SEGUROS</option>
+                          <option value="8">TECNOLOGIA</option>
+                          <option value="9">ENTRETENIMIENTO</option>
+                          <option value="10">SALUD_Y_BIENESTAR</option>
+                          <option value="11">OTROS</option>
+                          <option value="12">HOGAR</option>
+                          <option value="13">OBLIGACIONES_BANCARIAS</option>
+                          <option value="14">TRANSPORTE</option>
                           </select>
 
                         <mat-form-field style="top: 110px;left: -375px;width: 330px;">
-                            <mat-label>Referencia o número de factura</mat-label>
+                            <mat-label>Descripción de la transferencia</mat-label>
                             <input matInput placeholder="Ejemplo: 2209">
                         </mat-form-field>
-                        <mat-form-field style="top:16px;left: 420px;width: 330px;">
-                            <mat-label>Descripción personalizada de la factura</mat-label>
-                            <input matInput placeholder="Ejemplo: Escoba marca x">
-                        </mat-form-field>
-                        <select class="custom-select" style="width: 28%;margin-left:7%;margin-top:13%;">
-                        <option selected>Moneda en que se realiza la transferencia</option>
-                        <option value="1">COP</option>
-                        <option value="2">USD</option>
-                        <option value="3">Otra opción</option>
-                        </select>
-                        <mat-form-field style="top: 150px;left: -365px;width: 360px;">
+
+                        <mat-form-field style="top: 90px;left: 25px;width: 360px;">
                             <mat-label>Total a transferir por la factura</mat-label>
                             <input matInput placeholder="Ejemplo: 54800">
                         </mat-form-field>
@@ -200,7 +210,7 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                   line-height: 1.5;
                   letter-spacing: -0.3px;
                   text-align: justify;
-                  color: #808285;">Cuando se generá el código QR, se debe enviar el mensaje de la transferencia por SMS o correo electrónico.</p>
+                  color: #808285;">Cuando el usuario realice la transferencia por medio del código QR generado, se le notifica al titular de la cuenta destino la transacción exitosa (por correo electrónico y/o SMS).</p>
                     <ng-template matStepLabel>Notificación Transferencia</ng-template>
                     <div class="alert alert-success" role="alert" style="width: 30%;height: 30%;background-color: white;position: relative;left: 35%;">
                         <mat-icon color="primary" style="position: relative;left: -170px;margin-top: 15px;">account_circle</mat-icon>

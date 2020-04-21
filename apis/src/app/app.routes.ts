@@ -33,7 +33,6 @@ import { TransaccionesConciliacionBancariaComponent } from './components/transac
 import { OfertasComercialesComponent } from './components/ofertas-comerciales/ofertas-comerciales.component';
 import { OfertasComercialesBancolombiaComponent } from './components/ofertas-comerciales-bancolombia/ofertas-comerciales-bancolombia.component';
 import { OfertasComercialesBancolombia2Component } from './components/ofertas-comerciales-bancolombia2/ofertas-comerciales-bancolombia2.component';
-import { TransaccionesConciliadasComponent } from './components/transacciones-conciliadas/transacciones-conciliadas.component';
 import { PagosComponent } from './components/pagos/pagos.component';
 import { PagonominaComponent } from './components/pagos/pagonomina/pagonomina.component';
 import { Pagonomina2Component } from './components/pagos/pagonomina2/pagonomina2.component';
@@ -61,6 +60,10 @@ import { ConciliacionPortada } from './components/conciliacion-bancaria/portada-
 import { VerificarDocIdentidad } from './components/verificacion-documento-identidad/verificacion-documento-identidad.component';
 import { PortadaConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/portada-consulta-infodocumento.component';
 import { ConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/consulta-info-documento/consulta-info-documento.component';
+import { PortadaValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/portada-validar-pertenencia-cuenta.component';
+import { ValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/validar-pertenencia-cuenta/validar-pertenencia-cuenta.component';
+
+
 
 
 
@@ -99,7 +102,6 @@ const APP_ROUTES: Routes = [
     {path: 'estudio-manual-compania', component: EstudioManualCompaniaComponent},
     {path: 'estudio-manual-referencias', component: EstudioManualReferenciasComponent},
     {path: 'conciliacion-bancaria', component: ConciliacionBancariaComponent},
-    {path: 'transacciones-conciliadas', component: TransaccionesConciliadasComponent},
     {path: 'auth-conciliacion-bancaria', component: AuthConciliacionBancariaComponent},
     {path: 'cuentas-conciliacion-bancaria', component: CuentasConciliacionBancariaComponent},
     {path: 'transacciones-conciliacion-bancaria', component: TransaccionesConciliacionBancariaComponent},
@@ -133,6 +135,10 @@ const APP_ROUTES: Routes = [
     {path: 'verificar-doc-identidad', component: VerificarDocIdentidad},
     {path: 'consultar-infoDocumento-portada', component: PortadaConsultaInfoDocumento},
     {path: 'consultar-info-documento', component: ConsultaInfoDocumento},
+    {path: 'validar-pertenencia-cuenta-portada', component: PortadaValidarPertenenciaCuentaComponent},
+    {path: 'validar-pertenencia-cuenta', component: ValidarPertenenciaCuentaComponent},
+
+
 
 
 

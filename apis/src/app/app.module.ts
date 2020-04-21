@@ -47,7 +47,7 @@ import { TransaccionesConciliacionBancariaComponent } from "./components/transac
 import { OfertasComercialesComponent } from "./components/ofertas-comerciales/ofertas-comerciales.component";
 import { OfertasComercialesBancolombiaComponent } from "./components/ofertas-comerciales-bancolombia/ofertas-comerciales-bancolombia.component";
 import { OfertasComercialesBancolombia2Component } from "./components/ofertas-comerciales-bancolombia2/ofertas-comerciales-bancolombia2.component";
-import { TransaccionesConciliadasComponent } from "./components/transacciones-conciliadas/transacciones-conciliadas.component";
+
 import { RenovarSoat2Component } from "./components/renovar-soat/renovar-soat2/renovar-soat2.component";
 import { PagosComponent } from "./components/pagos/pagos.component";
 import { PagonominaComponent } from "./components/pagos/pagonomina/pagonomina.component";
@@ -89,6 +89,12 @@ import {VerificarDocIdentidad} from './components/verificacion-documento-identid
 import { PortadaConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/portada-consulta-infodocumento.component';
 import { ConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/consulta-info-documento/consulta-info-documento.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {ValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/validar-pertenencia-cuenta/validar-pertenencia-cuenta.component';
+import { PortadaValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/portada-validar-pertenencia-cuenta.component';
+
+
 
 
 
@@ -132,7 +138,6 @@ import {MatSelectModule} from '@angular/material/select';
     OfertasComercialesComponent,
     OfertasComercialesBancolombiaComponent,
     OfertasComercialesBancolombia2Component,
-    TransaccionesConciliadasComponent,
     RenovarSoat2Component,
     PagosComponent,
     PagonominaComponent,
@@ -160,7 +165,10 @@ import {MatSelectModule} from '@angular/material/select';
     ConciliacionPortada,
     VerificarDocIdentidad,
     PortadaConsultaInfoDocumento,
-    ConsultaInfoDocumento
+    ConsultaInfoDocumento,
+    ValidarPertenenciaCuentaComponent,
+    PortadaValidarPertenenciaCuentaComponent
+
 
 
 
@@ -187,7 +195,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatRadioModule,
     MatTableModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
+    MatSortModule
 
 
 
