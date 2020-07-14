@@ -1,0 +1,324 @@
+<br>
+<div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 301%;position: relative;left: -100%">
+        <div class="modal-header">
+            <h5 class="modal-title">Prototipo para API Estudio Crédito Vehiculo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverPortalCreditoVehiculo()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+        <div class="modal-body">
+
+            <!-- Comentario al inicio del prototipo -->
+            <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">*Esta es una muestra representativa de las funcionalidades que puede tener está API, sin embargo no garantiza que los aliados/consumidores lo implementen de la misma forma.</p>
+
+            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+                  font-size: 12px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.5;
+                  letter-spacing: -0.3px;
+                  text-align: justify;
+                  color: #808285;">Los campos vacíos deben ser diligenciados por el usuario solicitante del crédito.
+                        </p>
+                        <ng-template matStepLabel>Estudio Preliminar</ng-template>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
+                            Datos del solicitante del crédito:</h4><br>
+
+                        <p style="margin-left: 41%;">Tipo de documento de identificación</p>
+                        <select class="custom-select" style="width: 18%;margin-left: 34%;" required>
+
+              <option value="1">CC</option>
+              <option value="3">CE</option>
+              <option value="4" selected>Elija una opción</option>
+            </select>
+                        <mat-form-field style="top: 65px;left: -250px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">Número de documento</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+                        <mat-form-field style="top: 115px;left: -493px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">Ingrese su(s) nombre(s):</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 108px;left: 120px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">Ingrese su(s) apellido(s):</mat-label>
+                            <input matInput placeholder="Ejemplo: García Lopez" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 162px;left: -118px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">Número de celular:</mat-label>
+                            <input matInput placeholder="Ejemplo: García Lopez" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+                        <form style="margin-top: 12%;margin-left: 30%;">
+                            <p style="margin-left: 15%;">¿Cuál es su ocupación actual?</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+                <option>Empleado</option>
+                <option>Empleado público</option>
+                <option>Transportador</option>
+                <option value="independiente">Independiente</option>
+                <option>Jubilado</option>
+                <option>Jubilado público</option>
+                <option value="profesional_independiente">Profesional independiente</option>
+                <option>Rentista capital</option>
+                <option value="3" selected>Elija una opción</option>
+              </select>
+
+                        </form>
+
+                        <form style="margin-top: 2%;margin-left: 30%;">
+                            <p style="margin-left: 15%;">¿Usted tiene RUT?</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+                <option>SI</option>
+                <option>NO</option>
+                <option value="3" selected>Elija una opción</option>
+              </select>
+
+                        </form>
+                        <form style="margin-top: 2%;margin-left: 30%;">
+                            <p style="margin-left: 15%;">¿Cuál es su profesíon?</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+                <option>Profesión del solicitante</option>
+                <option>Abogado</option>
+                <option>Administrador de Empresas</option>
+                <option>Arquitecto</option>
+                <option>Contador</option>
+                <option>Ingeniero, mecánico, electrónico, carreras a fines</option>
+                <option>Médico, odontólogo, carreras afines</option>
+                <option>Veterinario, zootecnista</option>
+                <option>Otras ingenierías</option>
+                <option>Otro</option>
+                <option value="3" selected>Elija una opción</option>
+              </select>
+
+                        </form>
+                        <form style="margin-top: 2%;margin-left: 30%;">
+                            <p style="margin-left: 15%;">¿Cuál es su país de residencia?</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+                <option>Colombia</option>
+                <option>Otro</option>
+                <option value="3" selected>Elija una opción</option>
+              </select>
+                        </form>
+                        <span class="col-sm-10" style="display: flex; justify-content: center; position: relative;top: 15px;left: 6%;">
+              <input type="checkbox" style="position: relative;top:5px;margin: 3px;"><u>
+                <a style="cursor:pointer; font-size: 15px;" data-toggle="modal"
+                  data-target="#exampleModalLong"><u>Aceptar
+                    términos y condiciones.</u></a></u>
+            </span>
+                        <!-----------MODAL----------->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: 'Nunito', sans-serif;font-weight: bold">Términos y Condiciones</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify">
+                                        Se han guardado con exito sus datos personales, continuar con el proceso.
+
+                                    </div>
+                                    <span class="modal-footer col-sm-10">
+
+                    <button type="button" id="botonAcepto" class="btn btn-primary btn-small" data-dismiss="modal"
+                      onclick="document.getElementById('botonEnviarDocumentos').style.display='block';">Aceptar</button>
+                  </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Continuar<mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">El solicitante del crédito debe diligenciar los campos vacíos.</p>
+                        <ng-template matStepLabel>Estudio Preliminar Datos vehiculo</ng-template>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
+                            Datos del vehículo a financiar:</h4><br>
+
+                        <form style="margin-top: 1%;margin-left: 30%;">
+                            <p style="margin-left: 15%;">Elegir categoría del vehículo</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+
+                              <option>Credtio Vehiculo Nuevo</option>
+                              <option>Credtio Vehiculo Usado</option>
+                              <option>Leasing Vehiculo Nuevo</option>
+                              <option>Leasing Moto Gama Alta Nueva</option>
+                              <option>Credtio Moto Gama Alta Usada</option>
+                              <option>Credtio Vehiculo Gama Alta Nueva</option>
+                  <option value="3" selected>Elija una opción</option>
+                </select>
+                        </form>
+                        <form style="margin-top: 2%;margin-left: 30%;">
+                            <p style="margin-left: 15%;">Elegir subcategoría del vehículo</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+
+                              <option>Automovil</option>
+                              <option>Camioneta</option>
+                              <option>Campero</option>
+                              <option>Pick Up</option>
+                              <option>Motocicleta</option>
+
+        <option value="3" selected>Elija una opción</option>
+      </select>
+
+                        </form>
+                        <mat-form-field style="top: 15px;left: -5px;width: 360px;">
+                            <mat-label id="label1" style="display: flex;">Si el vehículo es usuado, ingrese su año o modelo:</mat-label>
+                            <input matInput placeholder="Ejemplo: 2017" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+            <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+          </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Continuar<mat-icon
+              color="primary">keyboard_arrow_right</mat-icon></button>
+
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+
+                        <ng-template matStepLabel>Estudio Final</ng-template>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
+                            Datos del solicitante del crédito:</h4><br>
+
+                        <mat-form-field style="top: -20px;left: 220px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">¿Cuál es su ingreso fijo mensual?</mat-label>
+                            <input matInput placeholder="Ejemplo: 5000000" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+                        <mat-form-field style="top: 33px;left: -20px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">¿Tiene otros ingresos?</mat-label>
+                            <input matInput placeholder="Ejemplo: Si su respesta es NO, digite el número 0" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 90px;left: -260px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">¿Cuáles son sus gastos?</mat-label>
+                            <input matInput placeholder="Ejemplo: 1000000" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Continuar<mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
+
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Se debe de tener en cuenta que el campo tasa de interés no se expondra por cuestiones legales en un sitio web o aplicativo móvil real. Se debe dialogar la entidad aliada.</p>
+                        <ng-template matStepLabel>Respuesta exitosa</ng-template>
+
+                        <br>
+                        <div class="alert alert-success" role="alert" style="width: 50%;position: relative;left: 23%;">
+                            <p>
+                                <mat-icon style="font-size: 40px;position: relative;left: 46%;">check_circle_outline</mat-icon>
+                            </p>
+                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Solicitud Aprobada</h4>
+                            <p style="text-align: center;">Felicitaciones, su solicitud de crédito fue aprobada.
+                            </p>
+                            <p style="text-align: center;">Monto aprobado para el crédito: 25000000,
+                            </p>
+                            <p style="text-align: center;"> Plazo del crédito aprobado (en meses): 180
+                            </p>
+                            <p style="text-align: center;font-weight:600">Tasa de interés aprobada para el crédito: 9.2,
+                            </p>
+                            <p style="text-align: center;">Fecha de vigencia de aprobación del crédito: 2020-09-05
+                            </p>
+                            <hr>
+                        </div>
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
+                        <button mat-button (click)="stepper.reset()">Volver a empezar</button>
+                    </div>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #content let-modal>
+
+    <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
+        <h4 class="modal-title" id="modal-basic-title">Prototipo para API Estudio Crédito Vehiculo</h4>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+      <br>
+    </button>
+    </div>
+
+    <div class="modal-body" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+
+
+    </div>
+
+    <!--   <div class="modal-footer" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <br>
+    </div> -->
+
+
+</ng-template>

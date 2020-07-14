@@ -1,0 +1,366 @@
+<!-- componente HTML de la línea de negocio llamada Créditos y depósitos del portal de las PoC -->
+
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Créditos y depósitos -->
+<br>
+<br>
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 280%;position: relative;left: -90%">
+        <div class="modal-header">
+            <h5 class="modal-title">Prototipo Giros Nacionales</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverGirosNacionalesPortada()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+        <div class="modal-body">
+
+            <!-- Comentario al inicio de la PoC -->
+            <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">*Esta es una muestra representativa de las funcionalidades que puede tener está API, sin embargo no garantiza que los aliados/consumidores lo implementen de la misma forma.</p>
+
+            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+                              font-size: 12px;
+                              font-weight: normal;
+                              font-stretch: normal;
+                              font-style: normal;
+                              line-height: 1.5;
+                              letter-spacing: -0.3px;
+                              text-align: justify;
+                              color: #808285;">
+                            Los campos deben ser diligenciados por el usuario final.</p>
+                        <ng-template matStepLabel>Consultar comisión</ng-template>
+                        <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
+                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
+
+                    <option value="1">CC</option>
+                    <option value="2">CE</option>
+                    <option value="3">NIT</option>
+                    <option value="4">TI</option>
+                    <option value="5">PASS</option>
+                    <option value="3" selected>Elija una opción</option>
+                    </select>
+                        <mat-form-field style="top: 60px;left: -450px;width: 230px;">
+                            <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular:</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando">
+
+                        </mat-form-field>
+
+                        <form style="margin-top: 7%;margin-left: 28%;">
+                            <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
+                            <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
+                            <option value="1">CUENTA_DE_AHORRO</option>
+                            <option value="2">CUENTA_CORRIENTE</option>
+                            <option value="3"selected>Elija una opción</option>
+                      </select>
+
+                        </form>
+                        <mat-form-field style="top: 15px;left: 8px;width: 380px;">
+                            <mat-label id="label1" style="display: flex;">Número de cuenta destino de la transferencia:</mat-label>
+                            <input matInput placeholder="Ejemplo: 5093872099" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Los campos vacios deben ser diligenciados por el asesor vinculado al proceso de la empresa del tercero.</p>
+                        <ng-template matStepLabel>Envío de Giro</ng-template>
+
+                        <mat-form-field style="top: 40px;left: -10px;width: 230px;">
+                            <mat-label id="label1" style="display: flex;">Código del punto inicial de venta</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold; position: relative;top:50px">
+                            Datos del usuario que envía el giro </h4><br>
+                        <p style="margin-left: 36%; position: relative;top: 35px;">Tipo de documento del cliente titular de la cuenta</p>
+                        <select class="custom-select" style="width: 23%;margin-left: 27%;position: relative;top: 25px;" required>
+
+                              <option value="1" >CC</option>
+                              <option value="2">CE</option>
+                              <option value="3">NIT</option>
+                              <option value="5">PAS</option>
+                              <option value="3"selected >Elija una opción</option>
+                            </select>
+                        <mat-form-field style="top: 70px;left: -85px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando">
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 120px;left: -300px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Número de celular del titular</mat-label>
+                            <input matInput placeholder="Ejemplo: 3104569987">
+
+                        </mat-form-field>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold; position: relative;top: 125px;">
+                            Datos del usuario que recibe el giro </h4><br>
+                        <p style="margin-left: 36%;position: relative;top: 150px;">Tipo de documento del cliente titular de la cuenta</p>
+                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;position: relative;top: 180px;" required>
+
+                            <option value="1" >CC</option>
+                            <option value="2">CE</option>
+                            <option value="3">NIT</option>
+                            <option value="5">PAS</option>
+                            <option value="3"selected >Elija una opción</option>
+                          </select>
+                        <mat-form-field style="top: 150px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando">
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Número de celular del titular</mat-label>
+                            <input matInput placeholder="Ejemplo: 3104569987">
+
+                        </mat-form-field>
+                        <h4 style="display: flex; justify-content: center; color:#58595b; font-family: 'Nunito', sans-serif;font-weight: bold">
+                            Otros datos </h4><br>
+
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Pagador de Comisión</mat-label>
+                            <input matInput value="SENDER" disabled>
+
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Cantidad de dinero a enviar</mat-label>
+                            <input matInput placeholder="Ejemplo: $1,000.00">
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Comisión a pagar</mat-label>
+                            <input matInput value="$1,300.00" disabled>
+
+                        </mat-form-field>
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Valor del IVA</mat-label>
+                            <input matInput value="$1,300.00" disabled>
+
+                        </mat-form-field>
+                        <span class="col-sm-10" style="display: flex; justify-content: center; position: relative;top: 15px;left: 6%;">
+                          <input type="checkbox" style="position: relative;top:5px;margin: 3px;"><u>
+                          <a style="cursor:pointer; font-size: 15px;" data-toggle="modal" data-target="#exampleModalLong"><u>Envío de autorización de términos y condiciones al usuario final.</u></a></u>
+                      </span>
+                        <!-----------MODAL----------->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: 'Nunito', sans-serif;font-weight: bold">Términos y Condiciones</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify">
+                                        Se han enviado los términos y condiciones al correo y/o número de celular del usuario final, para que confirme la autorización de la validación de su cuenta.
+
+                                    </div>
+                                    <span class="modal-footer col-sm-10">
+
+                                  <button type="button" id="botonAcepto" class="btn btn-primary btn-small" data-dismiss="modal" onclick="document.getElementById('botonEnviarDocumentos').style.display='block';">Aceptar</button>
+                              </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Ver opción 2 <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+                                  font-size: 12px;
+                                  font-weight: normal;
+                                  font-stretch: normal;
+                                  font-style: normal;
+                                  line-height: 1.5;
+                                  letter-spacing: -0.3px;
+                                  text-align: justify;
+                                  color: #808285;">
+                            Los campos deben ser diligenciados por el usuario final.</p>
+                        <ng-template matStepLabel>Consultar estado del grio</ng-template>
+                        <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
+                        <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
+
+                        <option value="1">CC</option>
+                        <option value="2">CE</option>
+                        <option value="3">NIT</option>
+                        <option value="4">TI</option>
+                        <option value="5">PASS</option>
+                        <option value="3" selected>Elija una opción</option>
+                        </select>
+                        <mat-form-field style="top: 60px;left: -450px;width: 230px;">
+                            <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+                        <mat-form-field style="top: 70px;left: -26px;width: 320px;">
+                            <mat-label id="label1" style="display: flex;">Nombre del cliente o razón social titular:</mat-label>
+                            <input matInput placeholder="Ejemplo: Luis Fernando">
+
+                        </mat-form-field>
+
+                        <form style="margin-top: 7%;margin-left: 28%;">
+                            <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
+                            <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
+                                <option value="1">CUENTA_DE_AHORRO</option>
+                                <option value="2">CUENTA_CORRIENTE</option>
+                                <option value="3"selected>Elija una opción</option>
+                          </select>
+
+                        </form>
+                        <mat-form-field style="top: 15px;left: 8px;width: 380px;">
+                            <mat-label id="label1" style="display: flex;">Número de cuenta destino de la transferencia:</mat-label>
+                            <input matInput placeholder="Ejemplo: 5093872099" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+
+                <mat-step>
+                    <p style="font-family: 'OpenSans', sans-serif;
+                  font-size: 12px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.5;
+                  letter-spacing: -0.3px;
+                  text-align: justify;
+                  color: #808285;">.</p>
+                    <ng-template matStepLabel>Pagar el giro</ng-template>
+
+                    <div>
+                        <button mat-button matStepperPrevious> <mat-icon>keyboard_arrow_left</mat-icon> Atrás </button>
+                        <button mat-button (click)="stepper.reset()">Volver a empezar</button>
+                    </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </div>
+
+    </div>
+</div>
+
+
+<ng-template #content let-modal>
+
+    <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
+        <h4 class="modal-title" id="modal-basic-title">Prototipo Giros Nacionales</h4>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+      <br>
+    </button>
+    </div>
+
+    <div class="modal-body" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+
+
+    </div>
+
+    <!--   <div class="modal-footer" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        <br>
+    </div> -->
+
+
+</ng-template>
+
+<!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
+    height: 16px;padding-top: 2px"></i>REGRESAR </button> -->
+<!-- Contenedor del "footer o pie de página" del portal PoC-->
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<!-- Contenedor del "footer o pie de página" del portal PoC-->
+<footer class="detalle-footer" role="contentinfo">
+    <div class="region region-footer">
+        <div class="region-inner clearfix">
+            <div id="block-block-1" class="block block-block no-title odd first last block-count-5 block-region-footer block-1">
+                <div class="block-inner clearfix">
+                    <div class="block-content content no-title">
+                        <div class="footer">
+                            <p style="font-family: Nunito;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.14;
+                        letter-spacing: -0.39px;
+                        color: #808285;">Iniciativa desarrollada por el área de Open Banking y APIs - OBA</p>
+                            <!--  <p style="font-family: Nunito;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.14;
+                        letter-spacing: -0.39px;
+                        color: #808285;">Open Banking y API's - OBA</p> -->
+                            <p style="font-family: Nunito;
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.5;
+                        letter-spacing: -0.3px;
+                        color: #808285;">Contacto: oba@bancolombia.com.co</p>
+                            <h2 style="font-family: Nunito;
+                        font-size: 14px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.5;
+                        letter-spacing: -0.3px;
+                        color: #ffffff;
+                        position: relative;
+                        left: 550px;
+                        top: -28px;
+                        ">Copyright <i class="far fa-copyright"></i> Grupo Bancolombia</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<style>
+    .circulo {
+        width: 250px;
+        height: 250px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+</style>

@@ -1,14 +1,10 @@
-<!-- componente HTML de la línea de negocio llamada Créditos y depósitos del portal de las PoC -->
-
-<!-- Contenedor de la descripción de los productos que están en la línea de negocio Créditos y depósitos -->
-
-<div style="background-color:rgba(150, 140, 140, 0.1);width:1524px;
-height: 147px;margin-top: -23px;margin-left: -210px;background-size: cover;">
+<div style="background-color:rgba(150, 140, 140, 0.1);width:1534px;
+height: 167px;margin-top: -23px;margin-left: -212px;background-size: cover;">
     <br>
     <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
-    font-weight: 600;text-align: center;">Productos de Financiación</h3>
+    font-weight: 600;text-align: center;">Cuentas</h3>
     <hr>
-    <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
+    <p class="descripcion" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
@@ -16,8 +12,14 @@ height: 147px;margin-top: -23px;margin-left: -210px;background-size: cover;">
     letter-spacing: -0.34px;
     text-align: center;
     color: #808285;">
-        Aqui encontrarás los productos APIs de la línea de negocio Productos de Financiación, los cuales podrás utilizar como mejor se acomode a tus necesidades o a las necesidades de tu empresa</section>
-
+        Aquí encontrarás los productos APIs de la línea de negocio Cuentas, los cuales permiten conciliar automáticamente las cuentas de Bancolombia dentro de la plataforma de la empresa aliada, al obtener información sobre los saldos y movimientos de forma rápida,
+        automática y en tiempo real.
+        <!--  <br><u>Características principales:</u>
+        <br>
+        <li>Consulta de cuentas de depósito de Bancolombia asociados a un cliente de Alegra.</li>
+        <li>Consulta del saldo y movimientos de la cuenta en tiempo real.</li>
+        <li>Conciliación de movimientos para un periodo de tiempo personalizado</li> -->
+    </p>
 </div>
 <br>
 <!-- Contenedor del título Catálogo de productos, ubicado casi en el centro del componente HTML -->
@@ -31,30 +33,32 @@ line-height: 1.07;
 letter-spacing: -0.6px;
 color: #808285;">Catálogo de productos</h2>
 <br>
-<!-- Contenedor de las "cards o tarjetas" de los productos de la línea de negocio Créditos y depósitos -->
-<div class="card-deck">
+<!-- Contenedor de las "cards o tarjetas" de los productos de la línea de negocio Transferencias -->
+<div class="card-deck" style="width: 50%;height: 50%;">
 
-    <div class="card-deck" style="width: 50%;height: 50%;">
-        <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-            <img class="card-img-top" src="./assets/img/CreditoVehiculo.PNG" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Estudio Crédito Vehículo</h5>
-                <p class="card-text" style="color: #808285;">Realiza desde la comodidad de tu casa, un credito Sufi para el carro de tus sueños.</p>
-            </div>
-            <button type="button" (click)="verPortadaCreditoVehiculo()" class="btn btn-primary" style="color:#00448d;margin-left: 310px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
-                  height: 16px;padding-top: 2px"></i></button>
 
+    <div class="card" style="border: 0px;background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+        <img class="card-img-top" src="./assets/img/giroNacional.PNG" alt="Card image cap" style="width: 100%;height: 35%;">
+        <div class="card-body">
+            <h5 class="card-title">Giros Nacionales</h5>
+            <p class="card-text" style="color: #808285;">Confirma si una cuenta Bancolombia pertenece a una persona consultada.</p>
         </div>
+        <button type="button" (click)="verPortadaGirosNacionales()" class="btn btn-primary" style="color:#00448d;margin-left: 81px;"> Conocer más<i class="fas fa-angle-right" style="float:right;color:#00448d; width: 10px;
+                height: 16px;padding-top: 2px"></i></button>
 
     </div>
 
+
 </div>
-<br><br><br><br><br>
-<!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
-    height: 16px;padding-top: 2px"></i>REGRESAR </button> -->
-<!-- Contenedor del "footer o pie de página" del portal PoC-->
+
+<br><br><br><br><br><br><br><br>
+<!-- <span>
+    <button (click)="verFamilias()"style="margin-right: 30px" class="btn btn-primary btn-lg "><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;height: 16px;padding-top: 2px"></i>REGRESAR </button>
+    <button type="button "(click)="verAuthConciliacionBancaria()" class="btn btn-primary"> Ingresar <i class="fas fa-angle-right" style="float:right;color:#454648; width: 10px;height: 16px;padding-top: 2px"></i></button>
+</span> -->
 <br><br><br>
 <!-- Contenedor del "footer o pie de página" del portal PoC-->
+<br><br><br>
 <footer class="detalle-footer" role="contentinfo">
     <div class="region region-footer">
         <div class="region-inner clearfix">

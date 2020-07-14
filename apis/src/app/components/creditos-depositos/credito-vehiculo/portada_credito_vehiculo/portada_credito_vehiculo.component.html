@@ -1,0 +1,212 @@
+<!-- componente HTML de la línea de negocio llamada Creditos y depositios del portal de los prototipos de APIs -->
+
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Creditos y depositios -->
+<br>
+<br>
+
+
+<div style="background-color:white;width:70%;
+height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
+    <br>
+    <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
+    font-weight: 600;text-align:left;">Estudio Crédito Vehículo</h3>
+    <hr style="width: 72%;position: relative;left: -15%;">
+    <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
+    width: 70%;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.34px;
+    text-align: justify;
+    color: #808285;">
+        El producto API Estudio Crédito Vehículo, permite registrar la información básica del solicitante del crédito, también del comercio y del vehiculo en cuestión. Para este caso de uso, la información suministrada será evaluada por dos tipos de estudios:
+        Preliminar y Final. Si deseas conocer el paso a paso solo debes oprimir en "Comenzar".</section>
+    <br>
+    <!--  <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.34px;
+    text-align: justify;
+    color: #808285;">
+        Cabe resaltar que esta prueba de concepto es una muestra representativa de las funcionalidades de está API.
+    </section> -->
+
+</div>
+
+<!-- Contenedor de la imágen circular representativa de la API Estudio crédito vehículo -->
+<div style=" margin-left: 55%;margin-top: -80px;">
+    <img class="circulo" src="./assets/img/CreditoVehiculo.PNG" alt="Card image cap">
+</div>
+
+
+<!-- Lista de las características del producto -->
+
+<div style="width: 58%;margin-top: 1%;position: relative;left: 8%;">
+    <h2 style="color:#00448d;font-family: Nunito;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: -0.6px;
+  margin-top: -12%;
+  margin-left: -95%;">Características del producto</h2>
+    <ul class="list-group" style="margin-left: -17%;margin-top: 2%;">
+        <i class="fas fa-check-circle" style="color:
+        #ffcf01 ;">
+      <p style="font-family: 'OpenSans', sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: -0.3px;
+          margin-top: -20px;
+          margin-left: 3%;
+          color: #808285;">Autogestión del proceso desde la comodidad de su casa</p>
+    </i>
+        <i class="fas fa-check-circle" style="color:
+        #ffcf01 ;">
+      <p style="font-family: 'OpenSans', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: -0.3px;
+            margin-top: -20px;
+            margin-left: 3%;
+            color: #808285;">Conocimiento oportuno de la información</p>
+    </i>
+        <i class="fas fa-check-circle" style="color:
+        #ffcf01 ;">
+      <p style="font-family: 'OpenSans', sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: -0.3px;
+                margin-top: -20px;
+                margin-left: 3%;
+                color: #808285;">Mayor campo de acción</p>
+    </i>
+    </ul>
+</div>
+<!-- Botón para comenzar y tambien apertura al popup o ventana emergente del prototipo-->
+
+
+
+<button class="btn btn-primary btn-lg" style="box-sizing: border-box;
+display: inline-block;  text-align: center;
+text-decoration: none; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+width: 248px;
+height: 38px;
+border-radius: 10000px;
+background-color: #ffd200;
+position: relative;
+left: -40%;
+margin-top: 6%;" (click)="verCreditoVehiculo()">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
+              height: 16px;padding-top: 2px"></i></button>
+
+<!-- Botón o "collapse" para desplegar más información que necesite el cliente del prototipo " -->
+<div class="container-collapse" style="width: 40%;position: relative;left: 46%;top: -120px;">
+    <p>
+        <i class="fas fa-plus-circle" style="color: #ffcf01;position: relative;left:60%;top: 12px;"></i><a class="btn btn-primary" style="position: relative; left: 60%;margin-top: 5%;" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+    Más información
+</a>
+    </p>
+    <div class="collapse" id="collapseExample" style="position: relative;left: 20%;">
+        <div class="card card-body">
+            <p> Funcional y de negocio: ajarcila@bancolombia.com.co </p>
+            <p>Documentación técnica: <a href="https://developer.bancolombia.com/es/product" class="stretched-link">https://developer.bancolombia.com/es/product</a> </p>
+
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- <pre>{{closeResult}}</pre> -->
+
+<br><br><br><br><br>
+<!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
+    height: 16px;padding-top: 2px"></i>REGRESAR </button> -->
+<!-- Contenedor del "footer o pie de página" del portal PoC-->
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<!-- Contenedor del "footer o pie de página" del portal PoC-->
+<footer class="detalle-footer" role="contentinfo">
+    <div class="region region-footer">
+        <div class="region-inner clearfix">
+            <div id="block-block-1" class="block block-block no-title odd first last block-count-5 block-region-footer block-1">
+                <div class="block-inner clearfix">
+                    <div class="block-content content no-title">
+                        <div class="footer">
+                            <p style="font-family: Nunito;
+                          font-size: 16px;
+                          font-weight: bold;
+                          font-stretch: normal;
+                          font-style: normal;
+                          line-height: 1.14;
+                          letter-spacing: -0.39px;
+                          color: #808285;">Iniciativa desarrollada por el área de Open Banking y APIs - OBA</p>
+                            <!--  <p style="font-family: Nunito;
+                          font-size: 16px;
+                          font-weight: bold;
+                          font-stretch: normal;
+                          font-style: normal;
+                          line-height: 1.14;
+                          letter-spacing: -0.39px;
+                          color: #808285;">Open Banking y API's - OBA</p> -->
+                            <p style="font-family: Nunito;
+                          font-size: 14px;
+                          font-weight: 600;
+                          font-stretch: normal;
+                          font-style: normal;
+                          line-height: 1.5;
+                          letter-spacing: -0.3px;
+                          color: #808285;">Contacto: oba@bancolombia.com.co</p>
+                            <h2 style="font-family: Nunito;
+                          font-size: 14px;
+                          font-weight: bold;
+                          font-stretch: normal;
+                          font-style: normal;
+                          line-height: 1.5;
+                          letter-spacing: -0.3px;
+                          color: #ffffff;
+                          position: relative;
+                          left: 550px;
+                          top: -28px;
+                          ">Copyright <i class="far fa-copyright"></i> Grupo Bancolombia</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<style>
+    /*Estilo para la imágen circular  */
+
+    .circulo {
+        width: 230px;
+        height: 230px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    /* Estilo para el popup o ventana emergente de la PoC */
+
+    .mat-stepper-horizontal {
+        margin-top: 8px;
+    }
+
+    .mat-form-field {
+        margin-top: 16px;
+    }
+</style>

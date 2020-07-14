@@ -19,7 +19,7 @@ verPagoNomina(){
 verPagoProveedor(){
   this.router.navigate(['pagoproveedor']);
 }
-verPagoTerceros(){
-  this.router.navigate(['pagoterceros']);
+verPortadaCreditoVehiculo(){
+  this.router.navigate(['portada-credito-vehiculo']);
 }
 }

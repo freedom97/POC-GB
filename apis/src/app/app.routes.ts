@@ -62,6 +62,13 @@ import { PortadaConsultaInfoDocumento } from './components/verificacion-document
 import { ConsultaInfoDocumento } from './components/verificacion-documento-identidad/portada-consulta-infodocumento/consulta-info-documento/consulta-info-documento.component';
 import { PortadaValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/portada-validar-pertenencia-cuenta.component';
 import { ValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/validar-pertenencia-cuenta/validar-pertenencia-cuenta.component';
+import { ServiciosConsumidorComponent } from './components/servicios-consumidor/servicios-consumidor.component';
+import { GirosNacionalesPortada } from './components/servicios-consumidor/giros-nacionales-portada/giros-nacionales-portada.component';
+import { GirosNacionales } from './components/servicios-consumidor/giros-nacionales-portada/giros-nacionales/giros-nacionales.component';
+import { GirosNacionales2 } from './components/servicios-consumidor/giros-nacionales-portada/giros-nacionales2/giros-nacionales2.component';
+import { PortadaCreditoVehiculoComponent } from './components/creditos-depositos/credito-vehiculo/portada_credito_vehiculo/portada_credito_vehiculo.component';
+import { CreditoVehiculoComponent } from './components/creditos-depositos/credito-vehiculo/credito-vehiculo.component';
+
 
 
 
@@ -128,7 +135,7 @@ const APP_ROUTES: Routes = [
     {path: 'pagoterceros-consultardetalle',  component: PagotercerosConsultardetalleComponent},
     {path: 'pagoterceros-consultarbeneficiario',  component: PagotercerosConsultarbeneficiarioComponent},
     {path: 'codigoqr-management', component: CodigoQrManagement},
-    {path: 'creditos-depositos', component: CreditosDepositos},
+    {path: 'productos-financiacion', component: CreditosDepositos},
     {path: 'pruebaAPI-qr', component: pruebaAPIQR},
     {path: 'transferencias', component: TransferenciasComponent},
     {path: 'conciliacion-portada', component: ConciliacionPortada},
@@ -137,7 +144,12 @@ const APP_ROUTES: Routes = [
     {path: 'consultar-info-documento', component: ConsultaInfoDocumento},
     {path: 'validar-pertenencia-cuenta-portada', component: PortadaValidarPertenenciaCuentaComponent},
     {path: 'validar-pertenencia-cuenta', component: ValidarPertenenciaCuentaComponent},
-
+    {path: 'servicios-consumidor', component: ServiciosConsumidorComponent},
+    {path: 'giros-nacionales-portada', component: GirosNacionalesPortada},
+    {path: 'giros-nacionales', component: GirosNacionales},
+    {path: 'giros-nacionales2', component: GirosNacionales2},
+    {path: 'portada-credito-vehiculo', component:PortadaCreditoVehiculoComponent},
+    {path: 'credito-vehiculo', component:CreditoVehiculoComponent},
 
 
 

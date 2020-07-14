@@ -93,6 +93,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {ValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/validar-pertenencia-cuenta/validar-pertenencia-cuenta.component';
 import { PortadaValidarPertenenciaCuentaComponent } from './components/conciliacion-bancaria/portada-validar-pertenencia-cuenta/portada-validar-pertenencia-cuenta.component';
+import { ServiciosConsumidorComponent } from './components/servicios-consumidor/servicios-consumidor.component';
+import { GirosNacionalesPortada } from './components/servicios-consumidor/giros-nacionales-portada/giros-nacionales-portada.component';
+import { GirosNacionales } from './components/servicios-consumidor/giros-nacionales-portada/giros-nacionales/giros-nacionales.component';
+import { GirosNacionales2 } from './components/servicios-consumidor/giros-nacionales-portada/giros-nacionales2/giros-nacionales2.component';
+import { PortadaCreditoVehiculoComponent } from './components/creditos-depositos/credito-vehiculo/portada_credito_vehiculo/portada_credito_vehiculo.component';
+import { CreditoVehiculoComponent } from './components/creditos-depositos/credito-vehiculo/credito-vehiculo.component';
 
 
 
@@ -167,7 +173,13 @@ import { PortadaValidarPertenenciaCuentaComponent } from './components/conciliac
     PortadaConsultaInfoDocumento,
     ConsultaInfoDocumento,
     ValidarPertenenciaCuentaComponent,
-    PortadaValidarPertenenciaCuentaComponent
+    PortadaValidarPertenenciaCuentaComponent,
+    ServiciosConsumidorComponent,
+    GirosNacionalesPortada,
+    GirosNacionales,
+    GirosNacionales2,
+    PortadaCreditoVehiculoComponent,
+    CreditoVehiculoComponent
 
 
 
