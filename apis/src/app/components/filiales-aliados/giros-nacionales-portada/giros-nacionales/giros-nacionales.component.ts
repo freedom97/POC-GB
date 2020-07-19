@@ -3,10 +3,10 @@ import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-pruebaQR',
-  templateUrl: './pruebaAPI-QR.component.html'
+  selector: 'app-giros-nacionales',
+  templateUrl: './giros-nacionales.component.html'
 })
-export class pruebaAPIQR implements OnInit {
+export class GirosNacionales implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   isOptional = false;
@@ -37,8 +37,8 @@ export class pruebaAPIQR implements OnInit {
   verAuthConciliacionBancaria(){
     this.router.navigate(['auth-conciliacion-bancaria']);
   }
-  volverQR(){
-    this.router.navigate(['codigoqr-management']);
+  volverGirosNacionalesPortada(){
+    this.router.navigate(['giros-nacionales-portada']);
   }
 
 

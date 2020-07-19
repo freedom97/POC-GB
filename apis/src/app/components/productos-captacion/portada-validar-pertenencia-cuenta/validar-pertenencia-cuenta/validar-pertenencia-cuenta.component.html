@@ -1,0 +1,209 @@
+<br>
+<div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 301%;position: relative;left: -100%">
+        <div class="modal-header">
+            <h5 class="modal-title">Prototipo para API Validar Pertenencia de la cuenta</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverPortalConciliacion()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+        <div class="modal-body">
+
+            <!-- Comentario al inicio del prototipo -->
+            <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">*Esta es una muestra representativa de las funcionalidades que puede tener está API, sin embargo no garantiza que los aliados/consumidores lo implementen de la misma forma.</p>
+
+            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+                <mat-step [stepControl]="firstFormGroup">
+                    <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Los campos vacíos deben ser diligenciados por el tercero que requiere validar la pertenencia.</p>
+                    <ng-template matStepLabel>Inicio</ng-template>
+                    <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
+                    <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
+                        Surcursal Virtual Personas</p>
+                    <br>
+                    <form [formGroup]="firstFormGroup">
+                        <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta</p>
+                        <select class="custom-select" style="width: 18%;margin-left: 12%;" required>
+
+              <option value="1">CC</option>
+              <option value="3">NIT</option>
+              <option value="4">TI</option>
+              <option value="5">PEP</option>
+              <option value="3" selected>Elija una opción</option>
+            </select>
+                        <mat-form-field style="top: 70px;left: -250px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">Número de documento</mat-label>
+                            <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
+
+                        </mat-form-field>
+
+
+
+                        <form style="margin-top: 6%;margin-left: 27%;">
+                            <p style="margin-left: 15%;">Tipo de cuenta del cliente</p>
+                            <select class="custom-select" style="width: 23%;margin-left: -43%;" required>
+                <option value="1">Cuenta de ahorro</option>
+                <option value="2">Cuenta corriente</option>
+                <option value="3" selected>Elija una opción</option>
+              </select>
+
+                        </form>
+                        <mat-form-field style="top: 15px;left: -25px;width: 240px;">
+                            <mat-label id="label1" style="display: flex;">Número de cuenta del cliente</mat-label>
+                            <input matInput placeholder="Ejemplo: 5093872099" formControlName="firstCtrl3" required>
+
+                        </mat-form-field>
+                        <span class="col-sm-10" style="display: flex; justify-content: center; position: relative;top: 15px;left: 6%;">
+              <input type="checkbox" style="position: relative;top:5px;margin: 3px;"><u>
+                <a style="cursor:pointer; font-size: 15px;" data-toggle="modal" data-target="#exampleModalLong"><u>Envío
+                    de autorización de términos y condiciones al usuario final.</u></a></u>
+            </span>
+                        <!-----------MODAL----------->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: 'Nunito', sans-serif;font-weight: bold">Términos y Condiciones</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                                    </div>
+                                    <div class="modal-body" style="text-align: justify">
+                                        Se han enviado los términos y condiciones al correo y/o número de celular del usuario final, para que confirme la autorización de la validación de su cuenta.
+
+                                    </div>
+                                    <span class="modal-footer col-sm-10">
+
+                    <button type="button" id="botonAcepto" class="btn btn-primary btn-small" data-dismiss="modal"
+                      onclick="document.getElementById('botonEnviarDocumentos').style.display='block';">Aceptar</button>
+                  </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div>
+
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Ver consulta exitosa <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Este mensaje exitoso sólo será visible para el tercero que requiere validar la pertenencia.</p>
+                        <ng-template matStepLabel>Consulta exitosa</ng-template>
+                        <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
+                        <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
+                            Surcursal Virtual Personas</p>
+                        <br>
+                        <div class="alert alert-success" role="alert" style="width: 50%;position: relative;left: 23%;">
+                            <p>
+                                <mat-icon style="font-size: 40px;position: relative;left: 46%;">check_circle_outline</mat-icon>
+                            </p>
+                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Felicitaciones</h4>
+                            <p style="text-align: center;">El No. de cuenta ***145 sí pertenece a la persona vinculada con el nombre José García y es una cuenta de nómina. </p>
+                            <hr>
+                        </div>
+
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Ver consulta fallida <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
+
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <p style="font-family: 'OpenSans', sans-serif;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.5;
+letter-spacing: -0.3px;
+text-align: justify;
+color: #808285;">Este mensaje exitoso sólo será visible para el tercero que requiere validar la pertenencia.</p>
+                        <ng-template matStepLabel>Consulta fallida</ng-template>
+                        <img src="./assets/img/icon_banco.png" style="width: 15%;height: 15%;position: relative;left: -10%;" alt="Card image cap">
+                        <p style="font-size: 15px;font-family: 'Nunito';font-weight: 500;color:black;position: relative;left: 32.5%;top:5px">
+                            Surcursal Virtual Personas</p>
+                        <br>
+                        <div class="alert alert-danger" role="alert" style="width: 50%;position: relative;left: 23%;">
+                            <p>
+                                <mat-icon style="font-size: 40px;position: relative;left: 46%;">cancel</mat-icon>
+                            </p>
+                            <h4 class="alert-heading" style="text-align: center;font-weight:600">Consulta incorrecta</h4>
+                            <br>
+                            <p style="text-align: left;">La cuenta no le pertenece a la persona consultada.
+                            </p>
+
+                            <hr>
+                        </div>
+
+
+                    </form>
+                    <div>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
+                        <button mat-button (click)="stepper.reset()">Volver a empezar</button>
+                    </div>
+                </mat-step>
+
+
+
+
+            </mat-horizontal-stepper>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #content let-modal>
+
+    <div class="modal-header" style="background-color: #EEEEEE;width: 180%;height:200% ; position: relative;left: -40%;">
+        <h4 class="modal-title" id="modal-basic-title">Prototipo para API Validar Pertenencia de la cuenta</h4>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+      <br>
+    </button>
+    </div>
+
+    <div class="modal-body" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
+
+
+    </div>
+
+
+
+</ng-template>

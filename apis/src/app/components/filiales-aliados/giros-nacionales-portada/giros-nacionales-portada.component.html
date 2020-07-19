@@ -1,6 +1,6 @@
-<!-- componente HTML de la línea de negocio llamada Medios de Pago del portal de los prototipos APIs -->
+<!-- componente HTML de la línea de negocio llamada Filiales del Exterior y Aliados del portal del prototipo de APIs -->
 
-<!-- Contenedor de la descripción de los productos que están en la línea de negocio Medios de pago -->
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Filiales del Exterior y Aliados -->
 <br>
 <br>
 
@@ -9,7 +9,7 @@
 height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
     <br>
     <h3 class="animated fadeIn fast" style="font-family: 'Nunito', sans-serif;font-size: 47px;
-    font-weight: 600;text-align:left;">Código QR</h3>
+    font-weight: 600;text-align:left;">Giros Nacionales</h3>
     <hr style="width: 72%;position: relative;left: -15%;">
     <section class="animated fadeIn fast" style="font-family: 'OpenSans', sans-serif;font-size: 16px;
     width: 70%;
@@ -20,14 +20,17 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
     letter-spacing: -0.34px;
     text-align: justify;
     color: #808285;">
-        Para entender cómo generar un código QR con esta API, solo debes realizar unos simples pasos al oprimir en "Comenzar".</section>
+        Los productos APIs de Giros Nacionales permiten entender la gestión integral del envío de dinero en Colombia. Las funcionalidades abarcan el envío, recepción, consulta, anulación y cancelación del envío, reversión de la transacción y reenvío de PIN. Si
+        deseas conocer el paso a paso solo debes oprimir en los botones "Comenzar caso de uso".</section>
     <br>
+
+
 
 </div>
 
-<!-- Contenedor de la imágen circular representativa de la API QR code -->
+<!-- Contenedor de la imágen circular representativa de la API-->
 <div style=" margin-left: 55%;margin-top: -80px;">
-    <img class="circulo" src="./assets/img/imgCardQR.PNG" alt="Card image cap">
+    <img class="circulo" src="./assets/img/giroNacional.PNG" alt="Card image cap">
 </div>
 
 
@@ -55,7 +58,7 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
           letter-spacing: -0.3px;
           margin-top: -20px;
           margin-left: 3%;
-          color: #808285;">Experiencia del cliente</p>
+          color: #808285;">Envío y recepción del dinero sin cuenta bancaria</p>
     </i>
         <i class="fas fa-check-circle" style="color:
         #ffcf01 ;">
@@ -68,7 +71,7 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
             letter-spacing: -0.3px;
             margin-top: -20px;
             margin-left: 3%;
-            color: #808285;">Eficiencia operacional</p>
+            color: #808285;">Facilidad y cercanía</p>
     </i>
         <i class="fas fa-check-circle" style="color:
         #ffcf01 ;">
@@ -81,12 +84,11 @@ height: 147px;margin-top: -23px;margin-left: -60px;background-size: cover;">
                 letter-spacing: -0.3px;
                 margin-top: -20px;
                 margin-left: 3%;
-                color: #808285;">Agilidad y comodidad</p>
+                color: #808285;">Consulta de la transacción en tiempo real</p>
     </i>
     </ul>
 </div>
-<!-- Botón para comenzar el prototipo y tambien apertura al popup o ventana emergente del mismo-->
-
+<!-- Botón para comenzar los casos de uso del prototipo giros nacionales y tambien apertura al popup o ventana emergente de la PoC-->
 
 
 <button class="btn btn-primary btn-lg" style="box-sizing: border-box;
@@ -97,11 +99,22 @@ height: 38px;
 border-radius: 10000px;
 background-color: #ffd200;
 position: relative;
-left: -40%;
-margin-top: 6%;" (click)="comenzar()">Comenzar<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
+left: -30%;
+margin-top: 3%;" (click)="comenzar1()">Comenzar caso de uso No. 1<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
               height: 16px;padding-top: 2px"></i></button>
 
-<!-- Botón o "collapse" para desplegar más información que necesite el cliente del prototipo de QR Code" -->
+<button class="btn btn-primary btn-lg" style="box-sizing: border-box;
+display: inline-block;  text-align: center;
+text-decoration: none; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+width: 248px;
+height: 38px;
+border-radius: 10000px;
+background-color: #ffd200;
+position: relative;
+left: -52%;
+margin-top: 15%;" (click)="comenzar2()">Comenzar caso de uso No. 2<i class="fas fa-angle-right" style="float:right;color: #454648; width: 10px;
+              height: 16px;padding-top: 2px"></i></button>
+<!-- Botón o "collapse" para desplegar más información que necesite el cliente de la PoC de QR Code" -->
 <div class="container-collapse" style="width: 40%;position: relative;left: 46%;top: -120px;">
     <p>
         <i class="fas fa-plus-circle" style="color: #ffcf01;position: relative;left:60%;top: 12px;"></i><a class="btn btn-primary" style="position: relative; left: 60%;margin-top: 5%;" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
@@ -123,10 +136,11 @@ margin-top: 6%;" (click)="comenzar()">Comenzar<i class="fas fa-angle-right" styl
 <pre>{{closeResult}}</pre>
 
 <br><br><br><br><br>
-<!-- Contenedor del "footer o pie de página" del portal de prototipos APIs-->
+
+<!-- Contenedor del "footer o pie de página" del portal de prototipos de APIs-->
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
-<!-- Contenedor del "footer o pie de página" del portal de prototipos APIs-->
+<!-- Contenedor del "footer o pie de página" del portal prototipos de APIs-->
 <footer class="detalle-footer" role="contentinfo">
     <div class="region region-footer">
         <div class="region-inner clearfix">
@@ -180,7 +194,7 @@ margin-top: 6%;" (click)="comenzar()">Comenzar<i class="fas fa-angle-right" styl
         -webkit-border-radius: 50%;
         border-radius: 50%;
     }
-    /* Estilo para el popup o ventana emergente del prototipo */
+    /* Estilo para el popup o ventana emergente del prototipo de APIs */
     
     .mat-stepper-horizontal {
         margin-top: 8px;

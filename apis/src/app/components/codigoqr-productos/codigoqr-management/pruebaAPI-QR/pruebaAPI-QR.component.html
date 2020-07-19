@@ -1,20 +1,20 @@
-<!-- componente HTML de la línea de negocio llamada Créditos y depósitos del portal de las PoC -->
+<!-- componente HTML de la línea de negocio llamada Transferencias del portal de los prototipos APIs -->
 
-<!-- Contenedor de la descripción de los productos que están en la línea de negocio Créditos y depósitos -->
+<!-- Contenedor de la descripción de los productos que están en la línea de negocio Transferencias -->
 <br>
 <br>
 
 <div class="modal-dialog" role="document">
     <div class="modal-content" style="width: 280%;position: relative;left: -90%">
         <div class="modal-header">
-            <h5 class="modal-title">Prueba de concepto API QR Code Management</h5>
+            <h5 class="modal-title">Prototipo API QR Code Management</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="volverQR()">
         <span aria-hidden="true">&times;</span>
       </button>
         </div>
         <div class="modal-body">
 
-            <!-- Comentario al inicio de la PoC -->
+            <!-- Comentario al inicio del prototipo -->
             <p style="font-family: 'OpenSans', sans-serif;
 font-size: 12px;
 font-weight: normal;
@@ -42,13 +42,13 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
                         <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
 
-                            <option value="1" selected>CC</option>
-                            <option value="2">CE</option>
-                            <option value="3">NIT</option>
-                            <option value="4">TI</option>
-                            <option value="5">PASS</option>
-                            <option value="3" >Elija una opción</option>
-                          </select>
+              <option value="1" selected>CC</option>
+              <option value="2">CE</option>
+              <option value="3">NIT</option>
+              <option value="4">TI</option>
+              <option value="5">PASS</option>
+              <option value="3">Elija una opción</option>
+            </select>
                         <mat-form-field style="top: 60px;left: -450px;width: 230px;">
                             <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
                             <input matInput placeholder="Ejemplo: 800928739" value="800928739" formControlName="firstCtrl" required>
@@ -64,10 +64,10 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <form style="margin-top: 7%;margin-left: 28%;">
                             <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
                             <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
-                            <option value="1"selected>CUENTA_DE_AHORRO</option>
-                            <option value="2">CUENTA_CORRIENTE</option>
-                            <option value="3">Elija una opción</option>
-                            </select>
+                <option value="1" selected>CUENTA_DE_AHORRO</option>
+                <option value="2">CUENTA_CORRIENTE</option>
+                <option value="3">Elija una opción</option>
+              </select>
 
                         </form>
                         <mat-form-field style="top: 15px;left: 8px;width: 380px;">
@@ -79,7 +79,8 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
 
                     </form>
                     <div>
-                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Ver opción 2 <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Ver opción 2 <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
                     </div>
                 </mat-step>
                 <mat-step [stepControl]="firstFormGroup">
@@ -98,13 +99,13 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <p style="margin-left: 36%;">Tipo de documento del cliente titular de la cuenta destino</p>
                         <select class="custom-select" style="width: 35%;margin-left: 23.3%;" required>
 
-                        <option value="1">CC</option>
-                        <option value="2">CE</option>
-                        <option value="3">NIT</option>
-                        <option value="4">TI</option>
-                        <option value="5">PASS</option>
-                        <option value="3" selected>Elija una opción</option>
-                        </select>
+              <option value="1">CC</option>
+              <option value="2">CE</option>
+              <option value="3">NIT</option>
+              <option value="4">TI</option>
+              <option value="5">PASS</option>
+              <option value="3" selected>Elija una opción</option>
+            </select>
                         <mat-form-field style="top: 60px;left: -450px;width: 230px;">
                             <mat-label id="label1" style="display: flex;">Número de documento:</mat-label>
                             <input matInput placeholder="Ejemplo: 800928739" formControlName="firstCtrl" required>
@@ -120,10 +121,10 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         <form style="margin-top: 7%;margin-left: 28%;">
                             <p style="margin-left: 11%;">Tipo de cuenta destino de la transferencia</p>
                             <select class="custom-select" style="width: 36%;margin-left: -43%;" required>
-                                <option value="1">CUENTA_DE_AHORRO</option>
-                                <option value="2">CUENTA_CORRIENTE</option>
-                                <option value="3"selected>Elija una opción</option>
-                          </select>
+                <option value="1">CUENTA_DE_AHORRO</option>
+                <option value="2">CUENTA_CORRIENTE</option>
+                <option value="3" selected>Elija una opción</option>
+              </select>
 
                         </form>
                         <mat-form-field style="top: 15px;left: 8px;width: 380px;">
@@ -134,7 +135,8 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
 
                     </form>
                     <div>
-                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 65px;">Siguiente <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
                     </div>
                 </mat-step>
                 <mat-step>
@@ -154,22 +156,22 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                             <input matInput placeholder="Ejemplo: Almacenes Éxito">
                         </mat-form-field>
                         <select class="custom-select" style="width: 29%;margin-left: 4.5%;margin-top:6%;">
-                          <option selected>Categoría a la que pertenece el comercio</option>
-                          <option value="1">IMPUESTOS</option>
-                          <option value="2">EDUCACION</option>
-                          <option value="3">VIAJES</option>
-                          <option value="4">COMIDAS_RESTAURANTES</option>
-                          <option value="5">MODA</option>
-                          <option value="6">MASCOTAS</option>
-                          <option value="7">SEGUROS</option>
-                          <option value="8">TECNOLOGIA</option>
-                          <option value="9">ENTRETENIMIENTO</option>
-                          <option value="10">SALUD_Y_BIENESTAR</option>
-                          <option value="11">OTROS</option>
-                          <option value="12">HOGAR</option>
-                          <option value="13">OBLIGACIONES_BANCARIAS</option>
-                          <option value="14">TRANSPORTE</option>
-                          </select>
+              <option selected>Categoría a la que pertenece el comercio</option>
+              <option value="1">IMPUESTOS</option>
+              <option value="2">EDUCACION</option>
+              <option value="3">VIAJES</option>
+              <option value="4">COMIDAS_RESTAURANTES</option>
+              <option value="5">MODA</option>
+              <option value="6">MASCOTAS</option>
+              <option value="7">SEGUROS</option>
+              <option value="8">TECNOLOGIA</option>
+              <option value="9">ENTRETENIMIENTO</option>
+              <option value="10">SALUD_Y_BIENESTAR</option>
+              <option value="11">OTROS</option>
+              <option value="12">HOGAR</option>
+              <option value="13">OBLIGACIONES_BANCARIAS</option>
+              <option value="14">TRANSPORTE</option>
+            </select>
 
                         <mat-form-field style="top: 110px;left: -375px;width: 330px;">
                             <mat-label>Descripción de la transferencia</mat-label>
@@ -182,8 +184,11 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         </mat-form-field>
                         <div style="position: relative; left:2%;">
 
-                            <button mat-button matStepperPrevious style="margin-top: 120px;"> <mat-icon>keyboard_arrow_left</mat-icon>Atrás </button>
-                            <button mat-button matStepperNext color="primary" style="margin-top: 120px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                            <button mat-button matStepperPrevious style="margin-top: 120px;">
+                <mat-icon>keyboard_arrow_left</mat-icon>Atrás
+              </button>
+                            <button mat-button matStepperNext color="primary" style="margin-top: 120px;">Siguiente <mat-icon
+                  color="primary">keyboard_arrow_right</mat-icon></button>
                         </div>
                     </form>
                 </mat-step>
@@ -197,8 +202,11 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
 
                     </form>
                     <div>
-                        <button mat-button matStepperPrevious style="margin-top: 100px;"><mat-icon>keyboard_arrow_left</mat-icon> Atrás </button>
-                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon color="primary">keyboard_arrow_right</mat-icon></button>
+                        <button mat-button matStepperPrevious style="margin-top: 100px;">
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
+                        <button mat-button matStepperNext color="primary" style="margin-top: 100px;">Siguiente <mat-icon
+                color="primary">keyboard_arrow_right</mat-icon></button>
                     </div>
                 </mat-step>
                 <mat-step>
@@ -213,13 +221,16 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                   color: #808285;">Cuando el usuario realice la transferencia por medio del código QR generado, se le notifica al titular de la cuenta destino la transacción exitosa (por correo electrónico y/o SMS).</p>
                     <ng-template matStepLabel>Notificación Transferencia</ng-template>
                     <div class="alert alert-success" role="alert" style="width: 30%;height: 30%;background-color: white;position: relative;left: 35%;">
-                        <mat-icon color="primary" style="position: relative;left: -170px;margin-top: 15px;">account_circle</mat-icon>
+                        <mat-icon color="primary" style="position: relative;left: -170px;margin-top: 15px;">account_circle
+                        </mat-icon>
                         <p style="margin-top: -9%;margin-left: 7%;">¡Transferencia exitosa!</p>
                         <p style="text-align: justify;">Bancolombia le informa:Transferencia por: $20000,desde la cuenta: 10566410843,fecha: 14/03/2019,inquietudes al: 0345109095/018000931987</p>
 
                     </div>
                     <div>
-                        <button mat-button matStepperPrevious> <mat-icon>keyboard_arrow_left</mat-icon> Atrás </button>
+                        <button mat-button matStepperPrevious>
+              <mat-icon>keyboard_arrow_left</mat-icon> Atrás
+            </button>
                         <button mat-button (click)="stepper.reset()">Volver a empezar</button>
                     </div>
                 </mat-step>
@@ -245,20 +256,13 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
 
     </div>
 
-    <!--   <div class="modal-footer" style="background-color:  #EEEEEE;width: 180%;position: relative;left: -40%;">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-        <br>
-    </div> -->
-
 
 </ng-template>
 
-<!-- <button (click)="verFamilias()" class="btn btn-primary btn-lg"><i class="fas fa-angle-left" style=" float:left; color:#454648;width: 10px;
-    height: 16px;padding-top: 2px"></i>REGRESAR </button> -->
-<!-- Contenedor del "footer o pie de página" del portal PoC-->
+<!-- Contenedor del "footer o pie de página" del portal de prototipos APIs-->
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
-<!-- Contenedor del "footer o pie de página" del portal PoC-->
+<!-- Contenedor del "footer o pie de página" del portal de prototipos APIs-->
 <footer class="detalle-footer" role="contentinfo">
     <div class="region region-footer">
         <div class="region-inner clearfix">
@@ -273,15 +277,8 @@ color: #808285;">Los campos obtienen los datos del usuario final almacenados en 
                         font-style: normal;
                         line-height: 1.14;
                         letter-spacing: -0.39px;
-                        color: #808285;">Iniciativa desarrollada por el área de Open Banking y APIs - OBA</p>
-                            <!--  <p style="font-family: Nunito;
-                        font-size: 16px;
-                        font-weight: bold;
-                        font-stretch: normal;
-                        font-style: normal;
-                        line-height: 1.14;
-                        letter-spacing: -0.39px;
-                        color: #808285;">Open Banking y API's - OBA</p> -->
+                        color: #808285;">Iniciativa desarrollada por el área de Estrategías de APIs</p>
+
                             <p style="font-family: Nunito;
                         font-size: 14px;
                         font-weight: 600;

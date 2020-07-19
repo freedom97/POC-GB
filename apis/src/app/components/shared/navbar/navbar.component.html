@@ -12,7 +12,7 @@ background-color: var(--white-0);background-size: cover;">
     <div class="collapse navbar-collapse" id="navbar" style="margin-top: 18px;margin-left: 5px;">
         <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['familias']" style="
+                <a class="nav-link" [routerLink]="['lineas-negocio']" style="
                font-family: 'OpenSans', sans-serif;
                 font-size: 16px;
                 font-weight: 400;
@@ -35,21 +35,21 @@ background-color: var(--white-0);background-size: cover;">
                 margin-left: 45px;
                 color: #808285; ">Líneas de negocio</button>
                 <mat-menu #lineasNegocio="matMenu">
-                    <button mat-menu-item [matMenuTriggerFor]="transferencias" [routerLink]="['transferencias']">Transferencias</button>
-                    <button mat-menu-item [matMenuTriggerFor]="cuentas" [routerLink]="['conciliacion-bancaria']">Cuentas</button>
+                    <button mat-menu-item [matMenuTriggerFor]="medios_de_pago" [routerLink]="['medios-pago']">Medios de Pago</button>
+                    <button mat-menu-item [matMenuTriggerFor]="productos_captacion" [routerLink]="['productos-captacion']">Productos de Captación</button>
                     <button mat-menu-item [matMenuTriggerFor]="productosFinanciacion" [routerLink]="['productos-financiacion']">Productos de Financiación</button>
-                    <button mat-menu-item [matMenuTriggerFor]="verificacionDocIdentidad" [routerLink]="['verificar-doc-identidad']">Verificación documento de identidad</button>
-                    <button mat-menu-item [matMenuTriggerFor]="serviciosConsumidor" [routerLink]="['']">Servicios al consumidor</button>
+                    <button mat-menu-item [matMenuTriggerFor]="seguridad" [routerLink]="['seguridad']">Seguridad</button>
+                    <button mat-menu-item [matMenuTriggerFor]="filiales_aliados" [routerLink]="['filiales-aliados']">Filiales del Exterior y Aliados</button>
 
 
                 </mat-menu>
-                <mat-menu #transferencias="matMenu">
+                <mat-menu #medios_de_pago="matMenu">
                     <button mat-menu-item [routerLink]="['codigoqr-management']">Código QR</button>
 
 
 
                 </mat-menu>
-                <mat-menu #cuentas="matMenu">
+                <mat-menu #productos_captacion="matMenu">
                     <button mat-menu-item [routerLink]="['conciliacion-portada']">Saldos y Movimientos</button>
                     <button mat-menu-item [routerLink]="['validar-pertenencia-cuenta-portada']">Validar Pertenencia de Cuenta</button>
 
@@ -60,13 +60,13 @@ background-color: var(--white-0);background-size: cover;">
 
 
                 </mat-menu>
-                <mat-menu #verificacionDocIdentidad="matMenu">
+                <mat-menu #seguridad="matMenu">
                     <button mat-menu-item [routerLink]="['consultar-infoDocumento-portada']">Verificación de documento de identidad</button>
 
 
 
                 </mat-menu>
-                <mat-menu #serviciosConsumidor="matMenu">
+                <mat-menu #filiales_aliados="matMenu">
                     <button mat-menu-item [routerLink]="['giros-nacionales-portada']">Giros Nacionales</button>
 
                 </mat-menu>
